@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem *)",
+      "Bash(Get-ChildItem *)",
+      "Bash(Select-Object Name)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\Módulo 1\" -File | Select-Object Name, @{Name=\"Size\\(KB\\)\";Expression={[math]::Round\\($_.Length/1024,2\\)}} | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\Módulo 2\" -File | Select-Object Name, @{Name=\"Size\\(KB\\)\";Expression={[math]::Round\\($_.Length/1024,2\\)}} | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\Módulo 3\" -File | Select-Object Name, @{Name=\"Size\\(KB\\)\";Expression={[math]::Round\\($_.Length/1024,2\\)}} | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\Módulo 4\" -File | Select-Object Name, @{Name=\"Size\\(KB\\)\";Expression={[math]::Round\\($_.Length/1024,2\\)}} | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\Módulo 5\" -File | Select-Object Name, @{Name=\"Size\\(KB\\)\";Expression={[math]::Round\\($_.Length/1024,2\\)}} | Format-Table -AutoSize)",
+      "Bash(Remove-Item *)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\ABC do Vinho\\\\css\")",
+      "Bash(Out-Null)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\ABC do Vinho\\\\js\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\ABC do Vinho\\\\modulo1\")",
+      "Bash(Write-Host \"Directories created\")",
+      "PowerShell(New-Item *)",
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "PowerShell(gh *)",
+      "PowerShell(winget *)"
+    ]
+  }
+}

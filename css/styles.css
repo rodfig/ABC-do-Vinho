@@ -364,6 +364,16 @@ body.module-page {
 
 .chapter-nav a.active .nav-num { color: rgba(212,175,55,0.5); }
 
+.nav-group {
+  padding: 1rem 1.5rem 0.3rem;
+  font-size: 0.55rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  list-style: none;
+  margin-top: 0.25rem;
+}
+
 /* ============================================================
    MAIN CONTENT
    ============================================================ */

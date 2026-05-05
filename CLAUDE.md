@@ -36,8 +36,8 @@ Quizzes/tests — deferred to later phase.
 ```
 index.html                        ← Landing (6 module cards)
 modulo1/index.html                ← 18 chapters, grouped sidebar (COMPLETE)
-modulo2/index.html                ← 23 chapters — Viticultura, Regiões e Vinhos (COMPLETE)
-modulo3/index.html                ← 20 chapters — Castas de Portugal (COMPLETE)
+modulo2/index.html                ← 24 chapters — Viticultura, Regiões e Vinhos (COMPLETE)
+modulo3/index.html                ← 20 chapters — Castas de Portugal (disabled, pending rework)
 modulo4/index.html                ← Vinhos Especiais landing (4 sub-cards) (pending)
   modulo4/espumantes/index.html   ← Vinhos Espumantes (pending)
   modulo4/porto/index.html        ← Vinho do Porto (pending)
@@ -108,7 +108,7 @@ Mirrors Vinhos do Mundo. Cream page background, dark sidebar, gold accent, per-m
 1. ✅ `css/styles.css` + `js/main.js`
 2. ✅ `index.html` (landing)
 3. ✅ Module 1 — 18 chapters
-4. ✅ Module 2 — 23 chapters (viticultura, terroir, regiões)
+4. ✅ Module 2 — 24 chapters (viticultura, terroir, regiões)
 5. ⚠️ Module 3 — built but disabled pending rework (disabled on landing)
 6. Module 4 — Vinhos Especiais (espumantes, porto, madeira, jerez sub-modules)
 7. Module 5 — Serviço e Sommelier

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo III — Castas de Portugal · ABC do Vinho</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="module-page" data-module="3">
+
+  <div class="progress-bar"></div>
+
+  <header class="topbar">
+    <a class="topbar-back" href="../">← ABC do Vinho</a>
+    <div class="topbar-sep"></div>
+    <span class="topbar-title">III &mdash; Castas de Portugal</span>
+    <button class="topbar-menu" id="topbar-menu" aria-label="Capítulos">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="module-layout">
+
+    <!-- ── SIDEBAR ───────────────────────────── -->
+    <nav class="sidebar">
+      <div class="sidebar-module">Módulo III</div>
+      <div class="sidebar-label">Capítulos</div>
+      <ol class="chapter-nav">
+
+        <li class="nav-group">Introdução</li>
+        <li><a href="#castas-intro"><span class="nav-num">01</span>Castas Autóctones de Portugal</a></li>
+
+        <li class="nav-group">Tintas</li>
+        <li><a href="#touriga-nacional"><span class="nav-num">02</span>Touriga Nacional</a></li>
+        <li><a href="#touriga-franca"><span class="nav-num">03</span>Touriga Franca</a></li>
+        <li><a href="#aragones"><span class="nav-num">04</span>Aragonês / Tinta Roriz</a></li>
+        <li><a href="#tinta-barroca"><span class="nav-num">05</span>Tinta Barroca</a></li>
+        <li><a href="#trincadeira"><span class="nav-num">06</span>Trincadeira / Tinta Amarela</a></li>
+        <li><a href="#alfrocheiro"><span class="nav-num">07</span>Alfrocheiro</a></li>
+        <li><a href="#baga"><span class="nav-num">08</span>Baga</a></li>
+        <li><a href="#castelao"><span class="nav-num">09</span>Castelão</a></li>
+        <li><a href="#tinto-cao"><span class="nav-num">10</span>Tinto Cão</a></li>
+        <li><a href="#vinhao"><span class="nav-num">11</span>Vinhão / Sousão</a></li>
+
+        <li class="nav-group">Brancas</li>
+        <li><a href="#arinto"><span class="nav-num">12</span>Arinto</a></li>
+        <li><a href="#verdelho"><span class="nav-num">13</span>Verdelho</a></li>
+        <li><a href="#encruzado"><span class="nav-num">14</span>Encruzado</a></li>
+        <li><a href="#gouveio"><span class="nav-num">15</span>Gouveio</a></li>
+        <li><a href="#antao-vaz"><span class="nav-num">16</span>Antão Vaz</a></li>
+        <li><a href="#fernao-pires"><span class="nav-num">17</span>Fernão Pires</a></li>
+        <li><a href="#roupeiro"><span class="nav-num">18</span>Roupeiro / Síria</a></li>
+        <li><a href="#viosinho"><span class="nav-num">19</span>Viosinho</a></li>
+        <li><a href="#malvasia-fina"><span class="nav-num">20</span>Malvasia Fina</a></li>
+
+      </ol>
+      <div class="sidebar-arrows">
+        <button class="sb-arrow" id="ch-prev" title="Capítulo anterior">↑</button>
+        <button class="sb-arrow" id="ch-next" title="Próximo capítulo">↓</button>
+      </div>
+    </nav>
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <!-- ── CONTENT ───────────────────────────── -->
+    <main class="content">
+
+      <!-- 01 ─────────────────────────────────── -->
+      <section class="chapter" id="castas-intro">
+        <p class="chapter-eyebrow">Capítulo 01</p>
+        <h1 class="chapter-title">Castas Autóctones de Portugal</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Portugal é um dos países com maior diversidade ampelográfica do mundo. Apesar da sua reduzida área geográfica, alberga centenas de castas autóctones — muitas delas exclusivas — que constituem a identidade singular do vinho português.</p>
+
+        <p>As castas autóctones são aquelas que evoluíram naturalmente numa determinada região ao longo de séculos, adaptando-se às condições específicas de solo e clima. Esta adaptação traduz-se em características organolépticas únicas que não é possível replicar noutro contexto.</p>
+
+        <figure>
+          <img src="img/castas-lista.jpeg" alt="Principais castas autóctones portuguesas">
+          <figcaption>Principais castas autóctones em utilização corrente em Portugal — (T) Tinta, (B) Branca</figcaption>
+        </figure>
+
+        <h3>Leitura das Fichas</h3>
+        <p>Cada ficha de casta apresenta dados agronómicos e enológicos essenciais para compreender o comportamento da variedade na vinha e o seu potencial no vinho:</p>
+
+        <div class="fact-grid">
+          <div class="fact-item">
+            <div class="fact-label">Índice de Winkler</div>
+            <div class="fact-value">Somatório de temperaturas activas (>10 °C) acumulado durante a estação. Determina o calor disponível para a maturação.</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-label">Índice de Fertilidade</div>
+            <div class="fact-value">Número médio de inflorescências (cachos) por gomo abrolhado. Condiciona a produção e a estratégia de poda.</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-label">Película</div>
+            <div class="fact-value">Espessura da casca do bago. Determina a riqueza em antocianinas, taninos e resistência a doenças fúngicas.</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-label">Acidez Natural</div>
+            <div class="fact-value">Concentração de ácidos orgânicos no mosto (g/l). A acidez garante frescura e longevidade ao vinho.</div>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Nota:</strong> TF = Touriga Franca &nbsp;|&nbsp; TN = Touriga Nacional. Nas fichas, a distribuição geográfica é representada em mapa com escala: Muito Forte / Forte / Média / Fraca / Muito Fraca.
+        </div>
+      </section>
+
+      <!-- 02 ─────────────────────────────────── -->
+      <section class="chapter" id="touriga-nacional">
+        <p class="chapter-eyebrow">Capítulo 02 · Tinta</p>
+        <h1 class="chapter-title">Touriga Nacional</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Considerada a grande casta tinta portuguesa, a Touriga Nacional é o estandarte da viticultura nacional. Apesar da sua fertilidade muito baixa — que limitou durante décadas a sua expansão — a qualidade excepcional dos seus vinhos tornou-a a variedade mais prestigiada do país.</p>
+
+        <figure>
+          <img src="img/casta-touriga-nacional.jpeg" alt="Ficha da casta Touriga Nacional">
+          <figcaption>Ficha da Casta — Touriga Nacional</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">6.700 ha (10,35%) — Douro e Alentejo com 6.000 ha</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Crescente</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Deitado, retombante</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Muito baixa</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.610 h acima de 10 °C com 11 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Pequeno (95–250 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Ligeiramente achatado, médio e negro-azul, polpa mole</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Medianamente espessa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Qualquer; difícil de conduzir pelo porte retombante</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Todos os tipos de solo, mesmo os pesados e férteis</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Exige elevada insolação e calor</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Casta vindimada tarde; resistência às chuvas de Outono</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Média-alta, 4,5–6,0 g/l total</span></li>
+          <li class="spec-item"><span class="spec-key">Intensidade da cor</span><span class="spec-val">Boa</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Muito elevado; particular aptidão para madeira</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Muito elevada</span></li>
+        </ul>
+      </section>
+
+      <!-- 03 ─────────────────────────────────── -->
+      <section class="chapter" id="touriga-franca">
+        <p class="chapter-eyebrow">Capítulo 03 · Tinta</p>
+        <h1 class="chapter-title">Touriga Franca</h1>
+        <div class="chapter-rule"></div>
+
+        <p>A casta com maior área plantada no Douro, a Touriga Franca combina produtividade razoável com qualidade considerável. É o complemento indispensável da Touriga Nacional nos lotes do Douro e do Vinho do Porto, contribuindo com estrutura e aromas florais intensos.</p>
+
+        <figure>
+          <img src="img/casta-touriga-franca.jpeg" alt="Ficha da casta Touriga Franca">
+          <figcaption>Ficha da Casta — Touriga Franca</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">13.200 ha (5,8%) — maior expressão no Douro</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Crescente, com migração para sul</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Médio/elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Semi-erecto</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Baixo-médio, 1,5–1,7 inflorescências/gomo abrolhado</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.500 h acima de 10 °C com 11 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Médio/grande (200–300 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Médio (1,50–2,50 g), polpa de consistência firme</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Medianamente espessa, por vezes grossa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Adapta-se a diversas formas</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Evitar solos muito férteis, profundos e húmidos (comprometem grau alcoólico e rachamento da película)</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Cotas de baixa altitude, boa exposição, seco e quente</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Perigo de podridões em climas mais húmidos e frescos</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Mediana, 3,5–4,5 g/l total</span></li>
+          <li class="spec-item"><span class="spec-key">Intensidade da cor</span><span class="spec-val">Varia com o ano</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Geralmente boa; particular aptidão para madeira</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Alta, mas com quebra acentuada acima de 10.000 kg/ha ou em condições edafo-climáticas desfavoráveis</span></li>
+        </ul>
+      </section>
+
+      <!-- 04 ─────────────────────────────────── -->
+      <section class="chapter" id="aragones">
+        <p class="chapter-eyebrow">Capítulo 04 · Tinta</p>
+        <h1 class="chapter-title">Aragonês / Tinta Roriz</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Conhecida como Tempranillo em Espanha, o Aragonês é a casta tinta mais plantada em Portugal — e uma das mais polémicas. A sua elevada capacidade produtiva pode gerar vinhos de qualidade medíocre; mas com controlo rigoroso do rendimento, produz alguns dos melhores vinhos da Península Ibérica.</p>
+
+        <figure>
+          <img src="img/casta-aragones.jpeg" alt="Ficha da casta Aragonês">
+          <figcaption>Ficha da Casta — Aragonês / Tinta Roriz</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">23.500 ha (24,2%) — Douro e Alentejo com 6.000 ha</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Descendente</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Médio elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Erecto a semi-erecto</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Médio (1,75 cachos/lançamento)</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.500 h acima de 10 °C com 11 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Médio/grande (200–500 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Arredondado, médio e negro-azul, polpa de consistência média</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Medianamente espessa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Qualquer; problema de quebra das varas com a empa</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Profundo, bem drenado; elevado teor de água provoca atrasos no pintor e redução de qualidade</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Seco e muito quente para obter qualidade</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Média-boa</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Baixa (3–5 g/l total)</span></li>
+          <li class="spec-item"><span class="spec-key">Intensidade da cor</span><span class="spec-val">Elevada no mosto; perigo de perda na fermentação</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Potencial elevado; boa aptidão para madeira</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Polémica — muito variável com o rendimento; com controlo, produz dos melhores vinhos ibéricos</span></li>
+        </ul>
+      </section>
+
+      <!-- 05 ─────────────────────────────────── -->
+      <section class="chapter" id="tinta-barroca">
+        <p class="chapter-eyebrow">Capítulo 05 · Tinta</p>
+        <h1 class="chapter-title">Tinta Barroca</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Casta essencialmente duriense, a Tinta Barroca é produtiva e de maturação rápida. Valorizada pelo seu vigor e adaptação a vinhas de altitude, adapta-se bem às condições mais frescas do Douro Superior, mas entra facilmente em sobrematuração nas zonas mais quentes.</p>
+
+        <figure>
+          <img src="img/casta-tinta-barroca.jpeg" alt="Ficha da casta Tinta Barroca">
+          <figcaption>Ficha da Casta — Tinta Barroca</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">7.000 ha (2,4%) — Douro</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Fortemente crescente</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Semi-erecto</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Médio, 1,6 inflorescências/gomo abrolhado</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.400 h acima de 10 °C com 16 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Médio/grande (250–500 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Médio</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Medianamente espessa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Adapta-se a diversas formas</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Profundo e fértil com alguma humidade; também zonas de elevada altitude</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Final de maturação rápido; entra em sobrematuração nas zonas muito quentes e secas</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Perigo de sobrematuração e de passas</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Média, 4–6 g/l total</span></li>
+          <li class="spec-item"><span class="spec-key">Intensidade da cor</span><span class="spec-val">Média; película muito pigmentada, perde bastante cor com o envelhecimento</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Geralmente boa; particular aptidão para madeira</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Varia com o solo; quebra acentuada com produções elevadas</span></li>
+        </ul>
+      </section>
+
+      <!-- 06 ─────────────────────────────────── -->
+      <section class="chapter" id="trincadeira">
+        <p class="chapter-eyebrow">Capítulo 06 · Tinta</p>
+        <h1 class="chapter-title">Trincadeira / Tinta Amarela</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Dispersa por todo o país, a Trincadeira é uma casta de dupla face: em condições ideais de solo seco e calor suficiente, produz vinhos notáveis com cor granada intensa e grande potencial de guarda. Em condições desfavoráveis, o excesso de produção e a sensibilidade à podridão comprometem irremediavelmente a qualidade.</p>
+
+        <figure>
+          <img src="img/casta-trincadeira.jpeg" alt="Ficha da casta Trincadeira / Tinta Amarela">
+          <figcaption>Ficha da Casta — Trincadeira / Tinta Amarela</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">16.200 ha (10,5%) — dispersa por todas as zonas</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Decrescente</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Semi-erecto</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">1,2 cachos/gomo</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.557 h acima de 10 °C com 11 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Médio/grande (210–300 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Médio, ligeiramente achatado, negro-azul, polpa mole e suculenta</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Pouco espessa, frágil e facilmente atacada por podridão</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Sebe difícil; exige equilíbrio entre área foliar e produção; vara longa — risco de excesso de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Baixa fertilidade, textura fraca/arenosa, seco ou bem drenado</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Quente, com suficientes horas de insolação; excesso de calor provoca secagem dos bagos</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Pouca; fraca resistência às chuvas de Outono</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Média, 4,5–5,5 g/l total</span></li>
+          <li class="spec-item"><span class="spec-key">Intensidade da cor</span><span class="spec-val">Granada intenso</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Muito boa em vinhos de elevada qualidade; aptidão para madeira</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Muito dependente do ambiente; excelente no óptimo, sem interesse em condições desfavoráveis</span></li>
+        </ul>
+      </section>
+
+      <!-- 07 ─────────────────────────────────── -->
+      <section class="chapter" id="alfrocheiro">
+        <p class="chapter-eyebrow">Capítulo 07 · Tinta</p>
+        <h1 class="chapter-title">Alfrocheiro</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Casta de vocação bairradina e duriense, o Alfrocheiro destaca-se pela fertilidade dos gomos basais — o que permite poda curta sem perda de produção. Sensível ao stress hídrico com insolação intensa, exprime o seu melhor potencial nos solos arenosos e pouco férteis do Dão, onde produz vinhos de boa longevidade.</p>
+
+        <figure>
+          <img src="img/casta-alfrocheiro.jpeg" alt="Ficha da casta Alfrocheiro">
+          <figcaption>Ficha da Casta — Alfrocheiro</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">1.850 ha (3,3%)</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Crescente</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Médio/vigoroso</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Semi-erecto</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Médio, cerca de 1,37 inflorescências/gomo abrolhado</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.650 horas activas com 12,5 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Pequeno (cerca de 100 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Pequeno (1,1 g), não uniforme, arredondado, com destacamento fácil</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Pouco espessa; o bago engelha com o stress hídrico</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Qualquer tipo de poda; boa fertilidade basal — recomenda-se poda curta</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Arenoso, pouco fértil; não se dá bem em solos compactos argilosos</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Não suporta stress hídrico com elevada insolação</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Perigo de degradação por podridão e engelhamento do bago</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Zona seca e quente: 4,0–5,5 g/l; no Dão: 6–7 g/l</span></li>
+          <li class="spec-item"><span class="spec-key">Intensidade da cor</span><span class="spec-val">Média/elevada</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Zona quente e seca: média (≤ 5 anos); no Dão: boa longevidade</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Elevado potencial; com produções muito altas, qualidade média</span></li>
+        </ul>
+      </section>
+
+      <!-- 08 ─────────────────────────────────── -->
+      <section class="chapter" id="baga">
+        <p class="chapter-eyebrow">Capítulo 08 · Tinta</p>
+        <h1 class="chapter-title">Baga</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Casta emblemática da Bairrada, a Baga é simultaneamente uma das mais produtivas e das mais difíceis de trabalhar. A sua película delicada, o cacho compacto e a maturação tardia criam desafios constantes ao viticultor. Quando conseguida a maturação plena, produz vinhos de acidez elevada, cor intensa e excepcional longevidade.</p>
+
+        <figure>
+          <img src="img/casta-baga.jpeg" alt="Ficha da casta Baga">
+          <figcaption>Ficha da Casta — Baga</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">9.200 ha (0,6%) — dispersa por todo o país</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Decrescente</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Médio-forte</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Semi-erecto, algumas varas prostradas e retombantes</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">Elevado; surgem problemas na maturação com as chuvas de Setembro</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">260 g em média, mas heterogéneo</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Médio, arredondado e negro-azul, polpa mole</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Média espessa, muito delicada, facilmente atacada por podridão</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Cordão bilateral (poda curta) ou Guyot (poda mista)</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Todos; recomenda-se média fertilidade e humidade, bem drenado, disponibilidade hídrica limitada</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Intensa insolação e Verão prolongado</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Baixa; cacho muito compacto, facilmente aparecem podridões</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Elevada, 6–7 g/l total</span></li>
+          <li class="spec-item"><span class="spec-key">Intensidade da cor</span><span class="spec-val">Elevada</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Excelente; boa aptidão para madeira</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Muito polémica pela produtividade extrema; em condições adequadas, dos melhores vinhos do país</span></li>
+        </ul>
+      </section>
+
+      <!-- 09 ─────────────────────────────────── -->
+      <section class="chapter" id="castelao">
+        <p class="chapter-eyebrow">Capítulo 09 · Tinta</p>
+        <h1 class="chapter-title">Castelão</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Anteriormente designado Periquita, o Castelão é a casta tinta dominante a sul do Mondego. Notável pela sua adaptabilidade a solos e climas muito diferenciados, exprime o seu melhor nas condições específicas de Setúbal, onde a influência atlântica e o calor moderado permitem vinhos de guarda de grande expressão.</p>
+
+        <figure>
+          <img src="img/casta-castelao.jpeg" alt="Ficha da casta Castelão">
+          <figcaption>Ficha da Casta — Castelão</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">20.500 ha (5,2%) — zona a sul do Mondego</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Decrescente</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Médio</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Erecto</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Médio, 1,75 inflorescências/gomo abrolhado</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.650 h acima de 10 °C com 14 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Médio a grande (120–270 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Arredondado, médio e negro-azul, polpa firme</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Medianamente espessa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Cordão bilateral ou Guyot; em zonas de forte influência atlântica</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Excelente poder de adaptação a condições muito diferenciadas</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Moderado; em clima marítimo tem tendência a desavinho</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Pouca</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Baixa, 3,7–5 g/l total</span></li>
+          <li class="spec-item"><span class="spec-key">Intensidade da cor</span><span class="spec-val">Média</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Boa em condições específicas (Setúbal); aptidão para madeira</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Muito variável conforme clima e solo; em condições adequadas, uma grande casta</span></li>
+        </ul>
+      </section>
+
+      <!-- 10 ─────────────────────────────────── -->
+      <section class="chapter" id="tinto-cao">
+        <p class="chapter-eyebrow">Capítulo 10 · Tinta</p>
+        <h1 class="chapter-title">Tinto Cão</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Uma das castas mais antigas do Douro, o Tinto Cão é a mais fraca em cor das grandes castas nobres durienses — mas compensa com uma acidez elevada e uma capacidade de envelhecimento notável quando atinge maturação plena. É tardio, de baixa produção e de difícil gestão, o que explica a sua área reduzida.</p>
+
+        <figure>
+          <img src="img/casta-tinto-cao.jpeg" alt="Ficha da casta Tinto Cão">
+          <figcaption>Ficha da Casta — Tinto Cão</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">330 ha (0,73%) — Douro</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Muito alto (mas de base baixa)</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Semi-erecto e horizontal</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Baixo-médio, 1,53–1,67 inflorescências/gomo abrolhado</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.900 h acima de 10 °C com 7 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Pequenos e médios (100–220 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Médio (1,1–1,7 g), de difícil destacamento</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Espessa a grossa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Adapta-se a diversas formas</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Fertilidade média, alguma humidade, altitude baixa/média, boa exposição solar</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Quente com boa insolação; sensível ao excesso de seca</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Uma das últimas castas a amadurecer; resistente à podridão e raios solares</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Média/elevada, 5–7 g/l total</span></li>
+          <li class="spec-item"><span class="spec-key">Intensidade da cor</span><span class="spec-val">Média — a mais fraca das castas nobres do Douro; intensifica com a idade</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Só no caso de maturação muito elevada</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Com boa maturação, muito elevada; nem sempre atinge o nível qualitativo superior em todos os anos</span></li>
+        </ul>
+      </section>
+
+      <!-- 11 ─────────────────────────────────── -->
+      <section class="chapter" id="vinhao">
+        <p class="chapter-eyebrow">Capítulo 11 · Tinta</p>
+        <h1 class="chapter-title">Vinhão / Sousão</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Casta tintureira do Minho, o Vinhão é inconfundível pela cor muito intensa — tanto a polpa como a película são pigmentadas, conferindo ao vinho uma cor quase opaca. É a casta que define o estilo de muitos Vinhos Verdes Tintos, onde a acidez elevada e a cor intensa são características apreciadas.</p>
+
+        <figure>
+          <img src="img/casta-vinhao.jpeg" alt="Ficha da casta Vinhão / Sousão">
+          <figcaption>Ficha da Casta — Vinhão / Sousão</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">6.100 ha (1,20%) — casta do Minho</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Crescente</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Médio-elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Erecto</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Médio, 1,8 inflorescências/gomo abrolhado</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.600 h acima de 10 °C com 10 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Médio/pequeno (160–200 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Médio, 1,5–1,7 g, redondo</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Medianamente espessa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Adapta-se a diversas formas</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Frescos</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Susceptível ao escaldão; pouco sensível ao vento</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Pouco sensível</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Elevada, 7–9 g/l total</span></li>
+          <li class="spec-item"><span class="spec-key">Intensidade da cor</span><span class="spec-val">Casta tintureira — cor intensa</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Média</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Boa</span></li>
+        </ul>
+      </section>
+
+      <!-- 12 ─────────────────────────────────── -->
+      <section class="chapter" id="arinto">
+        <p class="chapter-eyebrow">Capítulo 12 · Branca</p>
+        <h1 class="chapter-title">Arinto</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Com presença em todo o território nacional, o Arinto é a casta branca mais versátil e representativa de Portugal. Define-se por uma acidez elevada e persistente — característica que preserva frescura mesmo em climas quentes — e por uma capacidade de envelhecimento surpreendente. Está na base dos melhores brancos de guarda portugueses.</p>
+
+        <figure>
+          <img src="img/casta-arinto.jpeg" alt="Ficha da casta Arinto">
+          <figcaption>Ficha da Casta — Arinto</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">5.900 ha (1,6%) — presente em todo o país</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Ligeira expansão</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Muito elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Erecto, com algumas varas finas horizontais</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Baixa (0,8 cachos/lançamento)</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.229 h</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Grande: 350–450 g (zona quente); 613–675 g (zona marítima)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Elíptico-curto, pequeno e verde-amarelado, polpa mole</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Medianamente espessa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Vara longa (mais favorável à produtividade)</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Calcários e ácidos, fundos e húmidos, bem drenados, não compactos, exposição Norte</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Zonas do interior temperadas</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Média; relativamente tolerante à podridão</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Elevada, 6–9 g/l total</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Elevada; o vinho ganha com envelhecimento; aptidão para madeira</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Muito alta</span></li>
+        </ul>
+      </section>
+
+      <!-- 13 ─────────────────────────────────── -->
+      <section class="chapter" id="verdelho">
+        <p class="chapter-eyebrow">Capítulo 13 · Branca</p>
+        <h1 class="chapter-title">Verdelho</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Originário dos Açores, onde ainda é cultivado, o Verdelho tem vindo a ganhar expressão crescente no continente. A sua adaptabilidade notável — tanto a climas continentais como marítimos — e a capacidade de envelhecimento reconhecida internacionalmente (particularmente na Austrália) fazem dele uma casta com grande futuro no encepamento nacional.</p>
+
+        <figure>
+          <img src="img/casta-verdelho.jpeg" alt="Ficha da casta Verdelho">
+          <figcaption>Ficha da Casta — Verdelho</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">Nas ilhas 20 ha; procura crescente no continente</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Com grande futuro</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Moderado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Semi-erecto</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Elevado (2 cachos/lançamento)</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.350 h acima de 10 °C com 15 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Pequeno/médio (130–340 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Elíptico-curto, pequeno, verde-amarelado</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Espessa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Qualquer tipo de poda; sebe fácil de conduzir</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Profundo, com alguma humidade</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Flexível — adapta-se ao continental e ao marítimo</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Média/boa resistência</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Boa (5 g/l)</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Considerável — internacionalmente reconhecida como casta de envelhecimento</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Alta qualidade — fora do país e em experimentação nacional</span></li>
+        </ul>
+      </section>
+
+      <!-- 14 ─────────────────────────────────── -->
+      <section class="chapter" id="encruzado">
+        <p class="chapter-eyebrow">Capítulo 14 · Branca</p>
+        <h1 class="chapter-title">Encruzado</h1>
+        <div class="chapter-rule"></div>
+
+        <p>A grande casta branca do Dão, o Encruzado é muitas vezes comparado ao Chardonnay pela sua aptidão para vinhos brancos de guarda de alta complexidade. Em solos graníticos fundos e secos, exprime aromas de grande intensidade e uma longevidade que pode atingir várias décadas — um desempenho excepcional para uma casta branca portuguesa.</p>
+
+        <figure>
+          <img src="img/casta-encruzado.jpeg" alt="Ficha da casta Encruzado">
+          <figcaption>Ficha da Casta — Encruzado</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">300 ha — maioritariamente Dão</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Crescente</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Semi-erecto a horizontal</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Médio a elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.600 h acima de 10 °C com 10 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Médio/pequeno</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Ligeiramente achatado, médio e verde-amarelado, polpa mole</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Medianamente espessa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Sebe de difícil condução; adapta-se a qualquer poda</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Granito derivado, fundo e seco</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Evitar locais ventosos</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Normal</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Média</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Grande longevidade (até várias décadas)</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Da melhor categoria</span></li>
+        </ul>
+      </section>
+
+      <!-- 15 ─────────────────────────────────── -->
+      <section class="chapter" id="gouveio">
+        <p class="chapter-eyebrow">Capítulo 15 · Branca</p>
+        <h1 class="chapter-title">Gouveio</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Em expansão sobretudo em Trás-os-Montes, o Gouveio (conhecido como Verdejo em Espanha) destaca-se pela acidez elevada e pela excelente capacidade de envelhecimento. A sua fertilidade baixa obriga a uma gestão cuidada da poda, mas a adaptabilidade a diferentes climas e solos garante-lhe um potencial crescente no encepamento nacional.</p>
+
+        <figure>
+          <img src="img/casta-gouveio.jpeg" alt="Ficha da casta Gouveio">
+          <figcaption>Ficha da Casta — Gouveio</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">2.050 ha — maior expansão em Trás-os-Montes</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Em expansão</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Médio elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Semi-erecto</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Baixa (1,35 cachos/lançamento)</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.500 h acima de 10 °C com 14 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Pequeno/médio (120–300 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Arredondado, médio e verde-amarelado, polpa de consistência média</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Medianamente espessa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Qualquer; fácil de conduzir</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Granítico ou solos ácidos e calcários secos com rega; não excessivamente seco</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Flexível — continental e marítimo</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Pouca</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Elevada (5–6 g/l total)</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Muito boa, superior a 10 anos</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Muito alta</span></li>
+        </ul>
+      </section>
+
+      <!-- 16 ─────────────────────────────────── -->
+      <section class="chapter" id="antao-vaz">
+        <p class="chapter-eyebrow">Capítulo 16 · Branca</p>
+        <h1 class="chapter-title">Antão Vaz</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Casta característica da Vidigueira (Alentejo), o Antão Vaz produz bagos de dimensão inusual para vinho — quase de uva de mesa — numa região de calor extremo. Maturação muito tardia e películas muito espessas confere-lhe uma resistência excepcional. Os seus vinhos brancos, aromáticos e encorpados, têm boa longevidade para uma casta alentejana.</p>
+
+        <figure>
+          <img src="img/casta-antao-vaz.jpeg" alt="Ficha da casta Antão Vaz">
+          <figcaption>Ficha da Casta — Antão Vaz</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">600 ha (0,5%) — Alentejo, característica da Vidigueira</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Crescente ao nível regional</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Semi-erecto, horizontal</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">1,31 cachos/gomo</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.580 h acima de 10 °C com 11 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Grande (228–300 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Arredondado, grande (sugerindo uva de mesa), verde-amarelado, polpa de consistência média</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Muito espessa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Vara longa ou mista; pouca aptidão para cordão bilateral tradicional</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Profundo e seco, mas fértil</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Exige elevados níveis de calor e insolação</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Maturação muito tardia, mas bagos consistentes</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Baixa, 3,5–4,5 g/l total</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Boa longevidade</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Elevada</span></li>
+        </ul>
+      </section>
+
+      <!-- 17 ─────────────────────────────────── -->
+      <section class="chapter" id="fernao-pires">
+        <p class="chapter-eyebrow">Capítulo 17 · Branca</p>
+        <h1 class="chapter-title">Fernão Pires</h1>
+        <div class="chapter-rule"></div>
+
+        <p>A casta branca mais plantada de Portugal, o Fernão Pires (Maria Gomes na Bairrada) é reconhecida pelos seus aromas perfumados e frutados intensos. A sua precocidade na maturação é uma das suas maiores características — e também um dos principais desafios: deve ser vindimado antes da sobrematuração para não perder a acidez e a frescura que o definem.</p>
+
+        <figure>
+          <img src="img/casta-fernao-pires.jpeg" alt="Ficha da casta Fernão Pires">
+          <figcaption>Ficha da Casta — Fernão Pires</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">17.500 ha (1,2%) — maioritariamente Tejo e Bairrada</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Significativamente crescente</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Médio/elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Semi-erecto, horizontal</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Médio, 1,63 cachos/gomo</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.450 h acima de 10 °C com 15 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Médio (165–270 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Esférico, de tamanho médio</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Medianamente espessa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Todos os tipos; particularmente o cordão</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Profundo e bem drenado (areia em Pegões, aluvião/areia no Ribatejo)</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Alta flexibilidade, moderado a quente, desde que haja humidade no solo</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Vindimar antes da sobrematuração (ainda em fase de alto calor) para preservar acidez</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Média, 4,5–6,5 g/l de acidez total</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Melhor nos primeiros anos (aroma frutado); aptidão para madeira se uvas não excessivamente maduras</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Muito variável com a região; na Bairrada, vinhos velhos com excelente frescura</span></li>
+        </ul>
+      </section>
+
+      <!-- 18 ─────────────────────────────────── -->
+      <section class="chapter" id="roupeiro">
+        <p class="chapter-eyebrow">Capítulo 18 · Branca</p>
+        <h1 class="chapter-title">Roupeiro / Síria</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Conhecida como Síria no Alentejo e como Roupeiro no Douro e no Dão, esta casta de cachos grandes e película fina é um dos melhores exemplos de uma casta branca para consumo jovem. Os seus vinhos jovens revelam enorme frescura e expressão aromática; com o envelhecimento, especialmente em zonas quentes, perde rapidamente a sua identidade aromática.</p>
+
+        <figure>
+          <img src="img/casta-roupeiro.jpeg" alt="Ficha da casta Roupeiro / Síria">
+          <figcaption>Ficha da Casta — Roupeiro / Síria</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">11.700 ha — maioritariamente Alentejo e Douro</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Ligeiramente em expansão</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Médio/elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Semi-erecto</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Baixo, cerca de 0,72 inflorescências/gomo abrolhado</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.600 h acima de 10 °C com 12 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Grande (250–400 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Oblongo</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Fina</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Guyot duplo ou simples; aceita todas as formas possíveis</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Solos quentes de encosta</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Temperatura quente moderada, sem grande período de chuva em Setembro</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Limitada; relativamente sensível à chuva de Setembro</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Média (4–5 g/l) de acidez total</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Depende da região; normalmente pouca</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Excelente na fase jovem; com envelhecimento em zonas quentes, quebra acentuada da composição aromática</span></li>
+        </ul>
+      </section>
+
+      <!-- 19 ─────────────────────────────────── -->
+      <section class="chapter" id="viosinho">
+        <p class="chapter-eyebrow">Capítulo 19 · Branca</p>
+        <h1 class="chapter-title">Viosinho</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Casta do Douro com área reduzida mas qualidade reconhecida, o Viosinho surpreende pela sua maturação precoce — o que lhe confere poucos problemas de conservação após a maturação — e pela sua elevada flexibilidade de adaptação a outras regiões. A sua qualidade muito elevada e o potencial de expansão para Alentejo e Açores fazem dele uma casta com futuro promissor.</p>
+
+        <figure>
+          <img src="img/casta-viosinho.jpeg" alt="Ficha da casta Viosinho">
+          <figcaption>Ficha da Casta — Viosinho</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">100 ha (0,2%) — Douro</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Crescente</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Médio</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Erecto</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Médio, 1,78 cachos/gomo</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.250 h acima de 10 °C com 14 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Pequeno (120 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Pequeno (1,3 g)</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Medianamente espessa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Adapta-se a todos os tipos</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Todos, desde que secos e férteis ou bem drenados</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Pouco exigente</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Devido à maturação precoce, tem poucos problemas</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Média e baixa</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Muito boa</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Muito elevada; com futuro no encepamento nacional (Alentejo, Açores)</span></li>
+        </ul>
+      </section>
+
+      <!-- 20 ─────────────────────────────────── -->
+      <section class="chapter" id="malvasia-fina">
+        <p class="chapter-eyebrow">Capítulo 20 · Branca</p>
+        <h1 class="chapter-title">Malvasia Fina</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Conhecida como Boal na Madeira — onde é uma das castas clássicas do Vinho da Madeira — a Malvasia Fina está dispersa pelo país, com maior presença no Dão e no Douro. A sua sensibilidade ao stress hídrico contrasta com a sua boa adaptação ao vento. Em condições óptimas, produz vinhos brancos de qualidade elevada com bom potencial de envelhecimento.</p>
+
+        <figure>
+          <img src="img/casta-malvasia-fina.jpeg" alt="Ficha da casta Malvasia Fina">
+          <figcaption>Ficha da Casta — Malvasia Fina (Boal na Madeira)</figcaption>
+        </figure>
+
+        <ul class="spec-list">
+          <li class="spec-item"><span class="spec-key">Utilização nacional</span><span class="spec-val">7.000 ha (0,25%) — maioritariamente Dão e Douro; na Madeira conhecida como Boal</span></li>
+          <li class="spec-item"><span class="spec-key">Tendência</span><span class="spec-val">Pouco significante</span></li>
+          <li class="spec-item"><span class="spec-key">Vigor</span><span class="spec-val">Médio/elevado</span></li>
+          <li class="spec-item"><span class="spec-key">Porte (tropia)</span><span class="spec-val">Semi-erecto</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de fertilidade</span><span class="spec-val">Elevado, 1,50 cachos/gomo</span></li>
+          <li class="spec-item"><span class="spec-key">Índice de Winkler</span><span class="spec-val">1.550 h acima de 10 °C com 11,5 t/ha de produção</span></li>
+          <li class="spec-item"><span class="spec-key">Tamanho do cacho</span><span class="spec-val">Médio/grande</span></li>
+          <li class="spec-item"><span class="spec-key">Bago</span><span class="spec-val">Ligeiramente elíptico, pequeno e verde-amarelado, polpa mole</span></li>
+          <li class="spec-item"><span class="spec-key">Película</span><span class="spec-val">Medianamente espessa</span></li>
+          <li class="spec-item"><span class="spec-key">Sistema de condução</span><span class="spec-val">Qualquer poda; recomenda-se o cordão</span></li>
+          <li class="spec-item"><span class="spec-key">Solo favorável</span><span class="spec-val">Fundo, bem drenado; evitar terrenos muito quentes onde forma passa</span></li>
+          <li class="spec-item"><span class="spec-key">Clima favorável</span><span class="spec-val">Suporta vento; mais susceptível ao stress hídrico</span></li>
+          <li class="spec-item"><span class="spec-key">Conservação pós-maturação</span><span class="spec-val">Reduzida; apanhar antes da chuva de Setembro</span></li>
+          <li class="spec-item"><span class="spec-key">Acidez natural</span><span class="spec-val">Baixa, 4,5–6 g/l de acidez total</span></li>
+          <li class="spec-item"><span class="spec-key">Envelhecimento do vinho</span><span class="spec-val">Bom potencial para envelhecimento</span></li>
+          <li class="spec-item"><span class="spec-key">Qualidade do vinho</span><span class="spec-val">Boa; em condições óptimas, pode atingir qualidade excepcional</span></li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ── SCROLL ARROWS ─────────────────────── -->
+  <button class="scroll-arrow" id="scroll-up" aria-label="Rolar para cima">↑</button>
+  <button class="scroll-arrow" id="scroll-dn" aria-label="Rolar para baixo">↓</button>
+
+  <!-- ── MOBILE NAV ────────────────────────── -->
+  <nav class="mobile-nav">
+    <button class="mob-nav-btn" id="mob-prev">←</button>
+    <span class="mob-counter" id="mob-counter">1 / 20</span>
+    <button class="mob-nav-btn" id="mob-next">→</button>
+  </nav>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

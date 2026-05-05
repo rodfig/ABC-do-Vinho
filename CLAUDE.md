@@ -8,21 +8,18 @@ All content in **Portuguese**.
 
 ## Source Material
 
-PDFs live in `C:\Users\rodfi\Desktop\Documents\Wine\AEP\Profissional I\Modulo 1-5`.  
-Extract images from PDFs where they exist.
+PDFs live in `C:\Users\rodfi\Desktop\Documents\Wine\AEP\Profissional I\`.
 
-| Module | File | Pages |
+| Site Module | Source PDF | Notes |
 |---|---|---|
-| 1 | Módulo 1 - Texto para Estudo.pdf | 23 |
-| 2 | Módulo 2 - Texto para estudo.pdf | 142 |
-| 3 main | Modulo 3 - Texto para Estudo.pdf | 78 |
-| 3 sub | Módulo 3 - Espumantes - Texto para Estudo.pdf | — |
-| 3 sub | Módulo 3 - Madeira - Texto para Estudo.pdf | — |
-| 3 sub | Módulo 3 - Porto - Texto para Estudo.pdf | — |
-| 3 sub | Módulo 3 - Jerez - Texto para Estudo.pdf | — |
-| 4 | Módulo 4 - Texto para estudo.pdf | 26 |
-| 5a | Módulo 5 - Texto para estudo 1.pdf | 22 |
-| 5b | Módulo 5 - Texto para estudo 2.pdf | — |
+| 1 | Módulo 1/Módulo 1 - Texto para Estudo.pdf | 23 pages |
+| 2 | Módulo 2/Módulo 2 - Texto para estudo.pdf | pages 1–122 (viticultura, regiões) |
+| 3 | Módulo 2/Módulo 2 - Texto para estudo.pdf | pages 123–142 (casta fichas) |
+| 4 | Módulo 3/Modulo 3 - Texto para Estudo.pdf + sub-PDFs | espumantes, porto, madeira, jerez |
+| 5 | Módulo 4/Módulo 4 - Texto para estudo.pdf | 26 pages |
+| 6 | Módulo 5/Módulo 5 - Texto para estudo 1.pdf + 2.pdf | degustação |
+
+> Site modules do not map 1:1 to course PDFs. Modules 3–6 each draw from one or more PDFs.
 
 ---
 
@@ -37,84 +34,87 @@ Quizzes/tests — deferred to later phase.
 ## Site Map
 
 ```
-index.html                        ← Landing (5 module cards)
+index.html                        ← Landing (6 module cards)
 modulo1/index.html                ← 18 chapters, grouped sidebar (COMPLETE)
-modulo2/index.html                ← Fermentação e Defeitos (pending)
-modulo3/index.html                ← Castas landing (5 sub-cards) (pending)
-  modulo3/castas/index.html       ← Perfis Aromáticos (pending)
-  modulo3/espumantes/index.html   ← Vinhos Espumantes (pending)
-  modulo3/porto/index.html        ← Vinho do Porto (pending)
-  modulo3/madeira/index.html      ← Vinho da Madeira (pending)
-  modulo3/jerez/index.html        ← Jerez / Sherry (pending)
-modulo4/index.html                ← Serviço e Sommelier (pending)
-modulo5/index.html                ← Degustação (pending)
-css/styles.css                    ← Global reset, layout, typography, scroll arrows
-css/themes.css                    ← Per-module color themes
-js/main.js                        ← Chapter navigation engine (NOT slides.js)
+modulo2/index.html                ← 23 chapters — Viticultura, Regiões e Vinhos (COMPLETE)
+modulo3/index.html                ← 20 chapters — Castas de Portugal (COMPLETE)
+modulo4/index.html                ← Vinhos Especiais landing (4 sub-cards) (pending)
+  modulo4/espumantes/index.html   ← Vinhos Espumantes (pending)
+  modulo4/porto/index.html        ← Vinho do Porto (pending)
+  modulo4/madeira/index.html      ← Vinho da Madeira (pending)
+  modulo4/jerez/index.html        ← Jerez / Sherry (pending)
+modulo5/index.html                ← Serviço e Sommelier (pending)
+modulo6/index.html                ← Degustação (pending)
+css/styles.css                    ← Global reset, layout, typography, components
+js/main.js                        ← Chapter navigation engine
 ```
 
 ---
 
 ## Design System
 
-Mirrors Vinhos do Mundo. Dark gradient background, gold accent, per-module color themes.
+Mirrors Vinhos do Mundo. Cream page background, dark sidebar, gold accent, per-module color themes.
 
-**Global tokens:**
+**Global tokens (in CSS):**
 ```css
 --gold: #D4AF37
---bg-dark: #141414
---bg-card: rgba(255,255,255,0.05)
---cream: #FAF8F5
---font-serif: Georgia, serif
---font-sans: system-ui, sans-serif
+--page-bg: #F8F4EF
+--page-text: #2A2118
+--page-muted: #7A6858
 ```
 
-**Per-module themes:**
+**Per-module themes (data-module attribute on body):**
 
-| Module | Accent | Gradient dark |
-|---|---|---|
-| 1 — Viticultura | `#2D5A27` (forest green) | `#1A3318` |
-| 2 — Fermentação | `#7A4F1D` (amber) | `#3D2710` |
-| 3 — Castas | `#6B2737` (burgundy) | `#3A1420` |
-| 4 — Serviço | `#1E3A5F` (navy) | `#0F1E32` |
-| 5 — Degustação | `#7A3B2E` (terracotta) | `#3D1D17` |
+| Module | Content | Accent | CSS |
+|---|---|---|---|
+| 1 | História e Cultura | burgundy `#8B2935` | `[data-module="1"]` |
+| 2 | Viticultura e Regiões | forest green `#2D5A27` | `[data-module="2"]` |
+| 3 | Castas de Portugal | amber `#7A4F1D` | `[data-module="3"]` |
+| 4 | Vinhos Especiais | navy `#1E3A5F` | `[data-module="4"]` |
+| 5 | Serviço e Sommelier | terracotta `#7A3B2E` | `[data-module="5"]` |
+| 6 | Degustação | violet `#5B2E8A` | `[data-module="6"]` (add to CSS) |
 
-**Chapter format:** full-length scrollable page per topic section (not fixed-height slides).  
+**Chapter format:** full-length scrollable page per topic (not fixed-height slides).  
 **Chapter granularity:** one chapter per named section in the source PDFs.
+
+**Chapter numbering:** Sidebar nav-nums (e.g. `<span class="nav-num">01</span>`) are kept — they provide visual rhythm and position in the sidebar. Do NOT add `<p class="chapter-eyebrow">Capítulo XX</p>` to chapter content — it is redundant (sidebar already shows the number) and adds visual noise above the title.
 
 **Layout:**
 - Desktop: 230px fixed sidebar + `1fr` content area. Chapter `max-width: 820px`, left-aligned.
 - Mobile (≤768px): sidebar as fixed overlay drawer (hamburger toggle), bottom nav bar (prev/counter/next).
-- Scroll arrows: two ↑↓ buttons, `position: fixed`, vertically centered, `right: max(1rem, calc(100vw - 230px - 820px - 2.5rem))` — floats in whitespace beside text. Muted at top/bottom of scroll. Replaces browser scrollbar (hidden via `scrollbar-width: none`).
+- Scroll arrows: two ↑↓ buttons, `position: fixed`, vertically centred, `right: max(1rem, calc(100vw - 230px - 820px - 2.5rem))` — floats in whitespace beside text column. Muted at top/bottom of scroll.
 
+**Module 2 sidebar groups:** Viticultura / Terroir / Castas / Regiões de Portugal  
+**Module 3 sidebar groups:** Introdução / Tintas / Brancas  
 **Module 1 sidebar groups:** História / Classificação e Entidades / Portugal Hoje / Cultura e Futuro
 
 ---
 
 ## Slide Budget
 
-| Section | Slides est. |
-|---|---|
-| Módulo 1 | 40–50 |
-| Módulo 2 | 70–90 |
-| Módulo 3 — Castas | 30–40 |
-| Módulo 3 — Espumantes | 20–25 |
-| Módulo 3 — Porto | 25–30 |
-| Módulo 3 — Madeira | 20–25 |
-| Módulo 3 — Jerez | 20–25 |
-| Módulo 4 | 25–35 |
-| Módulo 5 | 40–50 |
-| **Total** | **~290–370** |
+| Module | Content | Chapters |
+|---|---|---|
+| 1 | História e Cultura | 18 (done) |
+| 2 | Viticultura e Regiões | 24 (done) |
+| 3 | Castas de Portugal | 20 (done) |
+| 4 | Vinhos Especiais (4 sub-modules) | ~80–100 est. |
+| 5 | Serviço e Sommelier | ~25–35 est. |
+| 6 | Degustação | ~40–50 est. |
 
 ---
 
 ## Build Order
 
-1. ✅ `css/styles.css` + `css/themes.css` + `js/main.js`
+1. ✅ `css/styles.css` + `js/main.js`
 2. ✅ `index.html` (landing)
-3. ✅ Module 1 (template validated — 18 chapters, grouped sidebar, mobile layout, scroll arrows)
-4. Modules 2, 3 (with sub-modules), 4, 5
-5. `print.css` + Puppeteer PDF export (later)
+3. ✅ Module 1 — 18 chapters
+4. ✅ Module 2 — 23 chapters (viticultura, terroir, regiões)
+5. ⚠️ Module 3 — built but disabled pending rework (disabled on landing)
+6. Module 4 — Vinhos Especiais (espumantes, porto, madeira, jerez sub-modules)
+7. Module 5 — Serviço e Sommelier
+8. Module 6 — Degustação
+9. Update landing `index.html` from 5 → 6 module cards
+10. `print.css` + Puppeteer PDF export (later)
 
 ## Deploy
 
@@ -124,6 +124,6 @@ GitHub → Vercel auto-deploy on push to `master`.
 
 ## Open Questions
 
-1. Module 2 mixes fermentation science with cocktail recipes — separate sub-section or integrated?
-2. Modules 1 and 3 overlap on soil science content — deduplicate or cross-reference?
-3. Modules 2 and 5 both cover ASI competition criteria — same treatment?
+1. Module 4: flat file or sub-module landing? (Currently planned as landing + 4 sub-modules.)
+2. Modules 1 and 2 overlap on soil science — cross-reference in Module 2 or note in Module 1?
+3. Modules 2 and 6 both cover tasting methodology — same treatment or different depth?

@@ -381,7 +381,11 @@ body.module-page {
   position: relative;
   height: calc(100vh - 50px);
   overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+
+.content::-webkit-scrollbar { display: none; }
 
 .chapter {
   display: none;
@@ -684,6 +688,51 @@ body.module-page {
 .chapter-end { display: none; }
 
 /* ============================================================
+   SCROLL ARROWS (bottom-right of lesson)
+   ============================================================ */
+.scroll-arrows {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: max(1rem, calc(100vw - 230px - 820px - 2.5rem));
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  z-index: 90;
+}
+
+.scroll-arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.88);
+  color: var(--page-text);
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s, background 0.15s;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.scroll-arrow.muted {
+  opacity: 0.18;
+  cursor: default;
+  pointer-events: none;
+}
+
+.scroll-arrow:not(.muted):hover {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+}
+
+body.sidebar-open .scroll-arrows { display: none; }
+
+/* ============================================================
    HAMBURGER BUTTON
    ============================================================ */
 .topbar-menu {
@@ -808,6 +857,12 @@ body.sidebar-open .sidebar-backdrop { display: block; }
 
   /* Comfortable reading padding; bottom clears the mobile nav bar */
   .chapter { padding: 2rem 1.25rem 5rem; }
+
+  .scroll-arrows {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.75rem;
+  }
 
   /* Landing and component grids go single column */
   .modules-grid { grid-template-columns: 1fr; }

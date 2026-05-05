@@ -15,10 +15,34 @@
   const mobNext  = document.getElementById('mob-next');
   const mobCount = document.getElementById('mob-counter');
 
+  /* Scroll arrows */
+  const scrollUp = document.getElementById('scroll-up');
+  const scrollDn = document.getElementById('scroll-dn');
+
   if (!chapters.length) return;
 
   let current = 0;
 
+  /* ── Scroll arrows ─────────────────────────── */
+  function updateScrollArrows() {
+    if (!scrollUp || !scrollDn || !content) return;
+    const atTop    = content.scrollTop <= 2;
+    const atBottom = content.scrollTop + content.clientHeight >= content.scrollHeight - 2;
+    scrollUp.classList.toggle('muted', atTop);
+    scrollDn.classList.toggle('muted', atBottom);
+  }
+
+  content?.addEventListener('scroll', updateScrollArrows, { passive: true });
+
+  scrollUp?.addEventListener('click', () => {
+    content?.scrollBy({ top: -Math.round(window.innerHeight * 0.6), behavior: 'smooth' });
+  });
+
+  scrollDn?.addEventListener('click', () => {
+    content?.scrollBy({ top: Math.round(window.innerHeight * 0.6), behavior: 'smooth' });
+  });
+
+  /* ── Chapter navigation ────────────────────── */
   function closeSidebar() { document.body.classList.remove('sidebar-open'); }
 
   function goTo(index) {
@@ -41,6 +65,8 @@
     if (mobNext)  mobNext.disabled  = current === chapters.length - 1;
     if (bar)      bar.style.width   = ((current + 1) / chapters.length * 100) + '%';
     if (mobCount) mobCount.textContent = (current + 1) + ' / ' + chapters.length;
+
+    updateScrollArrows();
   }
 
   /* Sidebar links */

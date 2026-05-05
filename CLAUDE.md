@@ -38,19 +38,19 @@ Quizzes/tests — deferred to later phase.
 
 ```
 index.html                        ← Landing (5 module cards)
-modulo1/index.html                ← Viticultura, Solos, Poda, Sommellerie
-modulo2/index.html                ← Fermentação e Defeitos
-modulo3/index.html                ← Castas landing (5 sub-cards)
-  modulo3/castas/index.html       ← Perfis Aromáticos
-  modulo3/espumantes/index.html   ← Vinhos Espumantes
-  modulo3/porto/index.html        ← Vinho do Porto
-  modulo3/madeira/index.html      ← Vinho da Madeira
-  modulo3/jerez/index.html        ← Jerez / Sherry
-modulo4/index.html                ← Serviço e Sommelier
-modulo5/index.html                ← Degustação
-css/styles.css                    ← Global reset, layout, typography
+modulo1/index.html                ← 18 chapters, grouped sidebar (COMPLETE)
+modulo2/index.html                ← Fermentação e Defeitos (pending)
+modulo3/index.html                ← Castas landing (5 sub-cards) (pending)
+  modulo3/castas/index.html       ← Perfis Aromáticos (pending)
+  modulo3/espumantes/index.html   ← Vinhos Espumantes (pending)
+  modulo3/porto/index.html        ← Vinho do Porto (pending)
+  modulo3/madeira/index.html      ← Vinho da Madeira (pending)
+  modulo3/jerez/index.html        ← Jerez / Sherry (pending)
+modulo4/index.html                ← Serviço e Sommelier (pending)
+modulo5/index.html                ← Degustação (pending)
+css/styles.css                    ← Global reset, layout, typography, scroll arrows
 css/themes.css                    ← Per-module color themes
-js/slides.js                      ← Shared slide navigation engine
+js/main.js                        ← Chapter navigation engine (NOT slides.js)
 ```
 
 ---
@@ -79,8 +79,15 @@ Mirrors Vinhos do Mundo. Dark gradient background, gold accent, per-module color
 | 4 — Serviço | `#1E3A5F` (navy) | `#0F1E32` |
 | 5 — Degustação | `#7A3B2E` (terracotta) | `#3D1D17` |
 
-**Slide format:** 1152×648px (16:9), same as Vinhos do Mundo.  
-**Slide granularity:** one slide per named section in the source PDFs.
+**Chapter format:** full-length scrollable page per topic section (not fixed-height slides).  
+**Chapter granularity:** one chapter per named section in the source PDFs.
+
+**Layout:**
+- Desktop: 230px fixed sidebar + `1fr` content area. Chapter `max-width: 820px`, left-aligned.
+- Mobile (≤768px): sidebar as fixed overlay drawer (hamburger toggle), bottom nav bar (prev/counter/next).
+- Scroll arrows: two ↑↓ buttons, `position: fixed`, vertically centered, `right: max(1rem, calc(100vw - 230px - 820px - 2.5rem))` — floats in whitespace beside text. Muted at top/bottom of scroll. Replaces browser scrollbar (hidden via `scrollbar-width: none`).
+
+**Module 1 sidebar groups:** História / Classificação e Entidades / Portugal Hoje / Cultura e Futuro
 
 ---
 
@@ -103,11 +110,15 @@ Mirrors Vinhos do Mundo. Dark gradient background, gold accent, per-module color
 
 ## Build Order
 
-1. `css/styles.css` + `css/themes.css` + `js/slides.js`
-2. `index.html` (landing)
-3. Module 1 (template validation)
+1. ✅ `css/styles.css` + `css/themes.css` + `js/main.js`
+2. ✅ `index.html` (landing)
+3. ✅ Module 1 (template validated — 18 chapters, grouped sidebar, mobile layout, scroll arrows)
 4. Modules 2, 3 (with sub-modules), 4, 5
 5. `print.css` + Puppeteer PDF export (later)
+
+## Deploy
+
+GitHub → Vercel auto-deploy on push to `master`.
 
 ---
 

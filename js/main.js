@@ -105,4 +105,13 @@
   }, { passive: true });
 
   goTo(0);
+
+  /* Copyright at sidebar bottom */
+  const sidebar = document.querySelector('.sidebar');
+  if (sidebar) {
+    const copy = document.createElement('div');
+    copy.className = 'sidebar-copyright';
+    copy.textContent = '© ' + new Date().getFullYear() + ' Rodrigo Figueiredo';
+    sidebar.appendChild(copy);
+  }
 })();

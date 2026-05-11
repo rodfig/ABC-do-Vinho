@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo IV — Fermentação e Vinificação · ABC do Vinho</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="module-page" data-module="4">
+
+  <div class="progress-bar"></div>
+
+  <header class="topbar">
+    <a class="topbar-back" href="../">← ABC do Vinho</a>
+    <div class="topbar-sep"></div>
+    <span class="topbar-title">IV &mdash; Fermentação e Vinificação</span>
+    <button class="topbar-menu" id="topbar-menu" aria-label="Capítulos">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="module-layout">
+
+    <!-- ── SIDEBAR ───────────────────────────── -->
+    <nav class="sidebar">
+      <div class="sidebar-module">Módulo IV</div>
+      <div class="sidebar-label">Capítulos</div>
+      <ol class="chapter-nav">
+
+        <li class="nav-group">Leveduras e FA</li>
+        <li><a href="#fa-intro"><span class="nav-num">01</span>Condução da Fermentação Alcoólica</a></li>
+        <li><a href="#flora-natural"><span class="nav-num">02</span>Flora Natural das Uvas e da Adega</a></li>
+        <li><a href="#inoculacao"><span class="nav-num">03</span>Inoculação de Leveduras</a></li>
+        <li><a href="#metabolismo"><span class="nav-num">04</span>Metabolismo das Leveduras</a></li>
+        <li><a href="#glicólise"><span class="nav-num">05</span>Glicólise e Equação da Fermentação</a></li>
+        <li><a href="#paragens"><span class="nav-num">06</span>Paragens de Fermentação</a></li>
+        <li><a href="#defeitos"><span class="nav-num">07</span>Defeitos Aromáticos e Compostos Sulfurosos</a></li>
+
+        <li class="nav-group">Condução</li>
+        <li><a href="#cinetica"><span class="nav-num">08</span>Cinética e Medição da Fermentação</a></li>
+        <li><a href="#temperatura"><span class="nav-num">09</span>Temperatura, CO₂ e Controlo Térmico</a></li>
+        <li><a href="#fml"><span class="nav-num">10</span>Fermentação Maloláctica</a></li>
+
+        <li class="nav-group">Maceração</li>
+        <li><a href="#maceracao-fundamentos"><span class="nav-num">11</span>Fundamentos da Maceração</a></li>
+        <li><a href="#tipos-maceracao"><span class="nav-num">12</span>Tipos de Maceração</a></li>
+        <li><a href="#remontagem"><span class="nav-num">13</span>Remontagem e Délestage</a></li>
+        <li><a href="#hiperoxi"><span class="nav-num">14</span>Hiperoxigenação e Crio-extracção</a></li>
+
+        <li class="nav-group">Vinificação</li>
+        <li><a href="#vindima-adega"><span class="nav-num">15</span>Da Vindima à Adega</a></li>
+        <li><a href="#defecacao-fa"><span class="nav-num">16</span>Defecação e Fermentação</a></li>
+        <li><a href="#desencuba-estagio"><span class="nav-num">17</span>Desencuba, Trasfegas e Estágio</a></li>
+        <li><a href="#clarificacao"><span class="nav-num">18</span>Clarificação, Estabilização e Engarrafamento</a></li>
+
+        <li class="nav-group">Estilos Especiais</li>
+        <li><a href="#naturais"><span class="nav-num">19</span>Vinhos Naturais</a></li>
+        <li><a href="#espumantes"><span class="nav-num">20</span>Vinhos Espumantes</a></li>
+        <li><a href="#fortificados"><span class="nav-num">21</span>Vinhos Fortificados</a></li>
+        <li><a href="#curtimenta"><span class="nav-num">22</span>Vinhos de Curtimenta</a></li>
+
+      </ol>
+      <div class="sidebar-arrows">
+        <button class="sb-arrow" id="ch-prev" title="Capítulo anterior">↑</button>
+        <button class="sb-arrow" id="ch-next" title="Próximo capítulo">↓</button>
+      </div>
+    </nav>
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <!-- ── CONTENT ───────────────────────────── -->
+    <main class="content">
+
+      <!-- 01 ─────────────────────────────────── -->
+      <section class="chapter" id="fa-intro">
+        <h1 class="chapter-title">Condução da Fermentação Alcoólica</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Saccharomyces</div>
+            <div class="fact-label">Agente principal</div>
+            <div class="fact-desc">Levedura dominante na FA</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">15–30 °C</div>
+            <div class="fact-label">Temperatura ideal</div>
+            <div class="fact-desc">Brancos: 15–20 °C · Tintos: 22–30 °C</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">17 g/L</div>
+            <div class="fact-label">Açúcar por 1% álcool</div>
+            <div class="fact-desc">Conversão aproximada</div>
+          </div>
+        </div>
+
+        <p>A fermentação alcoólica é o processo central da vinificação: as leveduras convertem os açúcares presentes no mosto — essencialmente glicose e frutose — em etanol e dióxido de carbono, libertando energia calorífica no processo. É uma reacção exotérmica que exige controlo activo por parte do enólogo. A concentração típica de açúcar nos mostos europeus situa-se entre <strong>180–260 g/L (18–26 °Brix)</strong>, produzindo 11–15% de álcool potencial.</p>
+
+        <p>O processo desenvolve-se em <strong>quatro fases distintas</strong>. A <strong>fase de latência</strong> (lag phase) corresponde ao período de adaptação das leveduras ao ambiente, sem crescimento celular visível. A <strong>fase exponencial</strong> é quando a população de leveduras cresce rapidamente e a produção de álcool é máxima; a densidade do mosto cai a olho nu. A <strong>fase de desaceleração</strong> ocorre quando o substrato começa a escassear e o etanol inicia a inibição progressiva do metabolismo. Por fim, a <strong>fase estacionária/final</strong> surge quando o açúcar está quase esgotado e as leveduras cessam a actividade fermentativa.</p>
+
+        <h2>Parâmetros Críticos da Fermentação</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Fator</th><th>Efeito</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Temperatura &lt;15 °C</td><td>Desacelera ou paralisa o metabolismo; risco de paragem</td></tr>
+            <tr><td>Temperatura &gt;30 °C</td><td>Acelera toxicidade do etanol; pode matar as leveduras</td></tr>
+            <tr><td>Azoto (YAN) insuficiente</td><td>Produção de H₂S, fermentação lenta, paragem</td></tr>
+            <tr><td>Deficiência de O₂ inicial</td><td>Membranas frágeis, menor tolerância ao álcool</td></tr>
+            <tr><td>pH 3,0–3,4</td><td>Favorece leveduras e inibe bactérias; abaixo de 3,0 começa a afectar também as leveduras</td></tr>
+            <tr><td>SO₂ excessivo</td><td>Inibe ou mata as leveduras sensíveis</td></tr>
+            <tr><td>Etanol &gt;13,5–14,5%</td><td>Toxicidade de membrana; paragem de fermentação</td></tr>
+          </tbody>
+        </table>
+
+        <dl class="region-facts">
+          <dt>Substrato</dt><dd>Glicose e frutose (açúcares fermentescíveis); a frutose é mais doce mas fermentada mais lentamente</dd>
+          <dt>Produto principal</dt><dd>Etanol (C₂H₅OH) + CO₂ — com produtos minoritários como glicerol, ácido succínico e ésteres</dd>
+          <dt>Fases</dt><dd>Latência (lag) → Exponencial → Desaceleração → Estacionária/Final</dd>
+        </dl>
+
+        <h2>Produtos Secundários da FA</h2>
+
+        <ul>
+          <li><strong>Glicerol</strong> (~7 g/L) — contribui para untuosidade e corpo</li>
+          <li><strong>Ácidos orgânicos</strong> — ácido succínico (gosto amargo-salgado), ácido acético (acidez volátil)</li>
+          <li><strong>Álcoois superiores</strong> — isoamílico, amílico, isobutílico; em excesso conferem aromas a solvente</li>
+          <li><strong>Ésteres</strong> — acetato de isoamilo (banana), acetato de etilo (frutado); positivos em concentrações baixas</li>
+          <li><strong>Compostos sulfurados</strong> — H₂S, mercaptanos; indesejados, resultam de stress nutricional (deficiência de azoto ou enxofre elementar)</li>
+        </ul>
+
+        <h2>Importância Enológica</h2>
+
+        <ul>
+          <li>Define o teor alcoólico e, portanto, a estrutura e o equilíbrio do vinho</li>
+          <li>Determina o perfil aromático secundário (ésteres, álcoois superiores formados pelas leveduras)</li>
+          <li>Assegura a estabilidade microbiológica do vinho final (etanol é inibitório)</li>
+          <li>A gestão correcta da FA é o factor mais determinante da qualidade enológica</li>
+        </ul>
+
+        <div class="callout">
+          <div class="callout-label">Regra prática</div>
+          <p>Álcool potencial (% v/v) ≈ <strong>0,592 × (Brix − 3)</strong>. Um mosto a 24 °Brix produz aproximadamente <strong>12,4% de álcool</strong>. Cada 17 g/L de açúcar geram ~1% de álcool. Uvas muito maduras (&gt;26 °Brix) aumentam o stress sobre as leveduras e o risco de paragem.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 02 ─────────────────────────────────── -->
+      <section class="chapter" id="flora-natural">
+        <h1 class="chapter-title">Flora Natural das Uvas e da Adega</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">10³–10⁶</div>
+            <div class="fact-label">UFC/mL no mosto fresco</div>
+            <div class="fact-desc">Leveduras + bactérias</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Non-Saccharomyces</div>
+            <div class="fact-label">Flora dominante inicial</div>
+            <div class="fact-desc">Torulaspora, Hanseniaspora...</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">&gt;4% álcool</div>
+            <div class="fact-label">Limiar de exclusão</div>
+            <div class="fact-desc">Saccharomyces toma o domínio</div>
+          </div>
+        </div>
+
+        <p>A superfície das uvas alberga uma microbiota diversa — leveduras, bolores e bactérias — que varia com a casta, a região, o clima e o estado sanitário da vindima. Esta flora é a base das fermentações espontâneas e confere parte do "terroir microbiológico" ao vinho.</p>
+
+        <h2>Microrganismos Presentes no Mosto</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Categoria</th><th>Exemplos</th><th>Papel</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Fungos filamentosos</td><td><em>Aspergillus niger, Penicillium, Rhizopus, Mucor, Botrytis cinerea</em></td><td>Contaminação fúngica; Botrytis pode ser desejada (podridão nobre) ou indesejada</td></tr>
+            <tr><td>Bactérias acéticas</td><td><em>Acetobacter, Gluconobacter</em></td><td>Produzem ácido acético (acidez volátil) — indesejadas</td></tr>
+            <tr><td>Bactérias lácticas</td><td><em>Oenococcus oeni, Lactobacillus plantarum</em></td><td>Desejadas para FML; podem ser indesejadas se não controladas</td></tr>
+            <tr><td>Bacilos</td><td><em>Bacillus</em> spp.</td><td>Raramente problemáticos em mostos normais</td></tr>
+            <tr><td>Leveduras oxidativas</td><td><em>Pichia, Candida, Kluyveromyces</em></td><td>Activas em presença de O₂; produzem ésteres mas sensíveis ao etanol</td></tr>
+            <tr><td>Leveduras fermentativas non-Sacch.</td><td><em>Kloeckera apiculata</em> (regiões frias) / <em>Hanseniaspora uvarum</em> (regiões quentes), <em>Torulaspora delbrueckii, Lachancea thermotolerans</em></td><td>Dominam o início da FA; desaparecem acima de 4–5% álcool; <em>Kloeckera</em> e <em>Hanseniaspora</em> são a mesma espécie em diferentes fases do ciclo — <em>Kloeckera</em> é a forma assexuada, predominante em regiões frias</td></tr>
+            <tr><td>Leveduras indesejadas</td><td><em>Brettanomyces bruxellensis, Zygosaccharomyces bailii</em></td><td>Produzem compostos fenólicos (4-EF, 4-EG) ou resistem ao SO₂ — contaminação</td></tr>
+            <tr><td>Levedura dominante FA</td><td><em>Saccharomyces cerevisiae</em></td><td>Tolerante ao álcool e SO₂; conduz a FA até ao fim</td></tr>
+          </tbody>
+        </table>
+
+        <dl class="region-facts">
+          <dt>Factores de diversidade</dt><dd>Casta, maturação, estado sanitário, clima, anos de uso do equipamento — definem o "terroir microbiológico"</dd>
+          <dt>Leveduras não-Saccharomyces</dt><dd>Desaparecem acima de 4–5% álcool; algumas são co-inoculadas deliberadamente para complexidade aromática (<em>Torulaspora delbrueckii</em>)</dd>
+          <dt>Brettanomyces</dt><dd>Produz 4-etilfenol (4-EF) e 4-etilguaiacol (4-EG) — aromas de curral, emplasto, estábulo; controlado com SO₂ e higienização rigorosa</dd>
+        </dl>
+
+        <h2>Fatores que Influenciam a Flora Natural das Uvas</h2>
+
+        <ul>
+          <li><strong>Precipitação e humidade</strong> — anos húmidos favorecem fungos e bactérias; anos secos favorecem leveduras</li>
+          <li><strong>Altitude</strong> — temperaturas mais baixas em altitude seleccionam flora distinta (mais <em>Kloeckera</em>)</li>
+          <li><strong>Tratamentos fitossanitários</strong> — fungicidas reduzem drasticamente a flora epifítica</li>
+          <li><strong>Ataques de pragas</strong> (Botrytis, moscas) — introduzem microrganismos indesejados</li>
+          <li><strong>Fertilização azotada</strong> — mostos mais ricos em azoto favorecem crescimento bacteriano</li>
+          <li><strong>Gestão de resíduos da vindima</strong> — bagaço e engaço deixados na vinha inoculam o solo com flora diversa</li>
+          <li><strong>Condições de assepsia da adega</strong> — adegas limpas e novas têm menos flora nativa; adegas antigas têm cepas estabelecidas</li>
+        </ul>
+
+        <h2>Fatores que Influenciam a Sobrevivência das Leveduras</h2>
+
+        <ul>
+          <li><strong>Temperatura</strong> — fora de 10–35 °C a actividade cessa; acima de 40 °C são destruídas</li>
+          <li><strong>Concentração de etanol</strong> — toxicidade de membrana acima de 13–14% vol.</li>
+          <li><strong>Pressão osmótica</strong> — mostos muito concentrados (&gt;30 °Brix) inibem o crescimento celular logo no início</li>
+          <li><strong>pH</strong> — pH 3,0–3,4 favorece as leveduras; valores mais baixos ou mais altos são inibitórios</li>
+          <li><strong>Disponibilidade de nutrientes</strong> — YAN &lt;150 mg/L causa stress, produção de H₂S e risco de paragem</li>
+        </ul>
+
+        <h2>Leveduras Tolerantes ao Final da Fermentação</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Espécie</th><th>Tolerância ao Álcool</th><th>Papel no Final da FA</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><em>Saccharomyces cerevisiae</em></td><td>13–15% vol. (algumas estirpes até 18%)</td><td>Domina e conclui a fermentação</td></tr>
+            <tr><td><em>Saccharomyces bayanus</em></td><td>Até 18–20% vol.</td><td>Usado em re-arranques e vinhos de alta graduação</td></tr>
+            <tr><td><em>Zygosaccharomyces bailii</em></td><td>Alta — e resiste ao SO₂</td><td>Contaminante grave em vinhos com açúcar residual</td></tr>
+            <tr><td><em>Brettanomyces bruxellensis</em></td><td>Moderada</td><td>Activo em vinho já fermentado — produz 4-EF e 4-EG</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <div class="callout-label">Flora da adega</div>
+          <p>Adegas com anos de produção acumulam populações estáveis de <em>Saccharomyces cerevisiae</em> nas madeiras, bombas e superfícies — estas cepas "de casa" conduzem naturalmente as fermentações espontâneas. É o que se chama "terroir microbiológico" e explica por que o mesmo enólogo num estabelecimento diferente obtém vinhos diferentes.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 03 ─────────────────────────────────── -->
+      <section class="chapter" id="inoculacao">
+        <h1 class="chapter-title">Inoculação de Leveduras</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">20–30 g/hL</div>
+            <div class="fact-label">Dose típica de inoculação</div>
+            <div class="fact-desc">Levedura liofilizada (LSA)</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">35–40 °C</div>
+            <div class="fact-label">Temperatura de reidratação</div>
+            <div class="fact-desc">Água morna, nunca no mosto</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">2 L/hL</div>
+            <div class="fact-label">Volume de inóculo final</div>
+            <div class="fact-desc">2% do volume total</div>
+          </div>
+        </div>
+
+        <p>A decisão entre inoculação com levedura seleccionada e fermentação espontânea é uma das primeiras escolhas enológicas da vindima. A inoculação garante arranque rápido, consistência e previsibilidade de perfil aromático.</p>
+
+        <h2>Características de uma Boa Levedura de Vinho</h2>
+
+        <ul>
+          <li>Alta tolerância ao etanol (≥14% v/v)</li>
+          <li>Boa capacidade fermentativa em condições de stress</li>
+          <li>Baixa produção de acidez volátil (ácido acético)</li>
+          <li>Baixa produção de compostos sulfurados (H₂S)</li>
+          <li>Produção equilibrada de álcoois superiores e ésteres</li>
+          <li>Resistência às temperaturas de fermentação (12–30 °C)</li>
+          <li>Arranque rápido e domínio sobre a flora selvagem</li>
+          <li>Baixa produção de espuma (facilidade de gestão)</li>
+          <li>Capacidade de floculação (sedimentação limpa)</li>
+          <li>Resistência ao SO₂</li>
+          <li>Capacidade de fermentar a temperaturas baixas (brancos)</li>
+          <li>Expressão aromática adequada ao estilo do vinho</li>
+          <li>Ausência do factor killer (ou portadora do factor killer)</li>
+        </ul>
+
+        <h2>Leveduras Secas Activas (LSA)</h2>
+
+        <ul>
+          <li>Desidratadas industrialmente por processo de liofilização ou spray-drying</li>
+          <li>Embaladas sob atmosfera de azoto (N₂) para proteger da oxidação</li>
+          <li>Humidade residual ≤ 9% — garante viabilidade e longa conservação</li>
+          <li>Armazenadas em frio (4–8 °C); validade de 1 ano após abertura em condições correctas</li>
+          <li>A desidratação destrói parcialmente a permeabilidade da membrana celular</li>
+          <li>Reidratação obrigatória em água morna a <strong>37–40 °C</strong>, 20–30 minutos (Go-Ferm® recomendado)</li>
+          <li>Doses: 0,1–0,3 g/L de mosto → cerca de <strong>10 000 000 células/mL</strong> (10⁷ cél/mL)</li>
+        </ul>
+
+        <h2>Sequência de Inoculação</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Etapa</th><th>Procedimento</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Reidratação</td><td>5 mL de água morna (35–40 °C) por grama de levedura; agitar suavemente; 20 minutos de repouso</td></tr>
+            <tr><td>Pré-activação</td><td>Adicionar ao volume de ~250 mL de mosto; aguardar 15–20 min</td></tr>
+            <tr><td>Adaptação</td><td>Diluir progressivamente até ~12,5 L (2% do volume final); agitar suavemente</td></tr>
+            <tr><td>Inoculação final</td><td>Adicionar ao tanque de fermentação (2 L de inóculo por hL de mosto)</td></tr>
+          </tbody>
+        </table>
+
+        <dl class="region-facts">
+          <dt>Estratégia intermédia</dt><dd>Inocular quando o mosto está a 13 °Brix — a levedura já encontra menos competição e o mosto é menos concentrado (menos stressante)</dd>
+          <dt>Inóculo líquido (pé-de-cuba)</dt><dd>Fermentação prévia de pequeno volume de mosto com flora nativa; método artesanal para activar leveduras autóctones</dd>
+          <dt>Go-Ferm®</dt><dd>Protector de membrana celular durante a reidratação; reduz stress osmótico e térmico; recomendado para leveduras secas activas (LSA)</dd>
+          <dt>Tempo após SO₂</dt><dd>Aguardar 12–24 horas após a adição de SO₂ antes de inocular — o excesso de SO₂ livre mata as leveduras</dd>
+        </dl>
+
+        <h2>Fermentação Natural ou Espontânea</h2>
+
+        <p>Na fermentação espontânea, nenhuma levedura é adicionada. A flora natural da vinha e da adega conduz o processo. O resultado é geralmente mais complexo mas menos previsível.</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Vantagens</th><th>Riscos</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Maior complexidade aromática e terroir microbiológico</td><td>Arranque lento — janela de contaminação mais longa</td></tr>
+            <tr><td>Diversidade de estirpes selvagens contribui para perfil único</td><td>Risco de paragem se a flora não for robusta</td></tr>
+            <tr><td>Sem necessidade de levedura comercial (custo e sustentabilidade)</td><td>Inconsistência entre colheitas — difícil replicar</td></tr>
+            <tr><td>Valorizada em vinhos naturais e biológicos</td><td>Maior risco de defeitos aromáticos (H₂S, mercaptanos, acidez volátil)</td></tr>
+          </tbody>
+        </table>
+
+        <p><strong>Estirpes selvagens:</strong> cepas de <em>Saccharomyces cerevisiae</em> presentes na adega há anos, adaptadas às condições locais. Podem ser isoladas, caracterizadas e reutilizadas como culturas-mãe — meio-termo entre espontânea e inoculada.</p>
+
+        <h2>O Domínio da <em>Saccharomyces cerevisiae</em></h2>
+
+        <ul>
+          <li>Produz etanol em concentrações letais para os competidores (efeito de exclusão)</li>
+          <li>Tolera pH baixo, SO₂ e temperaturas entre 10–35 °C — mais resistente que a maioria das leveduras não-Saccharomyces</li>
+          <li>Algumas estirpes produzem a toxina killer (K2) que elimina leveduras sensíveis</li>
+          <li>A partir de 4–5% de álcool, a maioria das leveduras non-Saccharomyces morre — <em>S. cerevisiae</em> toma o controlo completo</li>
+        </ul>
+
+        <div class="callout">
+          <div class="callout-label">Factor killer</div>
+          <p>Algumas estirpes de <em>Saccharomyces</em> produzem a toxina K2 (factor killer), que mata outras leveduras sensíveis. Em fermentações espontâneas, uma cepa killer dominante pode suprimir cepas desejáveis. A solução: inocular com uma cepa comercial que seja também killer — ou portadora do factor killer — para garantir o domínio sobre a flora da adega.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 04 ─────────────────────────────────── -->
+      <section class="chapter" id="metabolismo">
+        <h1 class="chapter-title">Metabolismo das Leveduras</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Efeito Crabtree</div>
+            <div class="fact-label">Glicose &gt; 2 g/L</div>
+            <div class="fact-desc">Fermentação preferida à respiração</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">YAN 200–300 mg/L</div>
+            <div class="fact-label">Azoto assimilável ideal</div>
+            <div class="fact-desc">Brancos: 200–250 · Tintos: 250–300</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">DAP</div>
+            <div class="fact-label">Fosfato de Diamónio</div>
+            <div class="fact-desc">Suplemento azotado standard</div>
+          </div>
+        </div>
+
+        <h2>Açúcares Fermentescíveis pelo <em>Saccharomyces cerevisiae</em></h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Tipo</th><th>Açúcares</th><th>Nota</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Monossacáridos</td><td>Glicose, Frutose, Manose, Galactose</td><td>Fermentados directamente; Glicose consumida mais rápido</td></tr>
+            <tr><td>Dissacáridos</td><td>Sacarose, Maltose, Melibiose</td><td>Hidrolisados por invertase ou maltase antes de entrar na célula</td></tr>
+            <tr><td>Não fermentescíveis</td><td>Lactose, Pentoses (Xilose, Arabinose), Rafinose (parcial)</td><td><em>S. cerevisiae</em> não possui as enzimas necessárias para estes açúcares</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Metabolismo do Carbono</h2>
+
+        <p>A glicose e frutose são catabolizadas pela glicólise em piruvato. Consoante a concentração de glicose e a disponibilidade de O₂, a levedura escolhe entre respiração e fermentação:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Concentração de Glicose</th><th>Via Metabólica</th><th>Resultado</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>&lt; 0,2 g/L</td><td>Respiração aeróbia (se O₂ disponível)</td><td>CO₂ + H₂O + ATP (maior energia)</td></tr>
+            <tr><td>0,2 – 2 g/L</td><td>Transição (mista)</td><td>Algum etanol + crescimento celular</td></tr>
+            <tr><td>&gt; 2 g/L</td><td><strong>Fermentação (Efeito Crabtree)</strong></td><td>Etanol + CO₂ predominantes mesmo com O₂</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Substratos Respiratórios</h2>
+
+        <p>Em condições de escassez de glicose (&lt;0,2 g/L), <em>S. cerevisiae</em> pode respirar compostos alternativos:</p>
+
+        <ul>
+          <li><strong>Piruvato</strong> — produto da glicólise; oxidado no ciclo de Krebs</li>
+          <li><strong>Lactato</strong> — convertido a piruvato pela lactato desidrogenase</li>
+          <li><strong>Acetato</strong> — oxidado via acetil-CoA</li>
+          <li><strong>Etanol</strong> — pode ser reoxidado a acetaldeído e depois a acetato</li>
+          <li><strong>Glicerol</strong> — convertido a dihidroxiacetona fosfato e depois oxidado</li>
+        </ul>
+
+        <h2>Metabolismo Não Carbónico</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Nutriente</th><th>Papel</th><th>Consequência da Deficiência</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Azoto (FAN/YAN)</td><td>Síntese proteica, crescimento celular</td><td>H₂S, mercaptanos, fermentação lenta</td></tr>
+            <tr><td>Fósforo</td><td>Síntese de ATP e fosfolípidos</td><td>Raramente limitante em mostos saudáveis</td></tr>
+            <tr><td>Enxofre</td><td>Síntese de cisteína e metionina</td><td>Excesso de enxofre elementar nas uvas → H₂S</td></tr>
+            <tr><td>Tiamina (Vitamina B1)</td><td>Co-factor essencial da piruvato descarboxilase</td><td>Fermentações lentas (especialmente em mostos com podridão)</td></tr>
+            <tr><td>Sódio (Na⁺) em excesso</td><td>Inibidor osmótico</td><td>Toxicidade a concentrações elevadas</td></tr>
+            <tr><td>Oxigénio (início FA)</td><td>Biossíntese de esteróis e ácidos gordos insaturados</td><td>Membranas frágeis, menor tolerância ao álcool</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <div class="callout-label">Limitação do metabolismo azotado</div>
+          <p><em>Saccharomyces cerevisiae</em> <strong>não consegue metabolizar o nitrato (NO₃⁻), o nitrito (NO₂⁻) nem as aminas</strong> como fonte de azoto. A única forma de azoto assimilável para a levedura são os aminoácidos, a amónia (NH₄⁺) e certas fontes de YAN (azoto assimilável pelas leveduras). Por isso, a suplementação azotada usa DAP (fosfato de diamónia) e misturas de aminoácidos (Fermaid®), nunca nitrato.</p>
+        </div>
+
+        <figure>
+          <img src="img/fig 1.png" alt="Transição Metabólica em Saccharomyces cerevisiae — curvas de fermentação vs respiração em função da concentração de glicose">
+          <figcaption>Transição Metabólica em <em>S. cerevisiae</em>: abaixo de 0,2 g/L predomina a respiração; acima de 2 g/L (Efeito Crabtree) a fermentação é preferida mesmo com O₂ presente.</figcaption>
+        </figure>
+
+        <div class="callout">
+          <div class="callout-label">Efeito Crabtree</div>
+          <p>Mesmo em presença de oxigénio, <em>S. cerevisiae</em> em mostos ricos em açúcares (&gt;2 g/L) prefere a via fermentativa. Este fenómeno garante que a produção de etanol arranca imediatamente — vantagem competitiva que a levedura evoluiu para excluir outros microrganismos do substrato. Em mostos quase esgotados (&lt;0,2 g/L), a respiração pode ser retomada se houver O₂.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 05 ─────────────────────────────────── -->
+      <section class="chapter" id="glicólise">
+        <h1 class="chapter-title">Glicólise e Equação da Fermentação</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">180 g glicose</div>
+            <div class="fact-label">→ 92 g etanol + 88 g CO₂</div>
+            <div class="fact-desc">Equação de Gay-Lussac (massas reais)</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">10 passos</div>
+            <div class="fact-label">Reacções enzimáticas</div>
+            <div class="fact-desc">Da glicose ao piruvato</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">2 ATP + 2 NADH</div>
+            <div class="fact-label">Energia produzida</div>
+            <div class="fact-desc">Por molécula de glicose</div>
+          </div>
+        </div>
+
+        <p>A glicólise decorre em dez reacções enzimáticas no citoplasma, convertendo uma molécula de glicose em dois piruvatos. Na via fermentativa, o piruvato é descarboxilado a acetaldeído (CO₂ libertado) e depois reduzido a etanol — regenerando NAD⁺ para manter o fluxo glicílitico activo.</p>
+
+        <h2>Equação Global</h2>
+
+        <div class="callout">
+          <div class="callout-label">Equação de Gay-Lussac</div>
+          <p><strong>C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂</strong><br>
+          Em massas: <strong>180 g de glicose → 92 g de etanol + 88 g de CO₂</strong><br>
+          A velocidade de fermentação tem um pico à volta de 30 °C; abaixo de 15 °C desacelera marcadamente; acima de 35 °C as leveduras morrem.</p>
+        </div>
+
+        <figure>
+          <img src="img/fig 2.png" alt="Diagrama da Glicólise e Fermentação — etapas intracelulares desde a glicose ao etanol e CO₂">
+          <figcaption>Etapas da glicólise: glicose e frutose entram na célula, passam pelo transportador, são convertidas em piruvato (10 reacções), que depois origina acetaldeído → etanol + CO₂ na via fermentativa.</figcaption>
+        </figure>
+
+        <h2>Açúcares Fermentescíveis</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Tipo</th><th>Exemplos</th><th>Nota</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Monossacáridos (hexoses)</td><td>Glicose, Frutose</td><td>Fermentados directamente pela levedura</td></tr>
+            <tr><td>Dissacáridos</td><td>Sacarose</td><td>Hidrolisada pela invertase antes de entrar na célula</td></tr>
+            <tr><td>Trissacáridos</td><td>Rafinose (parcial)</td><td>Só parcialmente fermentada por <em>S. cerevisiae</em></td></tr>
+          </tbody>
+        </table>
+
+        <h2>Produtos Secundários</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Composto</th><th>Impacto no Vinho</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Glicerol (~7 g/L)</td><td>Untuosidade e corpo</td></tr>
+            <tr><td>Ácido succínico</td><td>Gosto amargo-salgado</td></tr>
+            <tr><td>Acetaldeído</td><td>Aroma a maçã verde/oxidação; diminui com SO₂</td></tr>
+            <tr><td>Álcool isoamílico</td><td>Banana, solvente — predominante entre os álcoois superiores</td></tr>
+            <tr><td>Álcool amílico</td><td>Aroma a solvente em excesso</td></tr>
+            <tr><td>Álcool isobutílico</td><td>Aroma a solvente</td></tr>
+            <tr><td>Álcool isopropílico</td><td>Aroma a solvente</td></tr>
+            <tr><td>Ésteres (acetato de isoamilo)</td><td>Banana, frutos tropicais — aromas positivos</td></tr>
+          </tbody>
+        </table>
+
+        <dl class="region-facts">
+          <dt>Glicose vs. Frutose</dt><dd>A glicose é consumida mais rapidamente; no final da fermentação predomina a frutose, mais doce — razão pela qual vinhos com açúcar residual parecem mais "doces" do que o valor analítico sugere</dd>
+          <dt>Temperatura e cinética</dt><dd>Pico de velocidade a ~30 °C; abaixo de 15 °C a fermentação abranda markadamente; acima de 35 °C as leveduras morrem</dd>
+        </dl>
+
+        <figure>
+          <img src="img/fig 3.png" alt="Gráfico: Degradação da Glucose vs Frutose ao longo do tempo — curvas de concentração em g/L">
+          <figcaption>Degradação comparada da glicose e da frutose durante a fermentação. A glicose (azul) é consumida mais rapidamente; a frutose (laranja) permanece mais tempo — razão pela qual o final de fermentação tende a ter mais frutose residual.</figcaption>
+        </figure>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 06 ─────────────────────────────────── -->
+      <section class="chapter" id="paragens">
+        <h1 class="chapter-title">Paragens de Fermentação</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Densidade estável</div>
+            <div class="fact-label">Sinal de alerta</div>
+            <div class="fact-desc">&gt;1.010 g/cm³ por 3+ dias</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Curva em S</div>
+            <div class="fact-label">Fermentação saudável</div>
+            <div class="fact-desc">Descida até ~0,995 g/cm³</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Pé-de-cuba</div>
+            <div class="fact-label">Último recurso</div>
+            <div class="fact-desc">Aclimatação progressiva ao álcool</div>
+          </div>
+        </div>
+
+        <p>Uma paragem de fermentação é crítica: as leveduras interrompem a conversão de açúcares antes da conclusão, deixando açúcar residual que compromete a estabilidade microbiológica do vinho. A fermentação <strong>completa</strong> tem curva sigmoide, descendo para ~0,995 g/cm³; a <strong>parada</strong> estagna tipicamente em torno de 1,030 g/cm³.</p>
+
+        <h2>Causas das Paragens</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Categoria</th><th>Subcategoria</th><th>Exemplos / Explicações</th></tr>
+          </thead>
+          <tbody>
+            <tr><td rowspan="3">Deficiências Nutritivas</td><td>Azoto (YAN/FAN)</td><td>YAN &lt;150 mg/L; suplementar com DAP (fosfato de diamónio)</td></tr>
+            <tr><td>Micronutrientes e vitaminas</td><td>Raramente limitantes, excepto em mostos com podridão ou pés-de-cuba mal preparados</td></tr>
+            <tr><td>Oxigénio</td><td>Essencial no início para biossíntese de esteróis e ácidos gordos insaturados</td></tr>
+            <tr><td rowspan="3">Inibição</td><td>Etanol tóxico</td><td>Acima de 13,5–14,5% vol.; danifica membranas, inibe transporte de açúcar</td></tr>
+            <tr><td>Ácidos gordos</td><td>Ácidos gordos de cadeia média inibem as leveduras</td></tr>
+            <tr><td>Pressão osmótica</td><td>Mostos muito concentrados inibem o crescimento celular logo no início</td></tr>
+            <tr><td rowspan="3">Substâncias Tóxicas</td><td>Pesticidas e fungicidas</td><td>Resíduos nas uvas podem matar as leveduras; problema em vindimas com tratamentos tardios</td></tr>
+            <tr><td>Factor killer</td><td>Toxina K2 de leveduras selvagens; resolver com inoculação de estirpes resistentes</td></tr>
+            <tr><td>Ácidos orgânicos</td><td>Acetato ou propionato em mostos contaminados</td></tr>
+            <tr><td rowspan="2">Choque Térmico</td><td>Sobre-arrefecimento (&lt;15 °C)</td><td>Retarda ou bloqueia metabolismo</td></tr>
+            <tr><td>Sobre-aquecimento (&gt;32 °C)</td><td>Acelera toxicidade do etanol; pode desnaturar enzimas e matar células</td></tr>
+            <tr><td>Excesso de SO₂</td><td>—</td><td>Impede a fermentação ou mata leveduras sensíveis</td></tr>
+            <tr><td>Contaminações fúngicas</td><td>—</td><td>Botrytis e outros fungos produzem laccase e compostos inibitórios</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Efeito Tóxico do Etanol</h2>
+
+        <p>O etanol acumulado é o principal agente inibitório no final da fermentação. Age através de quatro mecanismos:</p>
+
+        <ol>
+          <li>Inibe a absorção de açúcares e aminoácidos — transportadores de membrana ficam comprometidos</li>
+          <li>Danifica as membranas fosfolipídicas — aumenta a fluidez e permeabilidade não selectiva</li>
+          <li>Causa perda de magnésio (Mg²⁺) e cálcio (Ca²⁺) intracelulares — essenciais para enzimas</li>
+          <li>Reduz o pH intracelular — compromete a actividade enzimática e o gradiente de protões</li>
+        </ol>
+
+        <h2>Produção de Defeitos Aromáticos por Stress Fermentativo</h2>
+
+        <ul>
+          <li><strong>Ácido acético + acetato de etilo</strong> — acidez volátil; aromas a vinagre e cola; resultado de stress nutricional ou contaminação bacteriana</li>
+          <li><strong>Álcoois superiores</strong> (isoamílico, amílico) — em excesso conferem aromas a solvente; produzidos em fermentação quente ou com stress azotado</li>
+          <li><strong>Fenóis voláteis</strong> (4-etilfenol, 4-etilguaiacol) — produzidos por <em>Brettanomyces</em>; aromas de curral e emplasto</li>
+          <li><strong>Compostos sulfurados</strong> (H₂S, tióis, dimetil sulfídrico, etil mercaptano) — resultado de deficiência de azoto, enxofre elementar residual ou autólise de leveduras</li>
+        </ul>
+
+        <h2>Paragens Intencionais</h2>
+
+        <p>Em certos estilos, a fermentação é interrompida deliberadamente antes da conclusão, preservando açúcar residual:</p>
+
+        <ul>
+          <li><strong>Zinfandel californiano de colheita tardia</strong> — alta concentração de açúcar + álcool elevado; fermentação para naturalmente</li>
+          <li><strong>Amarone della Valpolicella</strong> — uvas passificadas (appassimento); yeasts param pelo stress combinado de açúcar e álcool</li>
+          <li><strong>Vinhos naturais</strong> — sem inoculação nem nutrição; leveduras selvagens frequentemente param antes do fim</li>
+          <li><strong>Sauternes</strong> e outros botrytizados — açúcar muito elevado inibe as leveduras</li>
+          <li><strong>Vin Doux Naturel</strong> (França) — adição de aguardente para interromper a fermentação (como o Porto)</li>
+        </ul>
+
+        <h2>Prevenção e Resolução</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Etapa</th><th>Ação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Análise do mosto</td><td>Verificar Brix, pH e YAN antes da fermentação</td></tr>
+            <tr><td>Hidratação da levedura</td><td>Reidratar com Go-Ferm® a 35–40 °C — não directamente no mosto</td></tr>
+            <tr><td>Controlo de temperatura</td><td>Manter dentro da faixa ideal: brancos 12–18 °C, tintos 20–28 °C</td></tr>
+            <tr><td>Gestão de nutrientes</td><td>Adições fraccionadas de DAP/Fermaid — 1ª dose a 1/3 do açúcar consumido</td></tr>
+            <tr><td>Oxigenação inicial</td><td>Fornecer durante o primeiro 1/3 da fermentação</td></tr>
+            <tr><td>Higienização</td><td>Manter todo o equipamento e mosto limpos; esperar 12–24 h após adição de SO₂ antes da inoculação</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Protocolo de Resolução de Paragem (6 Passos)</h2>
+
+        <ol>
+          <li>Corrigir a temperatura — levar a 20–22 °C para reactivar o metabolismo</li>
+          <li>Reagitar as borras (se as leveduras ainda estiverem viáveis) — bâtonnage pode reactivar células dormentes</li>
+          <li>Não adicionar vitaminas sem diagnóstico prévio — excesso de tiamina pode ser inibitório</li>
+          <li>Trasfegas das borras mortas — remover células lisadas que libertam ácidos gordos inibitórios</li>
+          <li>Sulfitar levemente e re-inocular com cepa killer tolerante ao álcool — aclimatar progressivamente</li>
+          <li>Corrigir o azoto com DAP se YAN &lt; 200 mg/L — nutrição essencial para o re-arranque</li>
+        </ol>
+
+        <figure>
+          <img src="img/fig 5.png" alt="Evolução da Densidade do Mosto: fermentação completa (curva verde) vs fermentação parada (curva vermelha tracejada)">
+          <figcaption>Evolução da densidade ao longo de 14 dias: fermentação completa (verde) desce até ~0,995 g/cm³; fermentação parada (vermelho) estagna a ~1,030 g/cm³ — sinal de stuck fermentation que exige intervenção imediata.</figcaption>
+        </figure>
+
+        <div class="callout">
+          <div class="callout-label">Protocolo de restart</div>
+          <p><strong>1.</strong> Escolher cepa tolerante ao álcool (≥14%). <strong>2.</strong> Hidratar a 35–38 °C com Go-Ferm®. <strong>3.</strong> Adaptar gradualmente: misturar com partes iguais de vinho + mosto fresco → fermentar 4–6h → adicionar porções crescentes do vinho parado ao longo de 12–24h. <strong>4.</strong> Monitorizar a densidade diariamente. A chave é a <strong>aclimatação progressiva</strong> — o choque de etanol é o principal inimigo das leveduras de restart.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 07 ─────────────────────────────────── -->
+      <section class="chapter" id="defeitos">
+        <h1 class="chapter-title">Defeitos Aromáticos e Compostos Sulfurosos</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">H₂S</div>
+            <div class="fact-label">Ovo podre / esgoto</div>
+            <div class="fact-desc">Limiar olfativo: 0,8–1,5 μg/L</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Mercaptanos</div>
+            <div class="fact-label">Cebola / borracha / couro</div>
+            <div class="fact-desc">Detectáveis a &lt;1 ppb</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Cu²⁺ 0,05–0,3 mg/L</div>
+            <div class="fact-label">Tratamento com cobre</div>
+            <div class="fact-desc">Limite UE: 1 mg/L total</div>
+          </div>
+        </div>
+
+        <p>Quando a fermentação é comprometida — por stress nutricional, temperaturas extremas, excesso de SO₂, enxofre elementar nas uvas ou <strong>resíduos de pesticidas e herbicidas</strong> — surgem compostos sulfurados indesejados. Estes compostos são altamente voláteis e detectáveis em concentrações mínimas.</p>
+
+        <h2>Mercaptanos "Defeituosos"</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Composto</th><th>Aroma Percebido</th><th>Limiar Olfativo (ppb)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Metanotiol (CH₃SH)</td><td>Repolho cozido, borracha</td><td>2–5</td></tr>
+            <tr><td>Etanotiol (C₂H₅SH)</td><td>Cebola crua, gás, suor</td><td>1–3</td></tr>
+            <tr><td>Propanotiol</td><td>Couro velho, alho</td><td>&lt;10</td></tr>
+            <tr><td>Butanotiol</td><td>Queijo velho, cebola</td><td>~10</td></tr>
+          </tbody>
+        </table>
+
+        <p>Mercaptanos defeituosos formam-se por três vias distintas:</p>
+
+        <ol>
+          <li><strong>Transformação do H₂S residual</strong> — reage com compostos carbonílicos do vinho para formar tioéteres e mercaptanos</li>
+          <li><strong>Autólise de leveduras mortas</strong> — especialmente em estágio prolongado sobre borras sem bâtonnage; proteínas sulfuradas degradam-se em mercaptanos</li>
+          <li><strong>Redução química em ambiente anóxico</strong> — compostos sulfurados oxidados são reduzidos na ausência de O₂ para a forma reduzida (mercaptano)</li>
+        </ol>
+
+        <h2>Diagnóstico Antes do Tratamento</h2>
+
+        <ul>
+          <li>Realizar prova olfactiva directa para identificar o tipo de defeito (H₂S vs. mercaptano vs. tiól varietal)</li>
+          <li>Testar com uma gota de solução de sulfato de cobre (0,5%) — se o defeito desaparecer temporariamente, confirma-se a presença de H₂S ou mercaptano simples</li>
+          <li>Se a prova de cobre não eliminar o defeito, pode tratar-se de tióis de cadeia mais longa — considerar aeração controlada ou outros métodos</li>
+        </ul>
+
+        <h2>Prevenção dos Mercaptanos</h2>
+
+        <ul>
+          <li>Garantir YAN adequado (≥200 mg/L) antes da fermentação — deficiência de azoto é a causa mais comum</li>
+          <li>Evitar enxofre elementar (S⁰) nas uvas — resíduos de tratamentos fitossanitários tardios</li>
+          <li>Efectuar bâtonnage regular em estágio sobre borras — evita zonas anóxicas</li>
+          <li>Não prolongar o estágio sobre borras além do necessário sem arejamento periódico</li>
+          <li>Trasfegas atempadas para evitar acumulação de células mortas em autólise</li>
+        </ul>
+
+        <h2>Mercaptanos Benéficos (Tióis Varietais)</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Composto</th><th>Aroma Positivo</th><th>Presente em</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>3-Mercaptohexanol (3MH)</td><td>Maracujá, toranja</td><td>Sauvignon Blanc, Verdejo</td></tr>
+            <tr><td>3-Mercaptohexilacetato (3MHA)</td><td>Frutas tropicais</td><td>Sauvignon Blanc</td></tr>
+            <tr><td>4-Mercapto-4-metilpentan-2-ona (4MMP)</td><td>Cassis, buxo</td><td>Sauvignon Blanc</td></tr>
+          </tbody>
+        </table>
+
+        <p>A diferença entre um "defeito redutivo" e um "tiól varietal" está na <strong>estrutura química</strong> e na <strong>via de formação</strong> — os varietais derivam de precursores ligados à cisteína na uva, libertados durante a fermentação.</p>
+
+        <h2>Remoção de H₂S e Mercaptanos Defeituosos</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Método</th><th>Eficácia</th><th>Risco</th><th>Indicado para</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Sulfato de cobre (CuSO₄)<br>0,05–0,3 mg/L Cu²⁺</td><td>Alta</td><td>Tóxico em excesso; máx. 1 mg/L Cu total (UE)</td><td>Casos moderados a severos</td></tr>
+            <tr><td>Sparging com gás inerte (N₂ ou CO₂)</td><td>Média</td><td>Baixo</td><td>Casos leves</td></tr>
+            <tr><td>Aeração controlada</td><td>Média</td><td>Oxidação do vinho</td><td>Casos moderados, com cuidado</td></tr>
+            <tr><td>Leveduras inativadas com cobre (Reduless®, Noblesse®)</td><td>Alta</td><td>Baixo</td><td>Alternativa mais segura ao sulfato de cobre</td></tr>
+            <tr><td>Carvão enológico</td><td>Alta mas pouco selectiva</td><td>Remove também aromas positivos</td><td>Último recurso</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <div class="callout-label">Tolerância ao Etanol das Leveduras</div>
+          <p>As leveduras adaptam-se ao aumento de etanol por: desregulação da permeabilidade da membrana, formação de esteróis e ácidos gordos insaturados na presença de O₂ (razão pela qual aerar bem no início é crucial), e aumento da produção da enzima álcool desidrogenase. Leveduras comerciais são seleccionadas por 7 gerações em condições de stress — as naturais requerem ~20 gerações para a mesma adaptação.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 08 ─────────────────────────────────── -->
+      <section class="chapter" id="cinetica">
+        <h1 class="chapter-title">Cinética e Medição da Fermentação</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">°Brix / SG</div>
+            <div class="fact-label">Medição de referência</div>
+            <div class="fact-desc">Indicador indirecto do açúcar</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Curva em S</div>
+            <div class="fact-label">Perfil de fermentação saudável</div>
+            <div class="fact-desc">Sigmoide: lenta → rápida → declínio</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">≤ 0,995 g/cm³</div>
+            <div class="fact-label">Densidade final ("seca")</div>
+            <div class="fact-desc">Fermentação completa</div>
+          </div>
+        </div>
+
+        <h2>Parâmetros da Cinética Fermentativa</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Taxa</th><th>O que mede</th><th>Importância prática</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Taxa de crescimento celular</td><td>Velocidade de multiplicação das leveduras</td><td>Indica saúde nutricional do mosto</td></tr>
+            <tr><td>Taxa de produção de etanol (g/L/dia)</td><td>Velocidade de conversão de açúcar em álcool</td><td>Actividade metabólica das leveduras</td></tr>
+            <tr><td>Taxa de abaixamento da densidade</td><td>Velocidade de queda do SG</td><td>Principal indicador de progresso — monitorizar diariamente</td></tr>
+            <tr><td>Taxa de libertação de calor</td><td>Energia térmica da reacção exotérmica</td><td>Necessidade de refrigeração activa</td></tr>
+            <tr><td>Taxa de mortalidade celular</td><td>Células que morrem por unidade de tempo</td><td>Aumenta com temperatura elevada, carência nutricional ou alto etanol</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Medições sobre Propriedades Agregadas</h2>
+
+        <dl class="region-facts">
+          <dt>Perda de peso</dt><dd>Pesar o recipiente de fermentação diariamente: cada grama perdida corresponde a CO₂ libertado; permite calcular açúcar consumido e taxas de produção sem abrir o recipiente</dd>
+          <dt>Produção de CO₂</dt><dd>Medir o volume de CO₂ libertado com gasómetro ou débito volumétrico; método muito preciso mas requer equipamento; permite calcular a taxa de fermentação (g/L/h) em tempo real</dd>
+        </dl>
+
+        <h2>CO₂ em Barricas</h2>
+
+        <dl class="region-facts">
+          <dt>Volume a 15 °C</dt><dd>Uma barrica de 225 L em fermentação a 15 °C produz aproximadamente <strong>9 537 L de CO₂</strong> durante toda a fermentação</dd>
+          <dt>Volume a 20 °C</dt><dd>A 20 °C, o mesmo volume de mosto produz aproximadamente <strong>9 702 L de CO₂</strong> — ligeiramente mais, por maior eficiência metabólica</dd>
+          <dt>Implicação</dt><dd>Numa sala com 100 barricas em fermentação: mais de 970 000 L de CO₂ gerados — ventilação obrigatória e monitorização de segurança</dd>
+        </dl>
+
+        <h2>Escalas de Medição do Açúcar</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Escala</th><th>Fórmula / Definição</th><th>Uso</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Brix (°Bx)</strong></td><td>1 °Bx = 1 g sacarose / 100 g solução ≈ 10–11 g/L em mosto</td><td>Vinicultura e fruticultura — mais comum</td></tr>
+            <tr><td><strong>Baumé (°Bé)</strong></td><td>Densidade relativa a 12,5 °C</td><td>Indústria do sal e açúcar</td></tr>
+            <tr><td><strong>Oechsle (°Oe)</strong></td><td>°Oe = (densidade − 1) × 1000; ex.: 1,080 → 80 °Oe</td><td>Alemanha, Suíça</td></tr>
+            <tr><td><strong>Plato (°P)</strong></td><td>Semelhante a Brix com equações de correcção</td><td>Indústria cervejeira</td></tr>
+            <tr><td><strong>Balling</strong></td><td>Escala histórica que originou o Brix</td><td>Menos utilizado actualmente</td></tr>
+            <tr><td><strong>Klosterneuburg (KMW)</strong></td><td>Ajusta Brix para descontar compostos não-açucarados (2–4%) — proteínas, sais</td><td>Áustria</td></tr>
+            <tr><td><strong>TAP</strong></td><td>TAP ≈ 0,592 × (Brix − 3); ex.: 24 °Brix → 12,43% v/v</td><td>Álcool potencial estimado</td></tr>
+          </tbody>
+        </table>
+
+        <h2>CO₂ Produzido na Fermentação</h2>
+
+        <dl class="region-facts">
+          <dt>Volume produzido</dt><dd>56 L de CO₂ por litro de mosto a 24 °Brix (264 g/L de açúcar); varia entre 55 L (a 15 °C) e 57,9 L (a 30 °C)</dd>
+          <dt>Dissolução</dt><dd>O mosto em fermentação tem mais de 1,8 g/L de CO₂ dissolvido — o CO₂ é mais denso que o ar e impede a entrada de O₂</dd>
+          <dt>Interpretação da curva</dt><dd>Curva Brix vs. tempo: determina tempo de arranque, avalia nutrição das leveduras, estima duração, diagnostica stuck fermentations</dd>
+          <dt>Refractómetro</dt><dd>Preciso no início; partir de ~5% álcool as leituras ficam incorrectas — o álcool altera o índice de refracção; usar sempre densímetro durante a FA</dd>
+        </dl>
+
+        <h2>Alterações de Volume Durante a Fermentação</h2>
+
+        <p>O açúcar ocupa mais volume do que o etanol que dele resulta — por isso o volume de mosto <strong>diminui</strong> ao longo da fermentação:</p>
+
+        <dl class="region-facts">
+          <dt>Redução total</dt><dd>~44–50 mL por litro de mosto (mosto a 22 °Brix): o açúcar (164 mL/L) converte-se em etanol (114 mL/L) + CO₂ → contracção de ~50 mL/L</dd>
+          <dt>Exemplo a 22 °Brix</dt><dd>Açúcar: ocupa 164 mL/L · Etanol produzido: 114 mL/L · Diferença: −50 mL/L = redução de 5% do volume</dd>
+          <dt>Expansão térmica</dt><dd>Cada 10 °C acima de 20 °C aumenta o volume em ~0,2% (expansão do líquido); tanques quentes parecem mais cheios do que estão</dd>
+          <dt>Implicação prática</dt><dd>Nunca encher tanques até ao limite antes da FA — deixar margem para espuma e expansão térmica; corrigir o nível após a seca para evitar oxidação</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Um mosto a 24 °Brix</div>
+          <p>Tem aproximadamente <strong>264 g/L de açúcar</strong>. Ao fermentar completamente, produz ~56 L de CO₂ por litro de mosto. Para 10.000 L de mosto a 1 °Brix/dia: dVCO₂/dt = 55 × 11 / 210 × 10.000 = <strong>28.800 L de CO₂ por dia</strong> — uma quantidade que exige ventilação forçada obrigatória na adega.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 09 ─────────────────────────────────── -->
+      <section class="chapter" id="temperatura">
+        <h1 class="chapter-title">Temperatura, CO₂ e Controlo Térmico</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">0,125 °C/g açúcar</div>
+            <div class="fact-label">Calor libertado</div>
+            <div class="fact-desc">Reacção exotérmica — 1 g açúcar / L</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">56 L CO₂ / L mosto</div>
+            <div class="fact-label">Produção de CO₂</div>
+            <div class="fact-desc">Mosto a 24 °Brix</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">0,5% v/v no ar</div>
+            <div class="fact-label">Limite seguro de CO₂</div>
+            <div class="fact-desc">Acima causa asfixia</div>
+          </div>
+        </div>
+
+        <h2>Projeto Térmico de Cubas de Fermentação</h2>
+
+        <p>O projeto térmico dos recipientes de fermentação é crucial para manter temperaturas ideais, evitar fermentações paradas e preservar aromas.</p>
+
+        <ul>
+          <li>Remover o calor gerado pela fermentação (reacção exotérmica)</li>
+          <li>Evitar picos térmicos que inibem ou matam as leveduras</li>
+          <li>Proporcionar controlo preciso da temperatura para diferentes estilos de vinho</li>
+        </ul>
+
+        <h2>Libertação de Calor</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Parâmetro</th><th>Valor</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Calor por grama de açúcar</td><td>≈ 0,125 kcal → ΔT de 0,125 °C por litro</td></tr>
+            <tr><td>Mosto a 24 °Brix</td><td>Produz ≈ 3 kcal/L</td></tr>
+            <tr><td>Tanque de 10.000 L</td><td>Total de ≈ 30.000 kcal geradas</td></tr>
+            <tr><td>ΔT prático em tanques grandes</td><td>≈ 0,65 × Brix (apenas 60% da energia eleva temperatura)</td></tr>
+            <tr><td>ΔT prático em barricas</td><td>≈ 0,25 × Brix (maior dissipação por convecção)</td></tr>
+            <tr><td>Mosto a 24 °Brix, sem perdas</td><td>Aumento potencial de 24 × 0,125 = 3 °C</td></tr>
+          </tbody>
+        </table>
+
+        <figure>
+          <img src="img/fig 4.png" alt="Atividade das leveduras em função da temperatura — curva em sino com pico entre 20 e 30 °C">
+          <figcaption>Velocidade de fermentação vs. temperatura: curva em sino com pico entre 20–30 °C. Abaixo de 15 °C a actividade cai drasticamente; acima de 35 °C as leveduras são destruídas por desnaturação proteica.</figcaption>
+        </figure>
+
+        <h2>Segurança com CO₂</h2>
+
+        <p>O CO₂ é um gás mais denso que o ar — acumula-se em depressões, caves e espaços confinados. Em concentrações acima de 0,5% v/v pode causar asfixia. A ventilação necessária: entrada de ar exterior = <strong>24,75× o volume de CO₂ gerado</strong>. Para 10.000 L de mosto a 1 °Brix/dia: necessidade de ≈ 713.000 L de ar fresco por dia.</p>
+
+        <h2>Métodos de Controlo Térmico</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Sistema</th><th>Como funciona</th><th>Aplicação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Camisas térmicas (duplo corpo)</td><td>Circulação de água fria ou glicol entre paredes do tanque</td><td>Tanques inox — mais comuns</td></tr>
+            <tr><td>Placas refrigeradoras internas</td><td>Placas de inox perfuradas dentro do tanque</td><td>Alta eficiência; ocupam espaço</td></tr>
+            <tr><td>Permutadores externos</td><td>Mosto circula por tubulações e passa por permutador</td><td>Resfriamento rápido antes da entrada no tanque</td></tr>
+            <tr><td>Isolamento térmico</td><td>Poliuretano ou lã de rocha nas paredes do tanque</td><td>Minimiza trocas com ambiente</td></tr>
+            <tr><td>Climatização da sala</td><td>Temperatura ambiente controlada</td><td>Controlo passivo, essencial para barricas</td></tr>
+            <tr><td>Toalhas de água fria</td><td>Panos embebidos em água fria envolvem o exterior da barrica ou recipiente</td><td>Método artesanal eficaz para barricas e pequenos recipientes</td></tr>
+            <tr><td>Gelo seco (CO₂ sólido) ou azoto líquido</td><td>Aplicado directamente sobre o mosto ou no exterior do recipiente durante a vindima</td><td>Arrefecimento muito rápido; usado sobretudo na vindima mecânica nocturna em regiões quentes</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Alterações de Volume Durante a Fermentação</h2>
+
+        <dl class="region-facts">
+          <dt>Contracção de volume</dt><dd>A conversão de açúcar em etanol + CO₂ provoca uma redução de ~44–50 mL/L; o açúcar ocupa mais volume do que o etanol produzido</dd>
+          <dt>Expansão térmica</dt><dd>Cada 10 °C acima de 20 °C: aumento de volume de ~0,2%; em fermentação activa, o calor pode mascarar a perda de volume</dd>
+          <dt>Gestão prática</dt><dd>Não encher tanques até ao limite antes da FA; corrigir o nível com vinho após a seca para proteger contra oxidação</dd>
+        </dl>
+
+        <h2>Fermentação em Barricas</h2>
+
+        <dl class="region-facts">
+          <dt>Vantagens</dt><dd>Integração precoce dos compostos do carvalho; micro-oxigenação; complexidade aromática e untuosidade; desenvolvimento de aromas terciários (baunilha, coco, tostado)</dd>
+          <dt>Desvantagens</dt><dd>Difícil controlo térmico (sem camisas de refrigeração); menor massa térmica; maior custo operacional; gestão intensiva necessária</dd>
+          <dt>Práticas associadas</dt><dd>Colocação em salas com temperatura controlada; banhos de água fria no exterior da barrica; bâtonnage para homogeneização térmica; preenchimento até ao topo para minimizar oxidação</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Vindima nocturna</div>
+          <p>Em regiões quentes (Alentejo, Douro), a colheita mecânica de madrugada reduz a oxidação enzimática, preserva aromas voláteis e entrega o mosto já "pré-arrefecido" à adega. A 35 °C as reacções químicas aceleram e o mosto oxida mais rapidamente. Gelo seco nos pegões da máquina ajuda a arrefecer adicionalmente.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 10 ─────────────────────────────────── -->
+      <section class="chapter" id="fml">
+        <h1 class="chapter-title">Fermentação Maloláctica</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Málico → Lático</div>
+            <div class="fact-label">Conversão ácida</div>
+            <div class="fact-desc">2 COOH → 1 COOH + 1 OH + CO₂</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Oenococcus oeni</div>
+            <div class="fact-label">Bactéria predominante</div>
+            <div class="fact-desc">Mais tolerante ao álcool e ao SO₂</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">18–22 °C</div>
+            <div class="fact-label">Temperatura ideal FML</div>
+            <div class="fact-desc">pH &gt; 3,2 · SO₂ livre &lt; 20 mg/L</div>
+          </div>
+        </div>
+
+        <p>A FML é um processo bacteriano secundário que ocorre após a FA. Converte o ácido málico (dicarboxílico, mais agressivo) em ácido lático (monocarboxílico, mais suave), libertando CO₂. O resultado é um vinho menos ácido, mais macio e mais estável microbiologicamente.</p>
+
+        <h2>Condições Ideais para FML</h2>
+
+        <dl class="region-facts">
+          <dt>Temperatura</dt><dd>18–22 °C — bactérias necessitam de ≥19–20 °C para funcionar; abaixo, o processo para</dd>
+          <dt>pH</dt><dd>Acima de 3,2 — abaixo disto, a FML é difícil ou impossível</dd>
+          <dt>Álcool</dt><dd>Até 14% tolerado; acima inibe as bactérias</dd>
+          <dt>SO₂ livre</dt><dd>Não ultrapassar 15–20 mg/L — as bactérias são muito sensíveis ao SO₂</dd>
+          <dt>Nutrientes bacterianos</dt><dd>Vitaminas, aminoácidos, etc. — raramente limitantes mas importantes em mostos muito clarificados</dd>
+        </dl>
+
+        <h2>Comparação FA vs. FML</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Aspeto</th><th>Fermentação Alcoólica</th><th>Fermentação Maloláctica</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Agente</td><td>Leveduras (<em>Saccharomyces cerevisiae</em>)</td><td>Bactérias lácticas (<em>Oenococcus oeni</em>, <em>Lactobacillus plantarum</em>)</td></tr>
+            <tr><td>Substrato</td><td>Açúcares (glicose, frutose)</td><td>Ácido málico</td></tr>
+            <tr><td>Produto principal</td><td>Etanol + CO₂</td><td>Ácido lático + CO₂</td></tr>
+            <tr><td>Temperatura ideal</td><td>18–25 °C (brancos) / 24–28 °C (tintos)</td><td>18–22 °C</td></tr>
+            <tr><td>Sensibilidade ao SO₂</td><td>Moderada</td><td>Alta</td></tr>
+            <tr><td>Duração típica</td><td>7–15 dias (tintos) / 10–30 dias (brancos)</td><td>1–4 semanas</td></tr>
+            <tr><td>Controlo térmico crítico?</td><td>Sim (produção de calor intensa)</td><td>Moderado</td></tr>
+            <tr><td>Efeito sensorial</td><td>Formação de álcool e aromas primários</td><td>Redução da acidez, aumento de untuosidade</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Bactérias da FML</h2>
+
+        <dl class="region-facts">
+          <dt><em>Oenococcus oeni</em></dt><dd>A mais tolerante ao álcool (até 14%), ao SO₂ e à acidez (pH &gt; 3,0); espécie preferencial em enologia convencional; co-inoculação disponível comercialmente</dd>
+          <dt><em>Lactobacillus plantarum</em></dt><dd>Mais moderna e robusta; usada em vinhos naturais e biológicos; menos tolerante ao SO₂ mas mais activa em condições de temperatura mais baixa; pode produzir mais diacetilo (manteiga)</dd>
+        </dl>
+
+        <h2>Vantagens da FML</h2>
+
+        <ul>
+          <li>Redução da acidez total — ácido málico (dicarboxílico) convertido a ácido lático (monocarboxílico); menor sensação de dureza</li>
+          <li>Aumento da complexidade aromática — <strong>diacetilo</strong> (produto da FML) confere notas amanteigadas e de natas; positivo em tintos e certos brancos (Chardonnay)</li>
+          <li>Estabilidade microbiológica — consumo do ácido málico priva as bactérias de substrato; reduz risco de FML espontânea na garrafa</li>
+          <li>Aumento do volume e untuosidade — manoproteínas libertas pelas bactérias enriquecem a textura</li>
+        </ul>
+
+        <h2>Desvantagens (Caso Não Controlada)</h2>
+
+        <ul>
+          <li>Produção de acidez volátil em excesso — bactérias contaminantes produzem ácido acético</li>
+          <li>Produção de fenóis indesejados — derivados do ácido cafeico e cumárico</li>
+          <li>Perda de frescor e aromas primários em brancos aromáticos (Alvarinho, Moscatel, Viosinho)</li>
+          <li>Formação de aminas biogénicas — histamina, tiramina — risco para saúde se em concentrações elevadas</li>
+          <li>FML na garrafa — CO₂ indesejado, turbidez e acidez volátil</li>
+        </ul>
+
+        <h2>Métodos de Condução</h2>
+
+        <dl class="region-facts">
+          <dt>FML espontânea</dt><dd>Flora nativa inicia o processo — pode ser lenta e irregular; usada em vinhos naturais</dd>
+          <dt>Inoculação sequencial</dt><dd>Adicionar bactérias comerciais após o fim da FA — método mais previsível</dd>
+          <dt>Co-inoculação (simultânea)</dt><dd>Bactérias adicionadas juntamente com as leveduras ou durante a FA; encurta o ciclo total e reduz risco de contaminação</dd>
+          <dt>Quando bloquear</dt><dd>Brancos frescos aromáticos (Alvarinho, Viosinho) — bloquear com SO₂ após a FA para preservar a acidez viva; FML na garrafa é um defeito grave</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">FML na garrafa</div>
+          <p>Se o vinho for engarrafado com ácido málico residual e bactérias lácticas viáveis, a FML pode recomeçar na garrafa — produzindo CO₂ (perlância indesejada), turbidez e acidez volátil. Confirmar ausência de ácido málico por cromatografia em papel ou análise enzimática antes do engarrafamento.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 11 ─────────────────────────────────── -->
+      <section class="chapter" id="maceracao-fundamentos">
+        <h1 class="chapter-title">Fundamentos da Maceração</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Películas</div>
+            <div class="fact-label">Fonte de antocianinas</div>
+            <div class="fact-desc">7–10% do peso da uva</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Grainhas</div>
+            <div class="fact-label">Fonte de taninos condensados</div>
+            <div class="fact-desc">3–5% do peso da uva</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Lei de Fick</div>
+            <div class="fact-label">Rege a extracção</div>
+            <div class="fact-desc">Q = K × S × L × (C−c) / h</div>
+          </div>
+        </div>
+
+        <h2>Objetivos da Maceração</h2>
+
+        <ul>
+          <li><strong>Compostos de cor</strong> — extracção de antocianinas das películas para o mosto/vinho</li>
+          <li><strong>Taninos</strong> — das películas e grainhas; conferem estrutura, adstringência e potencial de guarda</li>
+          <li><strong>Aromas e precursores aromáticos</strong> — terpenóides, norisoprenóides e precursores de tióis libertados das películas</li>
+          <li><strong>Outros fenólicos e minerais</strong> — ácidos fenólicos, flavonóis, minerais das películas que enriquecem a complexidade do vinho</li>
+        </ul>
+
+        <h2>Antocianinas e pH: Variação de Cor</h2>
+
+        <p>As antocianinas — Malvidina, Peonidina, Petunidina e Cianidina — são sensíveis ao pH. A sua cor varia dramaticamente:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>pH</th><th>Estado da Antocianina</th><th>Cor Predominante</th><th>Observações</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>&lt; 2,5 – 3,0</td><td>Forma catiónica (flavylium)</td><td><strong>Vermelho vivo</strong></td><td>Estável, intensa — vinhos muito ácidos</td></tr>
+            <tr><td>3,0 – 3,6</td><td>Equilíbrio entre formas</td><td><strong>Rubi a vermelho púrpura</strong></td><td>Cor típica dos vinhos tintos equilibrados</td></tr>
+            <tr><td>3,6 – 4,0</td><td>Forma quinonoide ou carbinol</td><td><strong>Púrpura/violáceo</strong></td><td>Menor intensidade, cor menos estável</td></tr>
+            <tr><td>4,0 – 5,5</td><td>Predomínio quinonoide</td><td><strong>Azulada a azul-esverdeada</strong></td><td>Antocianinas instáveis — pouco desejável</td></tr>
+            <tr><td>&gt; 6,0</td><td>Forma de chalcona (aberta)</td><td><strong>Incolor ou amarelada</strong></td><td>Antocianinas degradadas — perda de cor</td></tr>
+          </tbody>
+        </table>
+
+        <p><em>Nota: Os vinhos tintos devem situar-se entre pH 3,35 e 3,70. Vinhos brancos entre 3,00 e 3,50. A casta Aragonês chega frequentemente com pH próximo de 4 — corrigir com ácido tartárico (1 g/L → pH 3,75).</em></p>
+
+        <h2>Comportamento das Antocianinas no Vinho</h2>
+
+        <p><strong>Explicação química (simplificada):</strong> a pH baixo (ácido), a estrutura <em>flavylium</em> predomina — estável e intensamente vermelha. A pH mais alto, as moléculas convertem-se em formas menos conjugadas (carbinol, quinonoide, chalcona) com menor absorção de luz visível, o que muda a cor para violeta, azul ou mesmo incolor. Este comportamento é <strong>reversível</strong> dentro de certos limites, o que permite usar as antocianinas como indicadores de pH naturais.</p>
+
+        <ul>
+          <li><strong>Vinhos tintos</strong> situam-se normalmente entre pH 3,2 e 3,6 — a cor dominante é <strong>vermelha a púrpura</strong></li>
+          <li>Se o pH sobe (por má vinificação ou fatores ambientais), a cor <strong>perde-se rapidamente</strong> e aparecem tonalidades azuladas acinzentadas</li>
+          <li>A <strong>cor azul</strong> em vinhos não é desejável — associada a instabilidade e oxidação</li>
+          <li>Nos rosés, a adição de SO₂ no engarrafamento pode provocar perda temporária de cor (decoloração reversível), que volta ao normal após 2–3 dias</li>
+        </ul>
+
+        <h2>Composição das Partes da Uva</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Parte</th><th>% Peso Uva</th><th>Compostos Relevantes</th><th>Função Enológica</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Película</strong></td><td>7–10%</td><td>Antocianinas (0,1–1%), taninos (1–3%), compostos aromáticos, ceras</td><td>Cor, estrutura, aromas varietais</td></tr>
+            <tr><td><strong>Polpa</strong></td><td>80–85%</td><td>Açúcares (15–25%), ácidos orgânicos (0,4–1,5%), aminoácidos</td><td>Fonte de fermentação, acidez</td></tr>
+            <tr><td><strong>Grainha</strong></td><td>3–5%</td><td>Taninos (15–20%), lípidos (10–20%), compostos fenólicos totais (20–30%)</td><td>Estrutura, adstringência — libertos com maceração longa</td></tr>
+            <tr><td><strong>Engaço</strong></td><td>3–7%</td><td>Taninos agressivos (3–7%), celulose e lignina (20–30%), compostos voláteis verdes</td><td>Taninos verdes, aumento do pH, mais oxigenação</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Detecção de Fraude em Vinho Tinto</h2>
+
+        <p>A análise de antocianinas permite detectar adulteração em vinhos tintos. O marcador dominante de <em>Vitis vinifera</em> é a <strong>malvidina-3-O-glucosídeo</strong> (malvidina ligada a um açúcar no carbono 3):</p>
+
+        <dl class="region-facts">
+          <dt>Padrão de <em>Vitis vinifera</em></dt><dd>Malvidina-3-O-glucosídeo é o antocianino predominante; as outras 4 antocianinas (Cianidina, Delfinidina, Peonidina, Petunidina) aparecem em menores quantidades; todos são <strong>monoglucosídeos</strong></dd>
+          <dt>Padrão de não-<em>vinifera</em></dt><dd>Castas híbridas americanas (Isabella, Concord) contêm <strong>diglucosídeos</strong> (malvidina-3,5-diglucosídeo) em quantidades significativas — ausentes ou residuais em <em>vinifera</em>; presença acima de 15% total é indicador de fraude</dd>
+          <dt>Detecção de fraude no Porto</dt><dd>O <strong>ácido pirúvico</strong> residual é marcador do Porto genuíno: a fermentação interrompida deixa piruvato não consumido; a sua ausência num suposto Porto sugere que a fermentação completou (não é Porto autêntico)</dd>
+        </dl>
+
+        <h2>Lei de Fick na Maceração</h2>
+
+        <p><strong>Q = K × S × L × (C − c) / h</strong></p>
+
+        <dl class="region-facts">
+          <dt>Q</dt><dd>Quantidade de soluto extraído por unidade de tempo</dd>
+          <dt>K</dt><dd>Coeficiente de difusão (depende da temperatura e natureza do soluto)</dd>
+          <dt>S</dt><dd>Superfície de contacto (área sólido-líquido)</dd>
+          <dt>L</dt><dd>Grau de lixiviação (capacidade de libertação do composto pelo sólido)</dd>
+          <dt>C − c</dt><dd>Gradiente de concentração entre a película e o mosto</dd>
+          <dt>h</dt><dd>Espessura da camada de difusão</dd>
+        </dl>
+
+        <p>Esta fórmula mostra por que <strong>agitação</strong>, <strong>temperatura</strong>, <strong>aumento da superfície de contacto</strong> e <strong>renovação do líquido junto à manta sólida</strong> aumentam a eficiência de extracção. Os métodos de contacto (remontagem) influenciam a <em>taxa</em> de extracção, mas não alteram a quantidade total extraída — que depende do equilíbrio.</p>
+
+        <h2>Influência dos Fatores Externos na Maceração</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Fator</th><th>Efeito na Extracção</th><th>Nota prática</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>SO₂</td><td>Estabiliza antocianinas; facilita a extracção por romper membranas celulares</td><td>Adição no início da maceração aumenta a cor; excesso inibe leveduras</td></tr>
+            <tr><td>Etanol</td><td>Excelente solvente para fenólicos e antocianinas — extracção aumenta progressivamente com o álcool</td><td>Macerações mais longas (após FA) extraem mais taninos das grainhas</td></tr>
+            <tr><td>Temperatura</td><td>Eleva a solubilidade e a taxa de difusão (K na Lei de Fick); extracção mais rápida e intensa</td><td>Macerações a quente: máxima extracção; a frio: cor sem taninos agressivos</td></tr>
+            <tr><td>Tempo</td><td>Determina o equilíbrio final — aumentar o tempo só ajuda até ao equilíbrio ser atingido</td><td>Antocianinas: pico a 2–3 dias; taninos: continuam a aumentar além de 10 dias</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Papel dos Taninos na Extracção de Antocianinas</h2>
+
+        <p>Os taninos enológicos adicionados ao mosto criam um mecanismo de 3 passos que amplifica a extracção de antocianinas:</p>
+
+        <ol>
+          <li><strong>Sequestração</strong> — taninos exógenos reagido com antocianinas livres no mosto, formando complexos pigmento-tanino estáveis (a antocianina fica "capturada")</li>
+          <li><strong>Quebra do equilíbrio</strong> — a remoção de antocianinas livres do mosto rompe o equilíbrio de extracção entre película e mosto</li>
+          <li><strong>Novo gradiente</strong> — com menos antocianinas livres no mosto, cria-se novo gradiente de concentração (C−c na Lei de Fick) que força extracção adicional das películas</li>
+        </ol>
+
+        <div class="callout">
+          <div class="callout-label">Antocianinas e taninos: dinâmica de extracção</div>
+          <p>As antocianinas atingem o máximo a 2–3 dias de maceração — depois decrescem por degradação e polimerização com taninos. Os taninos, ao contrário, continuam a aumentar ao longo da maceração. Adicionar taninos enológicos comerciais ao mosto reage com antocianinas livres, forma complexos pigmento-tanino estáveis, e "desloca o equilíbrio" permitindo extracção adicional de antocianinas da película.</p>
+        </div>
+
+        <figure>
+          <img src="img/fig 6.png" alt="Taxa de Extração de Taninos e Antocianinas ao Longo do Tempo — curvas de concentração relativa durante a maceração">
+          <figcaption>Extracção comparada durante a maceração: antocianinas (rosa) atingem o pico aos 2–3 dias e decrescem por degradação; taninos (castanho) sobem continuamente. O enólogo deve decidir o momento de desencuba consoante o perfil desejado.</figcaption>
+        </figure>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 12 ─────────────────────────────────── -->
+      <section class="chapter" id="tipos-maceracao">
+        <h1 class="chapter-title">Tipos de Maceração</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Pré-fermentativa</div>
+            <div class="fact-label">8–15 °C · 1–5 dias</div>
+            <div class="fact-desc">Cor sem taninos agressivos</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Convencional</div>
+            <div class="fact-label">25–30 °C · 5–10 dias</div>
+            <div class="fact-desc">Cor + taninos + estrutura</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Pós-fermentativa</div>
+            <div class="fact-label">Após seca · vários dias</div>
+            <div class="fact-desc">Taninos polimerizados suaves</div>
+          </div>
+        </div>
+
+        <h2>Os Três Tipos Principais</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Tipo</th><th>Duração</th><th>Temperatura</th><th>Objectivo</th><th>Estilo resultante</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Pré-fermentativa a frio</strong></td><td>1–5 dias</td><td>8–15 °C</td><td>Extrair antocianinas sem taninos agressivos — sem álcool presente</td><td>Vinhos frutados, suaves, aromáticos</td></tr>
+            <tr><td><strong>Convencional (durante FA)</strong></td><td>5–10 dias (ou mais)</td><td>25–30 °C</td><td>Maximizar extracção de cor, taninos e aroma</td><td>Vinhos estruturados, com corpo e potencial de guarda</td></tr>
+            <tr><td><strong>Pós-fermentativa</strong></td><td>Vários dias após seca</td><td>Temperatura ambiente</td><td>Extracção lenta de taninos polimerizados, suavizando o perfil</td><td>Vinhos de longa guarda, taninos mais redondos</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Influência do Tempo de Maceração</h2>
+
+        <dl class="region-facts">
+          <dt>Curta (3–5 dias)</dt><dd>Vinhos leves e frutados — menos taninos, boa cor inicial</dd>
+          <dt>Média (5–10 dias)</dt><dd>Boa extracção de cor e estrutura equilibrada</dd>
+          <dt>Longa (&gt;10 dias)</dt><dd>Vinhos estruturados, mais tânicos, com potencial de guarda</dd>
+          <dt>Factores externos</dt><dd>SO₂ (estabiliza antocianinas), etanol (solvente de fenólicos), temperatura (eleva solubilidade), tempo (determina equilíbrio)</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Maceração carbónica</div>
+          <p>Uvas inteiras em atmosfera de CO₂ sofrem fermentação intracelular — a própria célula fermenta sem esmagamento, dentro do bago. O resultado são vinhos frutados, leves, com taninos suaves e aromas de banana/framboesa. Estilo Beaujolais Nouveau. Em Portugal, usada pontualmente em tintos de consumo rápido.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 13 ─────────────────────────────────── -->
+      <section class="chapter" id="remontagem">
+        <h1 class="chapter-title">Remontagem e Délestage</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Remontagem</div>
+            <div class="fact-label">Pump-over</div>
+            <div class="fact-desc">Bomba do fundo para cima do chapéu</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Délestage</div>
+            <div class="fact-label">Rack and return</div>
+            <div class="fact-desc">Esvaziamento total + reintrodução</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">1–3× / dia</div>
+            <div class="fact-label">Frequência típica</div>
+            <div class="fact-desc">Mais no início da maceração</div>
+          </div>
+        </div>
+
+        <p>Durante a fermentação de tintos, as películas, grainhas e engaços sobem à superfície formando o "chapéu" (manta sólida). A remontagem e o délestage são as técnicas para gerir este chapéu — extraindo compostos e homogeneizando o mosto.</p>
+
+        <h2>Finalidades da Remontagem</h2>
+
+        <ul>
+          <li><strong>Reoxigenar o mosto</strong> — fornecer O₂ às leveduras em fase exponencial, essencial para biossíntese de esteróis e ácidos gordos insaturados</li>
+          <li><strong>Homogeneizar temperatura e leveduras</strong> — o chapéu é mais quente; a remontagem equilbra gradientes térmicos e distribui leveduras por todo o mosto</li>
+          <li><strong>Aumentar extracção de cor, aroma e taninos</strong> — o contacto renovado entre mosto e película restabelece o gradiente (Lei de Fick) e intensifica a extracção</li>
+          <li><strong>Arrefecer a manta</strong> — a manta sólida atinge temperaturas mais altas que podem matar leveduras e produzir defeitos; molhá-la regularmente reduz este risco</li>
+          <li><strong>Facilitar contacto líquido/manta</strong> — manta seca cria zonas anóxicas propícias a bactérias acéticas; a remontagem previne este problema</li>
+        </ul>
+
+        <h2>Métodos de Remontagem</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>#</th><th>Método</th><th>Descrição e Vantagem Enológica</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td><strong>Recalque a pé (pigeage)</strong></td><td>Pressão manual com pés — tradicional em lagares; extracção equilibrada sem ruptura de grainhas; preserva compostos nobres</td></tr>
+            <tr><td>2</td><td><strong>Macacos ou rodos</strong></td><td>Ferramentas manuais que afundam ou rompem a manta; adequado para pequenas produções</td></tr>
+            <tr><td>3</td><td><strong>Pressão de CO₂ (autovinificadores)</strong></td><td>CO₂ da fermentação empurra o mosto para cima; automático sem energia eléctrica; comum no Douro para Porto</td></tr>
+            <tr><td>4</td><td><strong>Bomba a torniquete</strong></td><td>Bombeia o mosto do fundo sobre a manta com cadência regular e controlável</td></tr>
+            <tr><td>5</td><td><strong>Gases inertes (CO₂, N₂, Ar)</strong></td><td>Empurram o mosto ou protegem a manta contra oxidação — importante em vinificação redutiva</td></tr>
+            <tr><td>6</td><td><strong>Robôs com macacos hidráulicos pisadores</strong></td><td>Simulam a pisa com precisão; equipamento automatizado em adegas modernas com controle digital</td></tr>
+            <tr><td>7</td><td><strong>Turbo-pigeur</strong></td><td>Injeta mosto sob pressão dentro da manta promovendo extracção vigorosa; usar com cuidado para evitar extracção excessiva de taninos</td></tr>
+            <tr><td>8</td><td><strong>Manta submersa</strong></td><td>Grades ou redes que mantêm o chapéu imerso continuamente; extracção constante sem remontagem activa; reduz oxidação</td></tr>
+            <tr><td>9</td><td><strong>OVI (Overhead Vinification Irrigator)</strong></td><td>Circulação por gravidade ou bombeamento programado; simula délestage num único reservatório</td></tr>
+            <tr><td>10</td><td><strong>Cuba rotativa ou com pás rotativas</strong></td><td>Movimento mecânico das massas para extracção intensa e homogénea; ideal para macerações curtas e enérgicas</td></tr>
+          </tbody>
+        </table>
+
+        <h2>O Processo de Délestage</h2>
+
+        <ol>
+          <li>Esvaziar totalmente o mosto fermentativo para um tanque auxiliar, <strong>deixando o chapéu de películas no fundo</strong> da cuba.</li>
+          <li>O mosto é reintroduzido por cima com força, quebrando o chapéu e molhando completamente as partes sólidas.</li>
+          <li>Pode repetir-se 1 a 2 vezes por dia, especialmente no início da fermentação.</li>
+        </ol>
+
+        <p><strong>Vantagem face à remontagem contínua:</strong> Melhor extracção de cor, taninos e compostos aromáticos; oxigenação controlada; redução de taninos verdes/adstringentes (mais delicado porque o contacto intenso é breve).</p>
+
+        <h2>Tanques para Simulação de Délestage</h2>
+
+        <p>Simular o efeito do délestage com apenas um tanque exige <strong>fundo perfurado ou filtros internos</strong>, aspersores e automação de fluxo. Quatro sistemas comerciais permitem fazê-lo:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Sistema</th><th>Princípio</th><th>Simulação délestage</th><th>Automação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Letina VIK "Wineficator"</strong></td><td>Fundo inclinado e perfurado + sistema interno de recirculação; ciclos automáticos programáveis</td><td>Sim — versão moderna sem drenar</td><td>Programável</td></tr>
+            <tr><td><strong>Pretank (China)</strong></td><td>Fundo inclinado com grade filtrante; bomba + aspersores controlados por PLC; recirculação contínua</td><td>Sim — filtro + aspersão</td><td>PLC / automático</td></tr>
+            <tr><td><strong>Matevi (França)</strong></td><td>Tanque interno perfurado suspenso acima do fundo; escoamento e retorno vigoroso distribuído pelo chapéu</td><td>Sim — com tanque interno perfurado</td><td>Possível</td></tr>
+            <tr><td><strong>Speidel "pressure flooder"</strong></td><td>Injeção pneumática que desloca o chapéu e faz remontagens internas — ideal para vinhos delicados</td><td>Sim — recirculação por ar</td><td>Automático</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Tipos de Bombas para Remontagem</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Sistema</th><th>Cisalhamento</th><th>Taninos</th><th>Melhor uso</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Marksman Smart Pump (Ridgelea)</td><td>Muito baixo</td><td>Finos</td><td>Vinhos premium, controle total</td></tr>
+            <tr><td>Bomba Peristáltica (Verderflex, Ragazzini)</td><td>Baixíssimo</td><td>Elegantes</td><td>Extracção leve, fermentação prolongada</td></tr>
+            <tr><td>Lóbulos Rotativos (Vogelsang, Waukesha)</td><td>Baixo</td><td>Medianos</td><td>Versatilidade, produção média a alta</td></tr>
+            <tr><td>Helicoidal / Cavidade Progressiva (PMH)</td><td>Baixo</td><td>Sedosos</td><td>Vinhos texturais, foco em pureza</td></tr>
+            <tr><td>Centrífugas</td><td>Alto</td><td>Agressivos</td><td>Líquidos limpos apenas (não recomendado com sólidos)</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <div class="callout-label">Autovinificadores do Douro</div>
+          <p>Desenvolvidos nos anos 1960 para resolver o problema da vindima intensiva e falta de mão de obra. Usam a pressão de CO₂ gerada pela fermentação para empurrar o mosto para cima — tecnologia simples, eficaz e com zero consumo eléctrico. Ainda hoje são a principal ferramenta de extracção para o Vinho do Porto.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 14 ─────────────────────────────────── -->
+      <section class="chapter" id="hiperoxi">
+        <h1 class="chapter-title">Hiperoxigenação e Crio-extracção</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">5–15 mg/L O₂</div>
+            <div class="fact-label">Dose de hiperoxigenação</div>
+            <div class="fact-desc">Adicionada antes da FA, no mosto branco</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">0 a −3 °C</div>
+            <div class="fact-label">Temperatura de crio-extracção</div>
+            <div class="fact-desc">Uvas inteiras ou desengaçadas</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Blanc de Noirs</div>
+            <div class="fact-label">Aplicação clássica</div>
+            <div class="fact-desc">Branco de uvas tintas (Pinot Noir/Meunier)</div>
+          </div>
+        </div>
+
+        <h2>Hiperoxigenação do Mosto</h2>
+
+        <p>Técnica aplicada a mostos brancos e rosés antes da FA. Consiste na adição deliberada e controlada de O₂, promovendo a oxidação precoce de compostos fenólicos instáveis (catequinas, flavonóides), que precipitam e são removidos por decantação — antes de passarem ao vinho final.</p>
+
+        <h2>Reação Química da Hiperoxigenação</h2>
+
+        <p>A enzima <strong>polifenoloxidase</strong> (PPO), presente nos mostos brancos, catalisa a oxidação dos compostos fenólicos instáveis em presença de O₂:</p>
+
+        <ol>
+          <li>A PPO oxida catequinas, flavonóides e outros fenólicos → <strong>quinonas</strong> (compostos de cor castanha)</li>
+          <li>As quinonas polimerizam-se e precipitam (insolúveis em mosto) → formam-se partículas marrons</li>
+          <li>A decantação ou filtração remove estes precipitados antes da fermentação — o mosto fica protegido da oxidação posterior</li>
+        </ol>
+
+        <dl class="region-facts">
+          <dt>Objectivos</dt><dd>Remover fenólicos oxidados; estabilizar a cor (retardar amarelecimento); reduzir sensibilidade futura à oxidação; aumentar complexidade aromática</dd>
+          <dt>Indicada para</dt><dd>Sauvignon Blanc, Chardonnay, Trebbiano, Airén, Chenin Blanc — brancos ricos em fenólicos sensíveis à oxidação</dd>
+          <dt>Contraindicada em</dt><dd>Uvas aromáticas (Moscatel, Gewürztraminer) — oxida terpenóides que definem o aroma varietal; pode reduzir aromas frutados primários</dd>
+          <dt>Descoberta</dt><dd>Desenvolvida nos anos 1970 na Alemanha e França pelo enólogo Kurt Düring, para resolver oxidação tardia em brancos</dd>
+        </dl>
+
+        <h2>Crio-extracção</h2>
+
+        <p>Consiste em <strong>resfriar as uvas inteiras ou desengaçadas a temperaturas próximas de 0 °C (ou −1 a −3 °C)</strong> antes da prensagem, rompendo parcialmente as paredes celulares da película. Isso facilita a libertação de precursores aromáticos enquanto a baixa temperatura impede a solubilização das antocianinas.</p>
+
+        <h2>Processo de Crio-extracção</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Etapa</th><th>Procedimento</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1. Colheita</td><td>Manual, com cuidado para manter os bagos inteiros e saudáveis</td></tr>
+            <tr><td>2. Resfriamento rápido</td><td>Túneis de frio, câmaras frigoríficas ou nitrogénio líquido/CO₂ — a temperaturas de 0 a −3 °C</td></tr>
+            <tr><td>3. Maceração a frio (opcional)</td><td>Uvas permanecem refrigeradas por algumas horas para extracção aromática controlada sem liberar cor</td></tr>
+            <tr><td>4. Prensagem suave</td><td>Pressão muito delicada — o mosto obtido é claro, mesmo de uvas tintas (Pinot Noir, Meunier)</td></tr>
+            <tr><td>5. Decantação e fermentação</td><td>Mosto clarificado a frio → fermentação a temperatura controlada</td></tr>
+          </tbody>
+        </table>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Vantagem</th><th>Detalhe</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Intensidade aromática</td><td>Libertação de precursores presentes na película</td></tr>
+            <tr><td>Baixa coloração</td><td>Ideal para vinhos brancos de uvas tintas</td></tr>
+            <tr><td>Frescor e elegância</td><td>Preserva acidez natural e evita oxidação</td></tr>
+            <tr><td>Pureza do mosto</td><td>Melhora a clarificação e reduz compostos indesejados</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Cuidados e Limitações da Crio-extracção</h2>
+
+        <ul>
+          <li><strong>Custo energético elevado</strong> — manutenção de temperaturas negativas exige refrigeração intensa, especialmente em regiões quentes</li>
+          <li><strong>Risco de oxidação sem gases inertes</strong> — a baixas temperaturas, as reacções enzimáticas são lentas mas a oxidação é possível; usar atmosfera de N₂ ou CO₂ durante o arrefecimento</li>
+          <li><strong>Controlo rigoroso de higiene</strong> — o ambiente refrigerado favorece o desenvolvimento de fungos e bactérias se a limpeza for deficiente; desinfecção dos equipamentos é crítica</li>
+        </ul>
+
+        <div class="callout">
+          <div class="callout-label">Blanc de Noirs</div>
+          <p>Um Blanc de Noirs é um vinho branco produzido a partir de uvas tintas — tipicamente Pinot Noir e Pinot Meunier em Champagne. A crio-extracção seguida de prensagem suave garante que o mosto seja claro, sem antocianinas. O resultado tem mais estrutura e complexidade aromática que um Blanc de Blancs (uvas brancas), com maior potencial de longevidade.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 15 ─────────────────────────────────── -->
+      <section class="chapter" id="vindima-adega">
+        <h1 class="chapter-title">Da Vindima à Adega</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Maturação tecnológica</div>
+            <div class="fact-label">Critério de vindima</div>
+            <div class="fact-desc">Açúcar + acidez + fenólica + sensorial</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Mecânica vs. manual</div>
+            <div class="fact-label">Método de colheita</div>
+            <div class="fact-desc">Velocidade vs. selectividade</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Desengace</div>
+            <div class="fact-label">Primeiro passo na adega</div>
+            <div class="fact-desc">Remove taninos verdes do engaço</div>
+          </div>
+        </div>
+
+        <p>A definição do momento ideal de colheita depende da <strong>maturação tecnológica</strong> (açúcares, acidez, pH), <strong>fenólica</strong> (taninos, antocianinas) e <strong>aromática</strong> (prova sensorial das bagas). Colher cedo demais resulta em vinhos verdes e agressivos; tarde demais, em vinhos alcoólicos, pouco frescos ou oxidados.</p>
+
+        <h2>Referência de Maturação na Europa Central — Chasselas</h2>
+
+        <p>O <em>Chasselas</em> é usado como referência fenológica em regiões da Suíça, França e Alemanha: diz-se que uma casta amadurece "X dias antes ou depois do Chasselas".</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Casta</th><th>Maturação relativa ao Chasselas</th><th>Observações</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Chasselas</td><td>0 (referência)</td><td>Base neutra de comparação</td></tr>
+            <tr><td>Müller-Thurgau</td><td>~−7 dias</td><td>Muito precoce</td></tr>
+            <tr><td>Pinot Noir</td><td>~+5 dias</td><td>Média-precoce</td></tr>
+            <tr><td>Riesling</td><td>~+10 a +15 dias</td><td>Matura lentamente</td></tr>
+            <tr><td>Merlot</td><td>~+5 a +7 dias</td><td>Média-precoce</td></tr>
+            <tr><td>Grenache</td><td>~+10 dias</td><td>Tende a ser tardia</td></tr>
+            <tr><td>Cabernet Sauvignon</td><td>~+20 dias</td><td>Maturação muito tardia</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Referência em Portugal — Fernão Pires (Maria Gomes)</h2>
+
+        <p>Em Portugal não existe casta-padrão nacional única. A <em>Fernão Pires</em> e a <em>Castelão</em> são usadas como referências regionais em contextos técnicos (IVV, ADVID, UTAD).</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Casta</th><th>Maturação relativa a Fernão Pires</th><th>Observações</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Fernão Pires</td><td>0 (referência)</td><td>Muito cultivada no Ribatejo e Bairrada</td></tr>
+            <tr><td>Alvarinho</td><td>~−3 a 0 dias</td><td>Em zonas quentes, amadurece cedo</td></tr>
+            <tr><td>Castelão</td><td>~0 a +3 dias</td><td>Usada para comparação no Sul</td></tr>
+            <tr><td>Trincadeira</td><td>~+5 dias</td><td>Sensível à podridão, exige cuidado</td></tr>
+            <tr><td>Arinto</td><td>~+7 dias</td><td>Maturação mais lenta, boa acidez</td></tr>
+            <tr><td>Alicante Bouschet</td><td>~+12 dias</td><td>Tardia e rica em cor</td></tr>
+            <tr><td>Touriga Nacional</td><td>~+10 dias</td><td>Matura mais tarde</td></tr>
+            <tr><td>Vinhão</td><td>~+15 dias</td><td>Muito tardia, norte de Portugal</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Da Colheita ao Tanque</h2>
+
+        <dl class="region-facts">
+          <dt>Vindima mecânica</dt><dd>Rápida e económica; risco de esmagamento excessivo e oxidação; usar SO₂ nos pegões e vindima nocturna em regiões quentes</dd>
+          <dt>Vindima manual</dt><dd>Selecção criteriosa dos cachos; essencial para uvas frágeis, botrytizadas ou vinhos de prestígio</dd>
+          <dt>Recepção</dt><dd>Pesagem, inspecção visual, triagem manual ou mecânica; depois para desengaçador-esmagador ou directamente para prensas</dd>
+          <dt>Desengace</dt><dd>Separa bagos do engaço (estrutura lenhosa) — reduz taninos verdes e sabores herbáceos; pode ser total, parcial ou omitido</dd>
+          <dt>Esmagamento</dt><dd>Rompe suavemente os bagos para libertar mosto; em maceração carbónica é omitido</dd>
+          <dt>Prensagem</dt><dd>1ª prensa: mosto mais delicado e limpo; 2ª prensa: mais tânico; 3ª prensa: mais adstringente e herbácea</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Calendário de maturação em Portugal</div>
+          <p><strong>Agosto (início):</strong> Fernão Pires, Moscatel Galego Branco, uvas base para espumante. <strong>Agosto (meados):</strong> Arinto, Síria, Trincadeira, Castelão (zonas quentes). <strong>Agosto final – Setembro (início):</strong> Castelão, Alicante Bouschet, Tinta Roriz, Alfrocheiro, Encruzado. <strong>Setembro (meados):</strong> Touriga Nacional, Touriga Franca, Baga (anos quentes), Viosinho, Gouveio. <strong>Setembro final – Outubro:</strong> Tinto Cão, Souzão, vindimas tardias, botrytizados, uvas para fortificados.</p>
+        </div>
+
+        <figure>
+          <img src="img/fig 7.png" alt="Fluxograma da vinificação de vinhos tranquilos — caminhos separados para Branco, Rosé e Tinto">
+          <figcaption>Visão geral do processo de vinificação de vinhos tranquilos. Branco (verde): prensagem imediata → decantação → fermentação. Tinto (rosa): maceração + FA simultâneas → prensagem pós-FA. Rosé (laranja): segue o método branco ou o método tinto consoante o estilo desejado.</figcaption>
+        </figure>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 16 ─────────────────────────────────── -->
+      <section class="chapter" id="defecacao-fa">
+        <h1 class="chapter-title">Defecação e Fermentação</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Débourbage</div>
+            <div class="fact-label">Decantação a frio</div>
+            <div class="fact-desc">12–48h a 8–12 °C para brancos</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">7–15 dias</div>
+            <div class="fact-label">Duração da FA em tintos</div>
+            <div class="fact-desc">Brancos: 10–30 dias a temperatura baixa</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">19–20 °C</div>
+            <div class="fact-label">Mínimo para bactérias lácticas</div>
+            <div class="fact-desc">Condição para FML ocorrer</div>
+          </div>
+        </div>
+
+        <p>Nos brancos e rosés, após a prensagem, o mosto passa pelo <strong>débourbage</strong> (defecação): decantação a frio durante 12–48 horas para as partículas sólidas sedimentarem. O mosto limpo é separado por trasfega e enviado para fermentação. Um mosto demasiado turvo fermenta com aromas pesados e de redução.</p>
+
+        <p>Na fermentação de tintos, o mosto permanece com películas e grainhas (maceração simultânea). Temperaturas críticas: brancos a 12–18 °C (preservar aromas varietais), tintos a 22–30 °C (maximizar extracção fenólica). A FML nos tintos faz-se normalmente imediatamente após a FA, aproveitando as temperaturas ainda quentes.</p>
+
+        <h2>Processo Detalhado de Vinificação</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>#</th><th>Etapa</th><th>Observações</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Marcação da data de vindima</td><td>Maturação tecnológica + fenólica + sensorial + condições meteorológicas</td></tr>
+            <tr><td>2</td><td>Vindima mecânica vs. manual</td><td>Manual: selectiva, melhor qualidade; Mecânica: rápida, económica, essencial em regiões quentes</td></tr>
+            <tr><td>3</td><td>Recepção da uva</td><td>Pesagem + inspecção + triagem; condução para esmagador ou prensas</td></tr>
+            <tr><td>4</td><td>Desengace e esmagamento</td><td>Engaço reduz taninos verdes; esmagamento suave para libertar mosto</td></tr>
+            <tr><td>5</td><td>Esgotamento (escorrimento livre)</td><td>Vinho de gota — mais equilibrado e limpo que o de prensa</td></tr>
+            <tr><td>6</td><td>Prensagem</td><td>Brancos: antes da FA; Tintos: após FA e maceração; grau de adstringência aumenta da 1ª para a 3ª prensa</td></tr>
+            <tr><td>7</td><td>Defecação / débourbage</td><td>12–48h a frio; só para brancos e rosés; mosto limpo → fermentação mais limpa</td></tr>
+            <tr><td>8</td><td>Fermentação alcoólica</td><td>Inoculação com levedura; temperatura controlada; tintos ~7 dias, brancos ~2 semanas</td></tr>
+            <tr><td>9</td><td>Remontagens</td><td>Durante FA em tintos; frequência e intensidade determinam o estilo</td></tr>
+            <tr><td>10</td><td>Leveduras</td><td>Indígenas ou seleccionadas; impacto forte no estilo e consistência</td></tr>
+            <tr><td>11</td><td>Temperatura</td><td>Brancos 12–18 °C, Tintos 22–30 °C; mau controlo → fermentações lentas, paragens, defeitos</td></tr>
+            <tr><td>12</td><td>Desencuba</td><td>Separação do tinto das borras após maceração; vinho de prensa pode ser usado para ajuste</td></tr>
+          </tbody>
+        </table>
+
+        <dl class="region-facts">
+          <dt>Adições no início da FA</dt><dd>Nutrientes (DAP, Fermaid®) em doses fraccionadas; taninos enológicos (estabilização de cor em tintos); enzimas pectolíticas (maior clareza no débourbage)</dd>
+          <dt>Monitorização</dt><dd>Densidade diária; temperatura 2× por dia; SO₂ livre e YAN no início; provas organolépticas regulares</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">FML nas regiões frias</div>
+          <p>No Norte de Portugal e interior (Dão, Bairrada, Douro), as temperaturas de Outubro caem rapidamente. As bactérias lácticas necessitam de ≥19–20 °C. Opções: aquecer artificialmente a adega; armazenar sem SO₂ até à primavera; inocular bactérias resistentes ao frio. <em>Fermentação maloláctica na garrafa é um defeito grave.</em></p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 17 ─────────────────────────────────── -->
+      <section class="chapter" id="desencuba-estagio">
+        <h1 class="chapter-title">Desencuba, Trasfegas e Estágio</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Desencuba</div>
+            <div class="fact-label">Separação sólido/líquido</div>
+            <div class="fact-desc">Após maceração completa</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Trasfega</div>
+            <div class="fact-label">Remoção de borras</div>
+            <div class="fact-desc">Limpeza + micro-oxigenação</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Sur lie</div>
+            <div class="fact-label">Estágio sobre borras finas</div>
+            <div class="fact-desc">Volume, untuosidade, estabilidade</div>
+          </div>
+        </div>
+
+        <p>A <strong>desencuba</strong> separa o vinho tinto das borras e partes sólidas após a maceração. O vinho de gota escorre por gravidade; o bagaço é prensado para recuperar o vinho de prensa. As <strong>trasfegas</strong> subsequentes promovem a limpeza gradual, micro-oxigenação controlada e evitam defeitos redutivos.</p>
+
+        <h2>Opções de Estágio</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Recipiente</th><th>Efeito</th><th>Estilo resultante</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Inox</td><td>Preserva frescura e aromas primários/secundários; sem oxidação nem cedência de madeira</td><td>Brancos aromáticos, tintos frutados de consumo rápido</td></tr>
+            <tr><td>Barricas de carvalho (225 L)</td><td>Micro-oxigenação lenta + cedência de taninos e aromas (baunilha, tosta, coco); alteração profunda do perfil</td><td>Brancos e tintos de alta gama</td></tr>
+            <tr><td>Tonéis grandes</td><td>Micro-oxigenação sem cedência excessiva de madeira</td><td>Tintos de longa guarda (Douro, Alentejo)</td></tr>
+            <tr><td>Sur lie (sobre borras finas)</td><td>Manoproteínas libertadas aumentam volume e estabilidade; reduz necessidade de colagem proteica</td><td>Brancos com corpo e untuosidade (Borgonha, Alvarinho premium)</td></tr>
+          </tbody>
+        </table>
+
+        <dl class="region-facts">
+          <dt>Vinho de gota vs. vinho de prensa</dt><dd>Gota: mais delicado, equilibrado, limpo — base do lote; prensa (1ª/2ª): mais tânico e rico em extracto, pode integrar-se para ajustar estrutura; 3ª prensa: adstringente e herbácea, não integrar</dd>
+          <dt>Bâtonnage</dt><dd>Agitação regular das borras finas em estágio sur lie; liberta manoproteínas; aumenta volume e estabilidade; reduz necessidade de colagem proteica</dd>
+          <dt>Trasfegas</dt><dd>Cada trasfega representa perda de aromas voláteis — equilibrar limpeza com preservação aromática</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Bâtonnage</div>
+          <p>O bâtonnage (agitação das borras finas) é especialmente importante em brancos estágio sur lie. As manoproteínas das paredes das leveduras mortas, libertadas durante a autólise, conferem untuosidade, volume em boca e estabilidade proteica — reduzindo ou eliminando a necessidade de colagem com bentonite antes do engarrafamento.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 18 ─────────────────────────────────── -->
+      <section class="chapter" id="clarificacao">
+        <h1 class="chapter-title">Clarificação, Estabilização e Engarrafamento</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Colagem</div>
+            <div class="fact-label">Clarificação por adsorção</div>
+            <div class="fact-desc">Bentonite, gelatina, clara de ovo...</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Estabilização tartárica</div>
+            <div class="fact-label">Frio (−4 °C) ou CMC</div>
+            <div class="fact-desc">Evita cristais na garrafa</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">SO₂ livre</div>
+            <div class="fact-label">Protecção no engarrafamento</div>
+            <div class="fact-desc">20–35 mg/L dependendo do pH</div>
+          </div>
+        </div>
+
+        <p>Antes do engarrafamento, o vinho deve ser visualmente limpo, estável e microbiologicamente seguro. A <strong>clarificação</strong> remove partículas em suspensão, proteínas instáveis e taninos em excesso. A <strong>estabilização</strong> previne o aparecimento de depósitos ou precipitados na garrafa.</p>
+
+        <dl class="region-facts">
+          <dt>Bentonite</dt><dd>Argila negativamente carregada — remove proteínas instáveis; estabilização proteica</dd>
+          <dt>Gelatina, clara de ovo, caseína</dt><dd>Adsorvem taninos em excesso — clarificação de tintos e brancos com taninos</dd>
+          <dt>Estabilização tartárica — frio</dt><dd>−4 °C durante 8–15 dias; provoca precipitação de cristais de bitartarato de potássio antes do engarrafamento</dd>
+          <dt>Estabilização tartárica — CMC</dt><dd>Carboximetilcelulose ou ácido metatartárico — alternativas modernas sem uso de frio intenso</dd>
+          <dt>Estabilização microbiológica</dt><dd>Filtração esterilizante (0,45 μm), pasteurização ou ajuste de SO₂ livre</dd>
+          <dt>SO₂ no engarrafamento</dt><dd>A pH 3,2 bastam ~20 mg/L; a pH 3,6 necessitam-se 40+ mg/L para a mesma protecção antimicrobiana</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Pedra de vinho</div>
+          <p>Os cristais de bitartarato de potássio (sais do ácido tartárico) que por vezes aparecem no fundo de garrafas são inofensivos. Indicam até que o vinho não foi excessivamente processado. Contudo, os consumidores interpretam-nos como impureza — daí a necessidade de estabilização tartárica antes do engarrafamento.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 19 ─────────────────────────────────── -->
+      <section class="chapter" id="naturais">
+        <h1 class="chapter-title">Vinhos Naturais</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Leveduras indígenas</div>
+            <div class="fact-label">Sem inoculação</div>
+            <div class="fact-desc">Flora da vinha e da adega</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">SO₂ zero ou mínimo</div>
+            <div class="fact-label">Máx. 40 mg/L total</div>
+            <div class="fact-desc">Apenas no engarrafamento se necessário</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Mínima intervenção</div>
+            <div class="fact-label">Sem colagens, sem filtração</div>
+            <div class="fact-desc">Aceitam turbidez e sedimentos</div>
+          </div>
+        </div>
+
+        <p>Os vinhos naturais não têm definição legal universal. Agrupam vinhos feitos com uvas de viticultura biológica ou biodinâmica, fermentados com leveduras indígenas, sem SO₂ (ou mínimo no engarrafamento) e com intervenção enológica reduzida ao mínimo.</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Etapa</th><th>Abordagem em Vinhos Naturais</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Vindima</td><td>Sempre manual — selecção de uvas sadias; não haverá correcções posteriores</td></tr>
+            <tr><td>Leveduras</td><td>Exclusivamente indígenas; sem inoculação de culturas seleccionadas</td></tr>
+            <tr><td>Fermentação</td><td>Espontânea; pode demorar mais; temperatura controlada manualmente</td></tr>
+            <tr><td>Remontagens</td><td>Feitas manualmente ou com mínima intervenção para evitar extracção excessiva</td></tr>
+            <tr><td>SO₂</td><td>Nulo ou apenas em doses mínimas no engarrafamento</td></tr>
+            <tr><td>Clarificação e filtração</td><td>Frequentemente omitidas; o vinho pode apresentar turvação natural</td></tr>
+            <tr><td>Engarrafamento</td><td>Muitas vezes por gravidade, sem bombeamento</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <div class="callout-label">Pétillants naturels (pét-nats)</div>
+          <p>Vinhos naturais engarrafados com algum CO₂ dissolvido e resíduo de fermentação vivo. A segunda fermentação ocorre directamente na garrafa, sem licor de tiragem, produzindo efervescência leve e irregular. Fechados com cápsula de coroa (não rolha). Estilo cada vez mais popular em Portugal — Bairrada, Vinho Verde, Dão.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 20 ─────────────────────────────────── -->
+      <section class="chapter" id="espumantes">
+        <h1 class="chapter-title">Vinhos Espumantes</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">5–6 atm</div>
+            <div class="fact-label">Pressão CO₂ na garrafa</div>
+            <div class="fact-desc">24 g/L açúcar → +1,2–1,3% alc.</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">≥ 9 meses</div>
+            <div class="fact-label">Sur lie mínimo (Portugal)</div>
+            <div class="fact-desc">Espumantes com DOC</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Extra-brut &lt;6 g/L</div>
+            <div class="fact-label">Classificação por doçura</div>
+            <div class="fact-desc">Brut 6–15 · Sec 17–35 · Doux &gt;50</div>
+          </div>
+        </div>
+
+        <h2>Métodos de Produção</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Método</th><th>2ª Fermentação</th><th>Características</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Clássico (Tradicional)</strong></td><td>Na garrafa — licor de tiragem (açúcar + leveduras)</td><td>Autólise das leveduras (pão, brioche); mín. 9 meses sur lie; remuage + dégorgement</td></tr>
+            <tr><td><strong>Método de Transferência</strong></td><td>Na garrafa → transferida para tanque pressurizado após 2ª FA</td><td>Sem remuage nem dégorgement; limpo e clarificado em sistema pressurizado</td></tr>
+            <tr><td><strong>Charmat (Cuba Fechada)</strong></td><td>Em autoclave pressurizado com açúcar e levedura</td><td>Mais rápido e económico; preserva aromas frutados primários; sem autólise</td></tr>
+            <tr><td><strong>Asti</strong></td><td>Fermentação parcial única em autoclave a partir de mosto fresco</td><td>7–9,5% alc.; açúcar residual natural; aromático, doce, sem notas autolíticas; interrompido por frio</td></tr>
+          </tbody>
+        </table>
+
+        <figure>
+          <img src="img/fig 8.png" alt="Fluxograma dos métodos de produção de espumantes — Método Tradicional, Cuba Fechada e Transferência">
+          <figcaption>Processos de produção de espumantes: todos partem de vinho base + licor de fermentação. O <strong>Método Tradicional</strong> (azul) realiza a 2ª FA na garrafa com remuage e descabeçamento. O <strong>Método Cuba Fechada</strong> (laranja) faz a 2ª FA em autoclave. O <strong>Método de Transferência</strong> (verde) combina garrafa com filtração em pressão.</figcaption>
+        </figure>
+
+        <h2>Processo Clássico — Etapas</h2>
+
+        <ol>
+          <li><strong>Prensagem de cacho inteiro:</strong> mosto sem fenólicos; limite legal Champagne = 102 L por 160 kg de uvas</li>
+          <li><strong>Fermentação primária:</strong> vinho base ~9% alc., alta acidez; em Champagne procuram-se aromas secundários (não tropicais)</li>
+          <li><strong>Tiragem:</strong> adição do licor de tiragem (açúcar + leveduras) antes de engarrafar com tampa provisória</li>
+          <li><strong>2ª fermentação na garrafa:</strong> 4–8 semanas; 24 g/L açúcar → 5–6 atm de CO₂ + 1,2–1,3% alc.</li>
+          <li><strong>Autólise das leveduras (sur lie):</strong> mínimo 15 meses (maioria Champagne), 36 meses (vintage); confere pão, brioche, frutos secos</li>
+          <li><strong>Remuage:</strong> rotação progressiva das garrafas para deslocar borras ao gargalo</li>
+          <li><strong>Dégorgement:</strong> expulsão das borras por congelamento do gargalo + pressão interna</li>
+          <li><strong>Licor de expedição:</strong> ajuste da doçura final; seguido de rolhagem com jaulamento</li>
+        </ol>
+
+        <h2>Remuage: Manual vs. Giropaletes</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Método</th><th>Duração</th><th>Capacidade</th><th>Uso</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Manual (pupitres)</td><td>4–6 semanas (28–42 dias)</td><td>~50.000 garrafas/operário/dia</td><td>5–10% da produção; vinhos de prestígio</td></tr>
+            <tr><td>Giropaletes (automatizada)</td><td>3–8 dias</td><td>500–1.000 garrafas/giropalete</td><td>90–95% da produção; 2–4 rotações/hora, 24h/dia</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Classificação por Doçura (Licor de Expedição)</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Designação</th><th>Açúcar residual (g/L)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Extra-brut</td><td>&lt; 6</td></tr>
+            <tr><td>Brut</td><td>6 – 15</td></tr>
+            <tr><td>Extra-sec</td><td>12 – 20</td></tr>
+            <tr><td>Sec</td><td>17 – 35</td></tr>
+            <tr><td>Demi-sec / Riche</td><td>33 – 50</td></tr>
+            <tr><td>Doux</td><td>&gt; 50</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <div class="callout-label">Espumantes portugueses</div>
+          <p>Portugal tem tradição espumantista sobretudo em <strong>Bairrada</strong> (método clássico com Bical e Arinto) e no <strong>Douro</strong>. As Denominações de Origem exigem pelo menos 9 meses de estágio sur lie. A acidez natural das castas portuguesas — Arinto, Síria, Fernão Pires — é uma vantagem competitiva para espumantes frescos, elegantes e com boa longevidade.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 21 ─────────────────────────────────── -->
+      <section class="chapter" id="fortificados">
+        <h1 class="chapter-title">Vinhos Fortificados</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">77–80% vol.</div>
+            <div class="fact-label">Teor da aguardente vínica</div>
+            <div class="fact-desc">Interrompe a fermentação</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">~3 dias</div>
+            <div class="fact-label">Maceração no Porto</div>
+            <div class="fact-desc">Extracção intensa e rápida</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Estufagem</div>
+            <div class="fact-label">Técnica única do Madeira</div>
+            <div class="fact-desc">45–50 °C durante 3–6 meses</div>
+          </div>
+        </div>
+
+        <p>Vinhos fortificados = adição de aguardente vínica (77–80% vol.) a um vinho em fermentação, interrompendo-a antes da conclusão e preservando açúcar natural residual. O <strong>momento da adição</strong> determina o estilo e o nível de doçura.</p>
+
+        <h2>Processo do Vinho do Porto</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Etapa</th><th>Detalhe</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Vindima e recepção</td><td>Castas do Douro (Touriga Nacional, Franca, Roriz, Barroca, Alvarelhão...)</td></tr>
+            <tr><td>Esmagamento e fermentação</td><td>~3 dias com maceração intensa (lagares ou autovinificadores) — extracção rápida de cor e taninos</td></tr>
+            <tr><td>Aguardentação</td><td>Adição de aguardente vínica (77–80% vol.) quando a relação açúcar/álcool desejada é atingida</td></tr>
+            <tr><td>Porto Ruby</td><td>Aguardente cedo → mais doce (80–120 g/L), frutado, vermelho; estágio em cascos grandes</td></tr>
+            <tr><td>Porto Tawny</td><td>Aguardente mais tarde + envelhecimento oxidativo em cascos de 550 L; cor âmbar, nozes, figo seco</td></tr>
+            <tr><td>Porto Vintage</td><td>Declarado em anos excepcionais; engarrafado ao 2.º ano sem filtração; envelhece 20–50 anos na garrafa</td></tr>
+            <tr><td>LBV (Late Bottled Vintage)</td><td>De um só ano; engarrafado entre o 4.º e 6.º ano</td></tr>
+            <tr><td>Colheita</td><td>De um único ano; engarrafado entre o 7.º e mais anos</td></tr>
+          </tbody>
+        </table>
+
+        <figure>
+          <img src="img/fig 9.png" alt="Fluxograma da vinificação de vinhos generosos — Porto (esquerda) e Madeira (direita)">
+          <figcaption>Comparação dos processos de vinificação de vinhos generosos. <strong>Porto</strong> (rosa): FA → aguardentação precoce → prensagem → transfega → maturação → lotação → clarificação → engarrafamento. <strong>Madeira</strong> (azul): prensagem → FA → aguardentação → estufagem → arrefecimento → transfega → engarrafamento.</figcaption>
+        </figure>
+
+        <h2>Processo do Vinho da Madeira</h2>
+
+        <dl class="region-facts">
+          <dt>Castas</dt><dd>Sercial (seco), Verdelho (meio-seco), Bual (meio-doce), Malvasia/Malmsey (doce) — cada uma define o estilo</dd>
+          <dt>Estufagem</dt><dd>Aquecimento a 45–50 °C durante 3–6 meses em "estufas" — processo único que confere inalterabilidade e notas de caramelo</dd>
+          <dt>Envelhecimento oxidativo</dt><dd>Em canteiros ou cubas; o Madeira é o vinho de maior longevidade do mundo — abre depois de séculos na garrafa</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Detecção de fraude</div>
+          <p>O Vinho do Porto genuíno pode ser distinguido por análise do <strong>ácido pirúvico</strong>. Uma fermentação completa consome todo o piruvato. No Porto, a fermentação é interrompida antes do fim — por isso existe ácido pirúvico residual. A sua ausência num suposto "Porto" é indicador de fraude. As antocianinas (malvidina-3-O-glucosídeo predominante em <em>Vitis vinifera</em>) também servem como marcadores de autenticidade.</p>
+        </div>
+
+        <figure>
+          <img src="img/fig 10.png" alt="Vinho do Porto — Breve Caracterização: diagrama de classificação com Vintage, LBV, Colheitas, envelhecimento e tipos">
+          <figcaption>Classificação do Vinho do Porto: de um só ano (Vintage, LBV, Colheitas) vs. de vários anos (Ruby, Tawny, Reserva). Envelhecimento mínimo: Vintage 2 anos em madeira; LBV 4–6 anos; Colheitas mín. 7 anos. Vinhos Castelinho constituem uma subcategoria histórica.</figcaption>
+        </figure>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 22 ─────────────────────────────────── -->
+      <section class="chapter" id="curtimenta">
+        <h1 class="chapter-title">Vinhos de Curtimenta</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Dias a meses</div>
+            <div class="fact-label">Maceração pelicular</div>
+            <div class="fact-desc">Uvas brancas vinificadas como tintos</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Cor laranja/âmbar</div>
+            <div class="fact-label">Característica visual</div>
+            <div class="fact-desc">Taninos presentes + carotenóides</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Ânforas e talhas</div>
+            <div class="fact-label">Recipientes clássicos</div>
+            <div class="fact-desc">Geórgia (kvevri) · Portugal (talha)</div>
+          </div>
+        </div>
+
+        <p>Vinhos de curtimenta (também chamados "laranja" ou "âmbar") são brancos vinificados com maceração pelicular prolongada — exactamente como se fossem tintos. Técnica milenar com origem no Cáucaso, presente em Portugal desde a Antiguidade (vinho de talha alentejano).</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Etapa</th><th>Abordagem nos Vinhos de Curtimenta</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Desengace e esmagamento</td><td>Igual aos tintos — o mosto permanece com as películas</td></tr>
+            <tr><td>Maceração</td><td>Pelicular prolongada: de dias a meses; extrai taninos, cor, fenólicos, confere estrutura</td></tr>
+            <tr><td>Fermentação</td><td>Em contacto com as películas; muitas vezes em ânforas ou talhas; pode ser espontânea</td></tr>
+            <tr><td>Remontagens</td><td>Podem ser feitas, mas frequentemente o processo é estático (especialmente em talhas)</td></tr>
+            <tr><td>Clarificação/filtração</td><td>Frequentemente omitidas; turvação natural aceite</td></tr>
+            <tr><td>Aromas e boca</td><td>Casca de laranja, chá preto, especiarias, pele de pêssego; taninos presentes (incomum em brancos)</td></tr>
+          </tbody>
+        </table>
+
+        <dl class="region-facts">
+          <dt>Maceração</dt><dd>De 2–3 dias (versão ligeira) a 6–12 meses (estilo geórgico clássico); tempo determina intensidade de cor e taninos</dd>
+          <dt>Kvevri (Geórgia)</dt><dd>Ânforas de barro seladas com cera de abelha; fermentação e estágio subterrâneos; método inscrito na UNESCO</dd>
+          <dt>Talha alentejana</dt><dd>Ânforas de barro impermeabilizadas com pez (resina de pinho); por lei, o vinho de talha só pode ser descubado a partir de 11 de Novembro (S. Martinho)</dd>
+          <dt>Perfil sensorial</dt><dd>Taninos presentes (incomum em brancos), baixa acidez percebida, amargor leve, oxidação moderada intencional; alta afinidade com gastronomia complexa</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Talha alentejana</div>
+          <p>O vinho de talha é uma tradição milenar do Alentejo: uvas brancas e tintas juntas fermentam directamente em grandes ânforas de barro. A talha "respira" através do barro poroso sem interferir quimicamente. Por lei, o vinho de talha alentejano só pode ser descubado a partir do <strong>Dia de São Martinho, 11 de Novembro</strong>. É servido directamente da talha nos restaurantes da região.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+    </main>
+
+  </div><!-- /.module-layout -->
+
+  <!-- ── MOBILE NAV BAR ────────────────────── -->
+  <nav class="mobile-nav">
+    <button class="mn-btn" id="mn-prev">‹</button>
+    <span class="mn-counter" id="mn-counter">1 / 22</span>
+    <button class="mn-btn" id="mn-next">›</button>
+  </nav>
+
+  <!-- ── SCROLL ARROWS ─────────────────────── -->
+  <div class="scroll-arrows" id="scroll-arrows">
+    <button class="scroll-arrow" id="scroll-up" aria-label="Rolar para cima">↑</button>
+    <button class="scroll-arrow" id="scroll-dn" aria-label="Rolar para baixo">↓</button>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

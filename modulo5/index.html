@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo V — Vinhos Especiais · ABC do Vinho</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="module-page" data-module="5">
+
+  <div class="progress-bar"></div>
+
+  <header class="topbar">
+    <a class="topbar-back" href="../">← ABC do Vinho</a>
+    <div class="topbar-sep"></div>
+    <span class="topbar-title">V &mdash; Vinhos Especiais</span>
+    <button class="topbar-menu" id="topbar-menu" aria-label="Capítulos">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="module-layout">
+
+    <!-- ── SIDEBAR ───────────────────────────── -->
+    <nav class="sidebar">
+      <div class="sidebar-module">Módulo V</div>
+      <div class="sidebar-label">Capítulos</div>
+      <ol class="chapter-nav">
+
+        <li class="nav-group">Espumantes</li>
+        <li><a href="#esp-definicao"><span class="nav-num">01</span>O que é um Espumante?</a></li>
+        <li><a href="#esp-metodo-trad"><span class="nav-num">02</span>Método Tradicional</a></li>
+        <li><a href="#esp-variacoes"><span class="nav-num">03</span>Variações do Método</a></li>
+        <li><a href="#esp-estilos"><span class="nav-num">04</span>Estilos de Espumante</a></li>
+        <li><a href="#esp-velho-mundo"><span class="nav-num">05</span>Espumantes do Velho Mundo</a></li>
+        <li><a href="#esp-novo-mundo"><span class="nav-num">06</span>Espumantes do Novo Mundo</a></li>
+
+        <li class="nav-group">Vinho do Porto</li>
+        <li><a href="#porto-historia"><span class="nav-num">07</span>Origens e História</a></li>
+        <li><a href="#porto-regiao"><span class="nav-num">08</span>A Região do Douro</a></li>
+        <li><a href="#porto-subregioes"><span class="nav-num">09</span>Sub-regiões do Douro</a></li>
+        <li><a href="#porto-viticultura"><span class="nav-num">10</span>Viticultura e Classificação</a></li>
+        <li><a href="#porto-castas"><span class="nav-num">11</span>Castas Tintas Principais</a></li>
+        <li><a href="#porto-vinif-tintos"><span class="nav-num">12</span>Vinificação dos Tintos</a></li>
+        <li><a href="#porto-vinif-brancos"><span class="nav-num">13</span>Vinificação dos Brancos</a></li>
+        <li><a href="#porto-envelhecimento"><span class="nav-num">14</span>Envelhecimento: Gaia vs Douro</a></li>
+        <li><a href="#porto-estilos"><span class="nav-num">15</span>Estilos de Vinho do Porto</a></li>
+
+        <li class="nav-group">Vinho da Madeira</li>
+        <li><a href="#mad-historia"><span class="nav-num">16</span>Origens e História</a></li>
+        <li><a href="#mad-crises"><span class="nav-num">17</span>Crises e Declínio</a></li>
+        <li><a href="#mad-terroir"><span class="nav-num">18</span>Terroir: Clima, Solo e Viticultura</a></li>
+        <li><a href="#mad-castas"><span class="nav-num">19</span>Castas Nobres e Comerciais</a></li>
+        <li><a href="#mad-vinificacao"><span class="nav-num">20</span>Vinificação por Casta</a></li>
+        <li><a href="#mad-maturacao"><span class="nav-num">21</span>Maturação: Estufas e Canteiro</a></li>
+        <li><a href="#mad-estilos"><span class="nav-num">22</span>Estilos de Vinho da Madeira</a></li>
+
+        <li class="nav-group">Jerez / Sherry</li>
+        <li><a href="#jerez-historia"><span class="nav-num">23</span>Origens e História</a></li>
+        <li><a href="#jerez-regiao"><span class="nav-num">24</span>Região: Território e Clima</a></li>
+        <li><a href="#jerez-viticultura"><span class="nav-num">25</span>Viticultura e Castas</a></li>
+        <li><a href="#jerez-vinificacao"><span class="nav-num">26</span>Vinificação e Envelhecimento</a></li>
+        <li><a href="#jerez-flor"><span class="nav-num">27</span>A Flor e seu Papel</a></li>
+        <li><a href="#jerez-estilos"><span class="nav-num">28</span>Estilos de Jerez</a></li>
+        <li><a href="#jerez-montilla"><span class="nav-num">29</span>Montilla-Moriles</a></li>
+        <li><a href="#jerez-outros"><span class="nav-num">30</span>Outros Vinhos ao Estilo de Jerez</a></li>
+
+      </ol>
+      <div class="sidebar-arrows">
+        <button class="sb-arrow" id="ch-prev" title="Capítulo anterior">↑</button>
+        <button class="sb-arrow" id="ch-next" title="Próximo capítulo">↓</button>
+      </div>
+    </nav>
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <!-- ── CONTENT ───────────────────────────── -->
+    <main class="content">
+
+      <!-- 01 ─────────────────────────────────── -->
+      <section class="chapter" id="esp-definicao">
+        <h1 class="chapter-title">O que é um Espumante?</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">CO₂</div>
+            <div class="fact-label">Gás responsável</div>
+            <div class="fact-desc">Dióxido de carbono dissolvido</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">2ª Ferm.</div>
+            <div class="fact-label">Origem das bolhas</div>
+            <div class="fact-desc">Na garrafa ou em tanque</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">3–6 atm</div>
+            <div class="fact-label">Pressão típica</div>
+            <div class="fact-desc">No espumante pronto para consumo</div>
+          </div>
+        </div>
+
+        <p>Um espumante é um vinho que contém dióxido de carbono (CO₂) dissolvido, que se manifesta em forma de bolhas efervescentes ao ser aberto. Esse gás é produzido naturalmente durante a fermentação alcoólica e aprisionado no interior da garrafa ou do tanque, conforme o método de produção escolhido.</p>
+
+        <p>O charme dos espumantes está na vivacidade das bolhas, que conferem frescor, textura e complexidade ao vinho. A qualidade das bolhas — tamanho, persistência e perlage — é um indicador directo da qualidade do espumante: bolhas finas e persistentes são sinónimo de produção lenta e de autólise prolongada sobre as borras de levedura.</p>
+
+        <dl class="region-facts">
+          <dt>Perlage</dt><dd>O conjunto de bolhas visíveis em taça — bolhas finas e numerosas indicam boa qualidade; bolhas grossas e rápidas revelam produção industrial</dd>
+          <dt>Pressão</dt><dd>Os grandes espumantes atingem 5–6 atm; Frizzante (levemente efervescente) fica entre 1–2,5 atm</dd>
+          <dt>Doçura final</dt><dd>Determinada pelo licor de expedição adicionado após o degorgement — de Extra Brut (&lt;6 g/L) a Doux (&gt;50 g/L)</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Porquê a segunda fermentação?</div>
+          <p>A primeira fermentação produz um vinho-base seco e sem efervescência. É a segunda fermentação — induzida pela adição de açúcar e leveduras (licor de tiragem) — que gera o CO₂ que, aprisionado, torna o vinho espumante. A equação é a mesma da fermentação alcoólica: C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 02 ─────────────────────────────────── -->
+      <section class="chapter" id="esp-metodo-trad">
+        <h1 class="chapter-title">Método Tradicional</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">24 g/L</div>
+            <div class="fact-label">Açúcar no licor de tiragem</div>
+            <div class="fact-desc">Gera 5–6 atm e +1,2–1,3% álcool</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">≥9 meses</div>
+            <div class="fact-label">Sur lie mínimo</div>
+            <div class="fact-desc">15m NV Champagne · 36m Vintage</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Remuage</div>
+            <div class="fact-label">Concentração das borras</div>
+            <div class="fact-desc">À mão (6 sem.) ou gyropalette (3 dias)</div>
+          </div>
+        </div>
+
+        <p>O método tradicional — <em>méthode champenoise</em> quando aplicado na Champagne — é o processo mais prestigiado de elaboração de espumantes. A segunda fermentação ocorre directamente na garrafa, onde o CO₂ fica aprisionado e as borras de levedura permanecem em contacto com o vinho durante meses ou anos, conferindo complexidade e aromas autolíticos únicos.</p>
+
+        <dl class="region-facts">
+          <dt>Colheita e Prensagem</dt><dd>Colheita manual de cachos inteiros; prensagem delicada para extrair apenas o mosto nobre com baixo teor fenólico. Em Champagne, só 102 litros por 160 kg de uva</dd>
+          <dt>Primeira Fermentação</dt><dd>FA rápida a temperatura mais alta; o objetivo não é fruta primária mas sim um vinho-base neutro e estruturado</dd>
+          <dt>Corte (Assemblage)</dt><dd>Combinação de várias parcelas e anos — vinhos de reserva garantem consistência no Non Vintage</dd>
+          <dt>Tiragem</dt><dd>Adição do licor de tiragem (açúcar + leveduras + agentes clarificantes) e engarrafamento com tampa corona</dd>
+          <dt>Autólise (Sur Lie)</dt><dd>Borras finas libertam aminoácidos, manoproteínas e ácidos gordos — aromas de brioche, biscoito, noz, cremosidade</dd>
+          <dt>Remuage</dt><dd>Rotação gradual das garrafas até as borras acumularem no gargalo (sur point)</dd>
+          <dt>Degorgement</dt><dd>Expulsão do sedimento — por congelamento do gargalo e máquina, ou manualmente (à la volée)</dd>
+          <dt>Dosagem</dt><dd>Adição do licor de expedição que determina o nível de doçura final (Extra Brut a Doux)</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Níveis de Doçura</div>
+          <p><strong>Extra Brut</strong> &lt;6 g/L · <strong>Brut</strong> 6–15 g/L · <strong>Extra Sec</strong> 12–20 g/L · <strong>Sec</strong> 17–35 g/L · <strong>Demi-Sec</strong> 33–50 g/L · <strong>Doux</strong> &gt;50 g/L</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 03 ─────────────────────────────────── -->
+      <section class="chapter" id="esp-variacoes">
+        <h1 class="chapter-title">Variações do Método</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Charmat</div>
+            <div class="fact-label">2ª Ferm. em tanque</div>
+            <div class="fact-desc">Frutal, jovem, mais acessível</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Pét-Nat</div>
+            <div class="fact-label">Método ancestral</div>
+            <div class="fact-desc">Sem adição de açúcar ou leveduras</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Transferência</div>
+            <div class="fact-label">Híbrido</div>
+            <div class="fact-desc">Autólise em garrafa + filtragem em tanque</div>
+          </div>
+        </div>
+
+        <p>Além do método tradicional, existem outros processos para produzir espumantes, cada um com características sensoriais, custo e nível de complexidade distintos:</p>
+
+        <dl class="region-facts">
+          <dt>Método de Transferência</dt><dd>Idêntico ao tradicional até à autólise. As garrafas são depois abertas e o vinho transferido para tanque, filtrado, dosado e reengarrafado sob pressão. Preserva parte da complexidade autolítica com eficiência industrial</dd>
+          <dt>Método em Tanque (Charmat)</dt><dd>A segunda fermentação ocorre em tanque pressurizado. Quando a pressão atinge 5 atm, o vinho é refrigerado a -5 °C, estabilizado, dosado e engarrafado. Resultado: vinhos mais frutados, jovens e com menor complexidade autolítica. Prosecco é o exemplo mais famoso</dd>
+          <dt>Método Ancestral (Pét-Nat)</dt><dd>A fermentação do mosto começa em tanque e termina na garrafa, sem adição de açúcar ou leveduras. O CO₂ da fermentação original é aprisionado naturalmente. Muitas vezes não é filtrado — vinhos turbulentos, rústicos e com grande variação entre garrafas</dd>
+          <dt>Carbonatação Artificial</dt><dd>O CO₂ é adicionado directamente ao vinho, como nos refrigerantes. Bolhas maiores e menos persistentes, sem complexidade. Método barato para vinhos de entrada</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Charmat vs. Tradicional</div>
+          <p>O Charmat favorece a frescura e os aromas primários da casta — ideal para Prosecco com a casta Glera. O método tradicional sacrifica fruta jovem em favor de complexidade autolítica desenvolvida durante o <em>sur lie</em>. A escolha deve corresponder ao estilo pretendido, não ao custo.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 04 ─────────────────────────────────── -->
+      <section class="chapter" id="esp-estilos">
+        <h1 class="chapter-title">Estilos de Espumante</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">NV</div>
+            <div class="fact-label">Non Vintage</div>
+            <div class="fact-desc">Mistura de safras com reservas</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Vintage</div>
+            <div class="fact-label">Safra única</div>
+            <div class="fact-desc">≥85% do ano declarado (fora Champagne)</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Blanc de Blancs</div>
+            <div class="fact-label">100% uvas brancas</div>
+            <div class="fact-desc">Elegância, acidez, frescor</div>
+          </div>
+        </div>
+
+        <dl class="region-facts">
+          <dt>Non Vintage (NV)</dt><dd>Mistura de diferentes safras com predominância de uma, reforçada por vinhos de reserva. Garante consistência de estilo ano após ano — a expressão da casa</dd>
+          <dt>Vintage</dt><dd>Base de um único ano excepcional. Mínimo de 85% do ano declarado fora da Champagne. Maior potencial de envelhecimento e complexidade</dd>
+          <dt>Rosé</dt><dd>Geralmente produzido por adição de vinho tinto ao vinho-base branco (método mais comum em Champagne) ou por contacto com cascas durante maceração curta</dd>
+          <dt>Blanc de Blancs</dt><dd>100% de uvas brancas — em Champagne, essencialmente Chardonnay. Perfil elegante, cítrico e mineral, com boa acidez</dd>
+          <dt>Blanc de Noirs</dt><dd>100% de uvas tintas (Pinot Noir e/ou Pinot Meunier em Champagne). Pode apresentar leve coloração acobreada. Estrutura e corpo mais presentes</dd>
+          <dt>Prestige Cuvée</dt><dd>Melhor espumante de uma casa, geralmente Vintage, de parcelas seleccionadas. Exemplos: Dom Pérignon, Cristal, Krug Grande Cuvée</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">NV — A Essência da Casa</div>
+          <p>O Non Vintage é a espinha dorsal comercial de grandes casas como Moët, Veuve Clicquot e Laurent-Perrier. A arte do <em>chef de cave</em> está em manter a consistência do estilo da casa ao longo dos anos, independentemente das variações climáticas — os vinhos de reserva, por vezes de 10 anos ou mais, são o segredo dessa consistência.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 05 ─────────────────────────────────── -->
+      <section class="chapter" id="esp-velho-mundo">
+        <h1 class="chapter-title">Espumantes do Velho Mundo</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Champagne</div>
+            <div class="fact-label">França · 5 sub-regiões</div>
+            <div class="fact-desc">Pinot Noir · Meunier · Chardonnay</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Cava</div>
+            <div class="fact-label">Espanha · Catalunha</div>
+            <div class="fact-desc">Macabeo · Xarel·lo · Parellada</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Prosecco</div>
+            <div class="fact-label">Itália · Véneto</div>
+            <div class="fact-desc">Casta Glera · Método Charmat</div>
+          </div>
+        </div>
+
+        <p><strong>Champagne (França)</strong> é produzido em cinco sub-regiões — Montagne de Reims (9 grand crus, Pinot Noir e Meunier), Vallée de la Marne (Pinot Meunier), Côte des Blancs (6 grand crus, Chardonnay), Côte de Sézanne e Aube. Solos calcários, viticultura intensa (6.000–10.000 vinhas/ha). Produtores classificam-se como RM (Récoltant-Manipulant), NM (Négociant-Manipulant), CM (Coopérative) ou MA (Marque d'Acheteur).</p>
+
+        <dl class="region-facts">
+          <dt>Crémant (França)</dt><dd>Espumantes franceses fora da Champagne, método tradicional com mínimo 9 meses sur lie. Produzidos em Alsace, Bourgogne, Loire, Bordeaux, Limoux, Die e outros</dd>
+          <dt>Cava (Espanha)</dt><dd>Produzido principalmente na Catalunha, em solos calcários; castas Macabeo, Xarel·lo e Parellada. Método tradicional, mínimo 9 meses. Final alcoólico 10,8–12,8%</dd>
+          <dt>Sekt (Alemanha/Áustria)</dt><dd>98% feito pelo método Charmat com uvas importadas. O Deutscher Sekt e Winzersekt (pequenos produtores) são de maior qualidade. Castas: Riesling, Pinot Blanc, Pinot Noir, Silvaner</dd>
+          <dt>Asti DOCG (Itália)</dt><dd>Moscato Bianco do Piemonte, fermentação em autoclave (método Asti). Asti: 3,5–4 atm, 7–9,9% abv. Moscato d'Asti: levemente efervescente, até 1 atm</dd>
+          <dt>Prosecco (Itália)</dt><dd>Conegliano e Valdobbiadene, casta Glera, método Charmat. Disponível como Frizzante e Spumante. Subzona mais fresca: Cartizze</dd>
+          <dt>Franciacorta DOCG (Itália)</dt><dd>Método tradicional, mínimo 25 meses sur lie (37 para Riserva). Castas: Chardonnay, Pinot Nero, Pinot Bianco. Solos pedregosos e minerais</dd>
+          <dt>Lambrusco (Itália)</dt><dd>Produzido em Modena, Parma e Reggio nell'Emilia com variedades de Lambrusco, geralmente pelo método em tanque. A maioria é doce ou meio-doce, podendo ser rosé, branco ou tinto. Existem versões artesanais fermentadas em garrafa, mas a produção dominante é industrial, com baixo teor alcoólico</dd>
+          <dt>Portugal</dt><dd>Produção crescente em Bairrada, Távora-Varosa e Douro. Método tradicional com castas locais: Maria Gomes, Bical, Gouveio, Arinto</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 06 ─────────────────────────────────── -->
+      <section class="chapter" id="esp-novo-mundo">
+        <h1 class="chapter-title">Espumantes do Novo Mundo</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Austrália</div>
+            <div class="fact-label">Yarra Valley · Tasmânia</div>
+            <div class="fact-desc">Método tradicional nos premium</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Cap Classique</div>
+            <div class="fact-label">África do Sul</div>
+            <div class="fact-desc">Nome local para método tradicional</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Brasil</div>
+            <div class="fact-label">Serra Gaúcha</div>
+            <div class="fact-desc">Charmat (principal) e tradicional</div>
+          </div>
+        </div>
+
+        <dl class="region-facts">
+          <dt>Austrália</dt><dd>Melhores vinhos de Yarra Valley, Great Western e Tasmânia. Shiraz espumante é um estilo único feito com método tradicional. Espumantes básicos usam método de transferência</dd>
+          <dt>Nova Zelândia</dt><dd>Concentração em Marlborough, com clima marítimo fresco e solos bem drenados. Método tradicional predominante com Pinot Noir e Chardonnay</dd>
+          <dt>EUA</dt><dd>Carneros e Anderson Valley fornecem uvas premium; Central Valley para vinhos mais baratos. Método tradicional nos melhores exemplares; espumantes de Zinfandel doce também são comuns</dd>
+          <dt>África do Sul</dt><dd>Cap Classique é o nome local para espumantes pelo método tradicional. Feitos com Chardonnay, Pinot Noir e Chenin Blanc. Clima mediterrânico com influência marítima</dd>
+          <dt>Argentina</dt><dd>Principal origem em Mendoza, com altitude compensando o clima quente. Crescente produção com Chardonnay e Pinot Noir pelo método tradicional</dd>
+          <dt>Brasil</dt><dd>Vale dos Vinhedos, Pinto Bandeira e Serra Gaúcha. Método Charmat (principal) e tradicional nos produtos premium. Espumantes frescos e aromáticos com ótima acidez</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Shiraz Espumante Australiano</div>
+          <p>O espumante de Shiraz tinto é uma das maiores originalidades do Novo Mundo — um vinho espumante tinto, encorpado e com taninos, produzido pelo método tradicional, que não tem equivalente directo no Velho Mundo. Muito popular na Austrália durante as festividades natalícias.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 07 ─────────────────────────────────── -->
+      <section class="chapter" id="porto-historia">
+        <h1 class="chapter-title">Vinho do Porto — Origens e História</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">1703</div>
+            <div class="fact-label">Tratado de Methuen</div>
+            <div class="fact-desc">Vantagens fiscais aos vinhos portugueses</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">1756</div>
+            <div class="fact-label">Delimitação da região</div>
+            <div class="fact-desc">Marquês de Pombal — 1ª região demarcada do mundo</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">77% ABV</div>
+            <div class="fact-label">Aguardente vínica</div>
+            <div class="fact-desc">1 parte para 4 de mosto → 20% final</div>
+          </div>
+        </div>
+
+        <p>O Vinho do Porto é uma das expressões mais emblemáticas da vitivinicultura portuguesa, com raízes históricas profundas e uma complexidade única resultante da conjugação de factores geográficos, humanos e técnicos. Este vinho fortificado, conhecido mundialmente pela sua doçura e intensidade, é produzido exclusivamente na região demarcada do Douro — a mais antiga região vinícola regulamentada do mundo.</p>
+
+        <p>O desenvolvimento do Porto está intrinsecamente ligado às relações comerciais entre Portugal e a Inglaterra. No século XVII, as importações de vinhos franceses pelos ingleses eram frequentemente proibidas ou altamente taxadas, levando os comerciantes britânicos a procurar alternativas em Portugal. Os vinhos disponíveis na época eram geralmente finos e adstringentes ou extremamente escuros e duros, conhecidos como <em>blackstrap</em>.</p>
+
+        <p>Para melhorar a estabilidade durante o transporte marítimo, começou-se a adicionar aguardente vínica antes do embarque. A verdadeira revolução deu-se quando um mercador descobriu em Lamego, no Douro, um mosteiro onde os monges adicionavam aguardente durante a fermentação — interrompendo-a e preservando os açúcares naturais das uvas.</p>
+
+        <dl class="region-facts">
+          <dt>Tratado de Methuen (1703)</dt><dd>Conferiu vantagens fiscais aos vinhos portugueses em Inglaterra, impulsionando o comércio do Porto</dd>
+          <dt>Escândalos de 1730</dt><dd>Adulteração com açúcar e sumo de sabugueiro levou à criação de regulamentações e à delimitação oficial da região pelo Marquês de Pombal</dd>
+          <dt>IVDP</dt><dd>Instituto dos Vinhos do Douro e Porto — organismo regulador actual, que define as quantidades de vinho permitidas (Benefício) e controla as exportações</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 08 ─────────────────────────────────── -->
+      <section class="chapter" id="porto-regiao">
+        <h1 class="chapter-title">A Região do Douro</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">65 km</div>
+            <div class="fact-label">A montante do Porto</div>
+            <div class="fact-desc">Até à fronteira com Espanha</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Xisto</div>
+            <div class="fact-label">Solo dominante</div>
+            <div class="fact-desc">1–2 m de profundidade, pedregoso</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">400–1.200 mm</div>
+            <div class="fact-label">Precipitação anual</div>
+            <div class="fact-desc">Porto vs. fronteira com Espanha</div>
+          </div>
+        </div>
+
+        <p>A região do Douro estende-se desde cerca de 65 km a montante da cidade do Porto até à fronteira com Espanha. As montanhas que cercam a região protegem-na da influência atlântica, criando um microclima interior único — verões secos e quentes, invernos rigorosos e precipitação concentrada nos meses mais frios.</p>
+
+        <dl class="region-facts">
+          <dt>Solo</dt><dd>Xisto dominante, envolto por granito. Vinhas plantadas em socalcos escavados em encostas íngremes, com solos pobres, pedregosos e pouco profundos (1–2 m) — que forçam as raízes a descer em profundidade, concentrando os vinhos</dd>
+          <dt>Clima</dt><dd>Progressivamente mais extremo de ocidente para oriente — do Porto (1.200 mm chuva, 35 °C verão) à fronteira espanhola (400 mm, >35 °C, com granizo e secas prolongadas)</dd>
+          <dt>Envelhecimento</dt><dd>Tradicionalmente em Vila Nova de Gaia, à beira do Atlântico, onde o clima mais fresco e húmido evita o "Douro Bake" — oxidação caramelizada pelo calor extremo do interior</dd>
+          <dt>Barragens</dt><dd>A construção de barragens nos anos 60 transformou o rio em grandes lagos, facilitando a navegação e a irrigação das vinhas jovens</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 09 ─────────────────────────────────── -->
+      <section class="chapter" id="porto-subregioes">
+        <h1 class="chapter-title">Sub-regiões do Douro</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Baixo Corgo</div>
+            <div class="fact-label">Mais ocidental e húmido</div>
+            <div class="fact-desc">Centrado em Régua · Ruby e Tawny básicos</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Cima Corgo</div>
+            <div class="fact-label">Coração da região</div>
+            <div class="fact-desc">Centrado em Pinhão · Vintage e LBV</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Douro Superior</div>
+            <div class="fact-label">Mais oriental e quente</div>
+            <div class="fact-desc">Terreno mais plano · maior mecanização</div>
+          </div>
+        </div>
+
+        <p>A região do Douro divide-se em três sub-regiões com características climáticas, geológicas e qualitativas distintas:</p>
+
+        <dl class="region-facts">
+          <dt>Baixo Corgo</dt><dd>A parte mais ocidental e húmida, centrada em torno da cidade da Régua. Produz vinhos mais leves, sendo a principal origem de Ruby e Tawnys de menor qualidade e custo mais acessível</dd>
+          <dt>Cima Corgo</dt><dd>É o coração da região, centrado em Pinhão. Com menos chuva e temperaturas mais elevadas, é onde se produzem os melhores vinhos — Vintage, LBV e Tawnys envelhecidos. Todos os grandes exportadores possuem propriedades nesta sub-região</dd>
+          <dt>Douro Superior</dt><dd>A zona mais oriental, remota e menos desenvolvida. O terreno é mais plano e o clima ainda mais quente. O aumento dos custos de mão-de-obra tem levado os produtores a investir aqui pela maior facilidade de mecanização</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 10 ─────────────────────────────────── -->
+      <section class="chapter" id="porto-viticultura">
+        <h1 class="chapter-title">Viticultura e Classificação das Vinhas</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">A → F</div>
+            <div class="fact-label">Sistema de classificação</div>
+            <div class="fact-desc">12 critérios · 2.031 pontos máx.</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">33.000</div>
+            <div class="fact-label">Viticultores</div>
+            <div class="fact-desc">Cultivando 38.000 ha de vinhas</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Lei do Targo</div>
+            <div class="fact-label">Controlo do mercado</div>
+            <div class="fact-desc">Máx. ⅓ do stock exportado por ano</div>
+          </div>
+        </div>
+
+        <p>A viticultura no Douro é complexa e adaptada às condições desafiantes da região. Os antigos <strong>socalcos</strong> eram estreitos, com apenas duas fileiras de videiras suportadas por muros de pedra; os modernos terraços mais largos atingem densidades de cerca de 6.000 videiras/ha. Os <strong>patamares</strong>, introduzidos nos anos 70, substituem os muros por taludes cobertos por vegetação — permitem mecanização, mas com menor densidade (~3.500 videiras/ha). As <strong>vinhas ao alto</strong> plantam-se verticalmente em encostas superiores a 30°, dificultando o acesso e agravando a erosão.</p>
+
+        <p>A vindima começa geralmente no final de Setembro e dura cerca de três semanas. Os rendimentos são muito baixos — 500–750 kg/ha nas vinhas velhas. Os <strong>javalis</strong> são pragas notórias na região, por comerem as uvas nas semanas antes da vindima.</p>
+
+        <dl class="region-facts">
+          <dt>Classificação A–F</dt><dd>As vinhas são classificadas com base em 12 critérios (altitude, exposição, declive, castas, idade, etc.). A pontuação máxima é de 2.031 pontos — propriedades com mais de 1.200 recebem A; abaixo de 200 recebem F</dd>
+          <dt>Benefício</dt><dd>A quantidade máxima de vinho do Porto que cada vinha pode produzir anualmente, determinada pelo IVDP com base na classificação. Vinhas A ou B produzem cerca de 500–600 litros de Porto por mil videiras</dd>
+          <dt>Fragmentação</dt><dd>Mais de 80% das parcelas têm menos de 5 hectares — estrutura extremamente fragmentada que dificulta a mecanização mas garante diversidade</dd>
+          <dt>Poda</dt><dd>Vinhas antigas podadas em Guyot com arames; as mais recentes em esporão com condução em VSP. A irrigação é crucial para vinhas jovens</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 11 ─────────────────────────────────── -->
+      <section class="chapter" id="porto-castas">
+        <h1 class="chapter-title">Castas Tintas Principais</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Touriga Nacional</div>
+            <div class="fact-label">A casta nobre</div>
+            <div class="fact-desc">Alta cor e tanino · baixo rendimento</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Tinta Roriz</div>
+            <div class="fact-label">Tempranillo português</div>
+            <div class="fact-desc">Elegância e equilíbrio</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Touriga Franca</div>
+            <div class="fact-label">Perfume intenso</div>
+            <div class="fact-desc">Tolerante ao calor e à seca</div>
+          </div>
+        </div>
+
+        <dl class="region-facts">
+          <dt>Tinta Roriz (Tempranillo/Aragonês)</dt><dd>Elegância e equilíbrio, com cor, taninos e concentração médios. Boa performance em anos mais frescos</dd>
+          <dt>Touriga Nacional</dt><dd>A casta nobre por excelência. Produz vinhos encorpados e concentrados, com alta cor e tanino, mas baixo rendimento devido às bagas pequenas</dd>
+          <dt>Touriga Franca</dt><dd>Perfume intenso e mais suave que a Touriga Nacional. Boa tolerância ao calor e à seca — a mais plantada no Douro</dd>
+          <dt>Tinta Cão</dt><dd>Pequenos cachos e bagos, alto teor de extracto e taninos. Excelente para envelhecimento prolongado</dd>
+          <dt>Tinta Barroca</dt><dd>Alta acidez, tanino e cor. Prefere locais mais frescos e amadurece cedo. Rica em açúcares (alto peso do mosto)</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">As "5 Castas Nobres"</div>
+          <p>Durante décadas, o IVDP recomendou oficialmente cinco castas tintas para os melhores vinhos do Porto: Touriga Nacional, Touriga Franca, Tinta Roriz, Tinta Cão e Tinta Barroca. São as que oferecem maior concentração, complexidade e potencial de envelhecimento, embora mais de 80 castas estejam autorizadas na região.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 12 ─────────────────────────────────── -->
+      <section class="chapter" id="porto-vinif-tintos">
+        <h1 class="chapter-title">Vinificação dos Tintos</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">24–36 h</div>
+            <div class="fact-label">Tempo até aguardentação</div>
+            <div class="fact-desc">Mosto a 6–8% álcool · 90–100 g/L açúcar</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">77% ABV</div>
+            <div class="fact-label">Aguardente vínica</div>
+            <div class="fact-desc">1 parte para 4 partes de mosto</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">20% ABV</div>
+            <div class="fact-label">Teor alcoólico final</div>
+            <div class="fact-desc">Com 90–100 g/L de açúcar residual</div>
+          </div>
+        </div>
+
+        <p>O desafio na produção de Vinho do Porto tinto é extrair rapidamente os compostos fenólicos (cor e taninos) <strong>antes que o teor alcoólico atinja 5–6%</strong>, momento em que a aguardente é adicionada, interrompendo a fermentação e preservando os açúcares naturais.</p>
+
+        <dl class="region-facts">
+          <dt>Pisa a Pé (Lagares)</dt><dd>Método tradicional em lagares de granito — suave, eficaz e que evita a trituração das grainhas. Cada lagar tem capacidade para 15 pipas (5.500–8.250 litros), exigindo 1–2 pessoas por pipa. Ainda usado nas quintas mais tradicionais e para Portos de maior qualidade</dd>
+          <dt>Autovinificadores</dt><dd>Sistema moderno que utiliza a pressão do CO₂ produzido durante a fermentação para bombear o mosto sobre a manta de sólidos — equivalente mecânico da pisa. Algumas casas usam robots que imitam o movimento humano</dd>
+          <dt>Aguardentação (Mutagem)</dt><dd>Quando o mosto atinge 6–8% de álcool e conserva 90–100 g/L de açúcar residual, adiciona-se aguardente vínica de 77% ABV na proporção de 1:4. O resultado é um vinho de cerca de 20% ABV</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 13 ─────────────────────────────────── -->
+      <section class="chapter" id="porto-vinif-brancos">
+        <h1 class="chapter-title">Vinificação dos Brancos</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Inox / Cimento</div>
+            <div class="fact-label">Fermentação</div>
+            <div class="fact-desc">Maceração pelicular controlada</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">16,5–17%</div>
+            <div class="fact-label">ABV final</div>
+            <div class="fact-desc">Ligeiramente inferior aos tintos</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Malvasia Fina</div>
+            <div class="fact-label">Casta branca principal</div>
+            <div class="fact-desc">Com Gouveio, Viosinho, Rabigato</div>
+          </div>
+        </div>
+
+        <p>A maioria dos vinhos brancos é produzida com maceração pelicular e fermentação em cimento ou inox. Os produtores mais exigentes utilizam controlo de temperatura e evitam o contacto com as películas, obtendo vinhos mais limpos, leves e menos adstringentes.</p>
+
+        <dl class="region-facts">
+          <dt>Estilos de Porto Branco</dt><dd>A maioria é lançada jovem — mesmo os "secos" contêm algum açúcar residual. Alguns estilos podem envelhecer em madeira, desenvolvendo notas oxidativas e nutadas. White Reserva e White Lágrima são exemplos mais complexos</dd>
+          <dt>Fortificação</dt><dd>Feita a uma graduação ligeiramente inferior à dos tintos, cerca de 16,5–17% ABV final. Pode ser feita com fermento parcial ou total, dependendo do estilo pretendido</dd>
+          <dt>Porto Branco Seco</dt><dd>Estilo crescente servido com tónica e gelo como aperitivo. Similar ao White Port & Tonic popularizado pela Taylor's com a marca Chip Dry</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 14 ─────────────────────────────────── -->
+      <section class="chapter" id="porto-envelhecimento">
+        <h1 class="chapter-title">Envelhecimento: Gaia vs Douro</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">V. N. de Gaia</div>
+            <div class="fact-label">Envelhecimento tradicional</div>
+            <div class="fact-desc">Clima fresco e húmido · sem "Douro Bake"</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Cask Aged</div>
+            <div class="fact-label">Envelhecido em madeira</div>
+            <div class="fact-desc">Pronto a beber após engarrafamento</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Bottle Aged</div>
+            <div class="fact-label">Envelhecido em garrafa</div>
+            <div class="fact-desc">Sem filtração · evolui por décadas</div>
+          </div>
+        </div>
+
+        <p>Os vinhos destinados a envelhecimento são tradicionalmente transportados para <strong>Vila Nova de Gaia</strong>, onde o clima mais fresco e húmido, próximo do Atlântico, evita o <em>"Douro Bake"</em> — o envelhecimento oxidativo e caramelizado causado pelo calor extremo do interior. Em Gaia, os vinhos mantêm cor, frescor e complexidade mais equilibrados.</p>
+
+        <dl class="region-facts">
+          <dt>Cask Aged (envelhecido em madeira)</dt><dd>Vinho permanece em pipa durante o período de envelhecimento, com exposição gradual ao oxigénio. Pronto a beber após engarrafamento — frequentemente filtrado para clareza. Inclui Ruby básico, Tawny e variantes</dd>
+          <dt>Bottle Aged (envelhecido em garrafa)</dt><dd>Curto estágio em madeira e engarrafamento sem filtração. Evolui em garrafa por décadas, desenvolvendo bouquet complexo e depósito. Inclui LBV Traditional e Vintage Port</dd>
+          <dt>Pipas de Carvalho</dt><dd>Os Vinhos do Porto envelhecem em pipas de carvalho de 550–630 litros (ou "vasilhas"). A dimensão intermédia — maior que uma barrica de Borgonha, menor que um grande tonel — permite trocas lentas e controladas com o oxigénio</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 15 ─────────────────────────────────── -->
+      <section class="chapter" id="porto-estilos">
+        <h1 class="chapter-title">Estilos de Vinho do Porto</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Ruby</div>
+            <div class="fact-label">Cor intensa · jovem</div>
+            <div class="fact-desc">2–3 anos em madeira</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Tawny</div>
+            <div class="fact-label">Oxidativo · sedoso</div>
+            <div class="fact-desc">10, 20, 30 ou 40 anos indicativos</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Vintage</div>
+            <div class="fact-label">Apenas 1% da produção</div>
+            <div class="fact-desc">2–3 anos madeira · décadas em garrafa</div>
+          </div>
+        </div>
+
+        <dl class="region-facts">
+          <dt>Ruby Básico</dt><dd>Envelhecido 2–3 anos em madeira. Jovem, cor intensa, carácter vibrante de frutas vermelhas</dd>
+          <dt>Ruby Premium (Reserva)</dt><dd>Até 5 anos em madeira; "Reserva" substituiu "Vintage Character". Maior complexidade que o básico</dd>
+          <dt>White Port</dt><dd>Maioria lançada jovem; mesmo os "secos" contêm algum açúcar residual. Alguns estilos envelhecem e desenvolvem notas oxidativas</dd>
+          <dt>Fine Tawny</dt><dd>Geralmente mistura de Ruby e Porto Branco. Qualidade inferior; muitas vezes proveniente do Baixo Corgo</dd>
+          <dt>Tawny com Indicação de Idade (10, 20, 30, 40 anos)</dt><dd>Média de idade das misturas. Produzidos a partir dos melhores lotes. Devem indicar o ano de engarrafamento</dd>
+          <dt>Colheita</dt><dd>Porto Tawny com ano de vindima. Mínimo 7 anos em madeira. Deve ser consumido 1–2 anos após engarrafamento</dd>
+          <dt>Late Bottled Vintage (LBV)</dt><dd>De um único ano, engarrafado após 4–6 anos. Pode ser filtrado (pronto a beber) ou "Traditional" (sem filtragem, evolui em garrafa)</dd>
+          <dt>Crusted Port</dt><dd>Mistura de várias colheitas, lançado 3 anos após engarrafamento, sem filtração. Escuro e encorpado — alternativa acessível ao Vintage</dd>
+          <dt>Vintage Port</dt><dd>Apenas 1% da produção. Envelhecido 2–3 anos em madeira e depois longamente em garrafa. Declaração depende de aprovação do IVDP, em média 3 anos por década, a partir de vinhas no Cima Corgo</dd>
+          <dt>Single Quinta Vintage</dt><dd>Estilo Vintage de uma única quinta. Usado especialmente em anos não declarados pelos grandes exportadores</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 16 ─────────────────────────────────── -->
+      <section class="chapter" id="mad-historia">
+        <h1 class="chapter-title">Vinho da Madeira — Origens e História</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Séc. XIV</div>
+            <div class="fact-label">Descoberta da ilha</div>
+            <div class="fact-desc">Inicialmente vinhos não fortificados</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Estufa</div>
+            <div class="fact-label">Aquecimento artificial</div>
+            <div class="fact-desc">Desde ~1900 · substitui viagem oceânica</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">6</div>
+            <div class="fact-label">Exportadores activos</div>
+            <div class="fact-desc">Blandy's · Barbeito · H&H · Justino's · D'Oliveira · Pereira d'Oliveira</div>
+          </div>
+        </div>
+
+        <p>Os vinhos da Madeira são uma das expressões mais singulares e duradouras da enologia mundial, produzidos na ilha homónima — uma região autónoma de Portugal situada a cerca de 1.000 km do continente e a 750 km da costa norte de África.</p>
+
+        <p>A Madeira foi descoberta no século XIV, inicialmente produzindo vinhos não fortificados. Com o passar do tempo, Funchal tornou-se um porto natural de escala para embarcações a caminho de África, Ásia e América do Sul. No entanto, os vinhos eram instáveis durante as longas viagens oceânicas. Por volta do século XVIII, surgiu a prática de fortificar os vinhos com álcool proveniente da cana-de-açúcar local.</p>
+
+        <p>Durante as travessias tropicais, observou-se que o vinho <em>melhorava</em> após o movimento contínuo dos navios e o calor das zonas equatoriais. Dois métodos de envelhecimento foram estabelecidos: o <strong>Vinho da Roda</strong> (que maturava durante a viagem) e o <strong>Vinho Canteiro</strong> (que envelhecida lentamente nos armazéns de Funchal). Com o declínio das viagens marítimas longas cerca de 1900, desenvolveu-se o sistema artificial de <strong>estufa</strong>.</p>
+
+        <dl class="region-facts">
+          <dt>Os 6 Exportadores Actuais</dt><dd>Blandy's, Barbeito, Henriques &amp; Henriques, Justino's, D'Oliveira e Pereira d'Oliveira (Vinhos) — perpetuando uma tradição vinícola de cinco séculos</dd>
+          <dt>DOC exclusiva</dt><dd>Apenas vinhos fortificados da ilha recebem a DOC Madeira; vinhos não fortificados recebem a designação de Vinho Regional</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 17 ─────────────────────────────────── -->
+      <section class="chapter" id="mad-crises">
+        <h1 class="chapter-title">Crises e Declínio Moderno</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">1851</div>
+            <div class="fact-label">Oídio</div>
+            <div class="fact-desc">Seguido da filoxera — vinhedos devastados</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">1917</div>
+            <div class="fact-label">Revolução Russa</div>
+            <div class="fact-desc">Mercado russo eliminado</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">1920s</div>
+            <div class="fact-label">Proibição nos EUA</div>
+            <div class="fact-desc">25% da produção exportada para os EUA em 1790</div>
+          </div>
+        </div>
+
+        <p>A indústria vinícola da Madeira enfrentou sérias adversidades ao longo dos séculos, que moldaram profundamente a sua estrutura actual:</p>
+
+        <dl class="region-facts">
+          <dt>Doenças (séc. XIX)</dt><dd>Oídio em 1851, seguido da filoxera, devastou os vinhedos. Como solução rápida, introduziram-se híbridos e videiras americanas — inicialmente como porta-enxertos, mas depois também para produção directa de vinho. Isso causou uma queda significativa na reputação de qualidade da região</dd>
+          <dt>Revolução Russa (1917)</dt><dd>Cortou mercados importantes — a Rússia era um dos principais destinos dos Madeiras mais doces</dd>
+          <dt>Proibição nos EUA (anos 1920–30)</dt><dd>Eliminou uma fatia significativa das vendas. Os americanos, que nos anos 1790 compravam cerca de 25% da produção (chegando a brindar a Declaração de Independência com vinho Madeira), deixaram de importar</dd>
+          <dt>Fusões e Concentração</dt><dd>Muitas empresas fecharam; outras fundiram-se na Madeira Wine Company (hoje parte do grupo Blandy's). Hoje apenas seis exportadores permanecem activos</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 18 ─────────────────────────────────── -->
+      <section class="chapter" id="mad-terroir">
+        <h1 class="chapter-title">Terroir: Clima, Solo e Viticultura</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Subtropical</div>
+            <div class="fact-label">Clima</div>
+            <div class="fact-desc">Até 3.000 mm de chuva nas altitudes</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Vulcânico</div>
+            <div class="fact-label">Solo</div>
+            <div class="fact-desc">Tufos, basalto · fértil e rico em ferro</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Levadas</div>
+            <div class="fact-label">Irrigação tradicional</div>
+            <div class="fact-desc">Canais que distribuem água pela ilha</div>
+          </div>
+        </div>
+
+        <p>A Madeira possui um clima subtropical, quente e húmido, com chuvas abundantes — até 3.000 mm anuais nas áreas de maior altitude. Isso favorece o surgimento de doenças como a podridão cinzenta (Botrytis) e o oídio. As vinhas são plantadas em pequenas parcelas em socalcos estreitos, inacessíveis a máquinas, exigindo trabalho manual intensivo. A altitude e a presença de nuvens nas áreas altas contribuem para a preservação da acidez nas uvas.</p>
+
+        <dl class="region-facts">
+          <dt>Solo</dt><dd>Vulcânico, fértil, formado por tufos vermelhos e amarelos em decomposição e pequenos fragmentos de basalto ricos em ferro. A ilha sobe abruptamente até 1.800 metros, criando microclimas variados</dd>
+          <dt>Levadas</dt><dd>Canais de irrigação tradicionais que distribuem a água das zonas altas e húmidas para as encostas secas — sistema de engenharia hídrica com séculos de existência</dd>
+          <dt>Treliças Elevadas</dt><dd>Para reduzir o risco de fungos, as vinhas são frequentemente cultivadas em treliças elevadas (latadas), mantendo a folhagem longe do solo húmido</dd>
+          <dt>Microclimas</dt><dd>A diversidade de altitude (0–1.800 m), exposição e precipitação cria microclimas que determinam qual casta é mais adequada para cada localização</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 19 ─────────────────────────────────── -->
+      <section class="chapter" id="mad-castas">
+        <h1 class="chapter-title">Castas Nobres e Comerciais</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Sercial</div>
+            <div class="fact-label">Alta acidez · seco</div>
+            <div class="fact-desc">Locais frios (até 1.000 m) · norte da ilha</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Malmsey</div>
+            <div class="fact-label">Doce e aromático</div>
+            <div class="fact-desc">Zonas quentes · &gt;60 g/L açúcar</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Tinta Negra Mole</div>
+            <div class="fact-label">Mais plantada</div>
+            <div class="fact-desc">Versátil · menor capacidade de envelhecimento</div>
+          </div>
+        </div>
+
+        <dl class="region-facts">
+          <dt>Tinta Negra Mole</dt><dd>A casta mais plantada, versátil e de alta produtividade, mas de qualidade inferior às uvas nobres. Carece de capacidade de envelhecimento e profundidade, sendo usada em diversos estilos conforme o maneio</dd>
+          <dt>Sercial</dt><dd>Cultivada em locais mais frios (até 1.000 m), no lado norte da ilha. Apresenta baixa produtividade, é a última a amadurecer, mantendo alta acidez e baixo álcool. Usada para os estilos mais secos (8–25 g/L açúcar residual)</dd>
+          <dt>Verdelho</dt><dd>Cresce em encostas frescas, com pouca produção, mas maior concentração de açúcares. Resulta em vinhos de acidez elevada e estilo meio-seco (25–40 g/L). Também utilizado na Austrália para vinhos tranquilos</dd>
+          <dt>Boal (ou Bual)</dt><dd>Plantada em locais mais quentes, especialmente no sul. Tem baixo rendimento e acidez elevada, sendo usada em vinhos meio-doces (40–60 g/L). A variedade correcta é a Boal Cachudo, também conhecida como Malvasia Fina</dd>
+          <dt>Malmsey (Malvasia)</dt><dd>Cultivada nas zonas mais quentes e de menor altitude. De maturação tardia, altamente aromática, de altos teores de açúcar mas mantendo acidez. Usada para os estilos mais doces (60 g/L ou mais)</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 20 ─────────────────────────────────── -->
+      <section class="chapter" id="mad-vinificacao">
+        <h1 class="chapter-title">Vinificação por Casta</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Vinho Surdo</div>
+            <div class="fact-label">Mistela muito doce</div>
+            <div class="fact-desc">Fortif. a 20% álcool</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Abafado</div>
+            <div class="fact-label">Fermentação interrompida</div>
+            <div class="fact-desc">Estágio mais avançado</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">95% álcool vínico</div>
+            <div class="fact-label">Fortif. Boal/Malmsey</div>
+            <div class="fact-desc">Elevação a 17–18% ABV</div>
+          </div>
+        </div>
+
+        <dl class="region-facts">
+          <dt>Tinta Negra Mole</dt><dd>A cor é extraída das cascas para simular envelhecimento. Fermentação em grandes cubas de aço inox ou concreto de 25.000 litros. Vinhos de maior qualidade recebem álcool durante a fermentação; os de menor qualidade fermentam até secar, sendo fortificados e adoçados com mistela</dd>
+          <dt>Boal e Malmsey</dt><dd>Passam por fermentação com as cascas, como no Vinho do Porto. São fermentadas em aço inox ou concreto, embora alguns produtores ainda utilizem barris. A fortificação é feita durante a fermentação, com álcool vínico de 95%, elevando o teor alcoólico a 17–18%</dd>
+          <dt>Sercial e Verdelho</dt><dd>Têm pouco ou nenhum contacto com as cascas, fermentando até secar ou quase secar. São adoçados posteriormente com Vinho Surdo (mistela intensamente doce, fortificada até 20%) ou Abafado (vinho menos doce cuja fermentação foi interrompida em estágio mais avançado)</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 21 ─────────────────────────────────── -->
+      <section class="chapter" id="mad-maturacao">
+        <h1 class="chapter-title">Maturação: Estufas e Canteiro</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">40–50 °C</div>
+            <div class="fact-label">Estufa — Cuba de Calor</div>
+            <div class="fact-desc">Mín. 3 meses em tanque inox</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">30–40 °C</div>
+            <div class="fact-label">Estufa — Armazém de Calor</div>
+            <div class="fact-desc">6–12 meses em tonéis de 600 l</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">20–100+ anos</div>
+            <div class="fact-label">Canteiro</div>
+            <div class="fact-desc">Calor natural do sol · exclusivo Vintage</div>
+          </div>
+        </div>
+
+        <p>O processo de envelhecimento é o elemento mais singular e definidor dos vinhos da Madeira. A exposição controlada ao calor — seja de forma artificial (estufa) ou natural (canteiro) — provoca uma série de reacções químicas que tornam este vinho praticamente indestrutível e com longevidade sem paralelo no mundo vínico:</p>
+
+        <dl class="region-facts">
+          <dt>Estufa — Cuba de Calor</dt><dd>O vinho é aquecido entre 40–50 °C por no mínimo 3 meses, em tanques de aço inox ou concreto (20.000–50.000 l), com serpentinas de água quente. É o método mais comum para os estilos mais acessíveis e é regulamentado pelo Instituto do Vinho da Madeira</dd>
+          <dt>Estufa — Armazém de Calor</dt><dd>Processo mais suave, com aquecimento a 30–40 °C durante 6 a 12 meses, em tonéis de madeira de 600 l. Utiliza o calor de tubos de água quente. Aplicado a alguns vinhos de categoria Reserve e Special Reserve</dd>
+          <dt>Canteiro</dt><dd>Método tradicional e mais prestigiado. O vinho matura lentamente em tonéis de 600 l aquecidos pelo calor natural do sol nos armazéns de Funchal — onde as temperaturas podem ultrapassar os 45 °C no verão. Pode envelhecer por 20 a 100 anos ou mais. Exclusivo para os Madeiras Vintage (Frasqueira)</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Maderização vs. Oxidação</div>
+          <p>O calor da estufa provoca reacções de Maillard e caramelização que criam os aromas característicos de caramelo, café, frutos secos e especiarias do Madeira. Ao contrário de outros vinhos, onde a oxidação é um defeito, no Madeira é parte intrínseca do estilo — daí a sua longevidade excepcional e resistência ao envelhecimento em garrafa.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 22 ─────────────────────────────────── -->
+      <section class="chapter" id="mad-estilos">
+        <h1 class="chapter-title">Estilos de Vinho da Madeira</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Finest</div>
+            <div class="fact-label">3 anos · estufa + tanque</div>
+            <div class="fact-desc">Estilo mais acessível</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Special Reserve</div>
+            <div class="fact-label">10 anos</div>
+            <div class="fact-desc">Maior proporção de casco</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Vintage (Frasqueira)</div>
+            <div class="fact-label">Mín. 20 anos em canteiro</div>
+            <div class="fact-desc">Cascos de 600 l · o ápice da tradição</div>
+          </div>
+        </div>
+
+        <dl class="region-facts">
+          <dt>Granel</dt><dd>Vinho a granel, frequentemente colorido e adoçado, usado para cozinhar. Representa até 40% da produção total da ilha</dd>
+          <dt>Finest (3 anos)</dt><dd>Aquecido por cuba de calor e depois envelhecido em tanque. Estilo mais acessível e jovem</dd>
+          <dt>Reserve (5 anos)</dt><dd>Mínimo de 5 anos, com maior proporção de vinho envelhecido em casco. Maior complexidade que o Finest</dd>
+          <dt>Special Reserve (10 anos)</dt><dd>Envelhecido por 10 anos. Perfil mais complexo com aromas de frutos secos, caramelo e especiarias</dd>
+          <dt>Extra Reserve (15 anos)</dt><dd>Envelhecido por 15 anos. Raridade crescente no mercado</dd>
+          <dt>Colheita</dt><dd>De uma única colheita, mas com menor tempo de envelhecimento que um Vintage. Mínimo de 7 anos para Sercial, 5 anos para as demais castas</dd>
+          <dt>Solera</dt><dd>Sistema com base em uma data de fundação, cada engarrafamento contendo pequenas fracções de vinhos mais antigos. Actualmente proibido pela União Europeia — cada vez menos comum</dd>
+          <dt>Vintage — Frasqueira</dt><dd>De uma única vindima, envelhecido no mínimo 20 anos em cascos de 600 l (às vezes finalizado em garrafões de vidro). Representa o ápice da tradição e longevidade do vinho Madeira</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 23 ─────────────────────────────────── -->
+      <section class="chapter" id="jerez-historia">
+        <h1 class="chapter-title">Jerez — Origens e História</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">1100 a.C.</div>
+            <div class="fact-label">Fenícios introduzem viticultura</div>
+            <div class="fact-desc">Jerez de la Frontera · sul de Espanha</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">1935</div>
+            <div class="fact-label">Denominação de Origem</div>
+            <div class="fact-desc">Oficialmente criada · Consejo Regulador 1933</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">10.350 ha</div>
+            <div class="fact-label">Área actual de vinhedos</div>
+            <div class="fact-desc">Metade do que existia nos anos 1970</div>
+          </div>
+        </div>
+
+        <p>Os vinhos de Jerez — internacionalmente conhecidos como <em>Sherry</em> — são resultado de uma longa tradição vinícola que remonta a mais de três milénios. A cidade de Jerez de la Frontera, no sul da Espanha, é considerada uma das mais antigas vilas vinícolas do país. A introdução da viticultura ocorreu ainda no século XII a.C., por volta de 1100 a.C., com os fenícios.</p>
+
+        <p>No final do século XV, o comércio de vinhos de Jerez com Inglaterra e França já era sólido. Em 1492, muitas vinhas foram tomadas pelos ingleses — estabelecendo-se nessa época o tamanho do "Sherry Butt", o barril ainda utilizado na maturação. Os ataques de Francis Drake a Jerez reacenderam o interesse britânico pelo vinho local, que passou a ser conhecido como <em>"sack"</em>.</p>
+
+        <p>Sanlúcar de Barrameda desempenhou um papel estratégico no século XVI como porto de partida para as Américas — os vinhos de Jerez abasteciam as frotas que zarpavam para o Novo Mundo, estabelecendo a reputação global da região muito antes da era industrial. No início do século XIX, figuras como <strong>Pedro Domecq</strong> e <strong>Manuel María González Ángel</strong> (fundador da González Byass) foram fundamentais para estruturar a indústria moderna. Contudo, a praga da <strong>filoxera</strong>, no final do século XIX, devastou os vinhedos da região, forçando replantações em porta-enxertos americanos e reduzindo drasticamente a área de produção.</p>
+
+        <dl class="region-facts">
+          <dt>Sherry Shippers Association (1910)</dt><dd>Criada para organizar a indústria após a expansão desordenada do século XX, que gerou queda de preços e variações drásticas de qualidade</dd>
+          <dt>VOS e VORS (2000)</dt><dd>Rótulos de qualidade introduzidos em 2000: VOS (<em>Very Old Sherry</em>, média de 20 anos) e VORS (<em>Very Rare Old Sherry</em>, mais de 30 anos). Aplicáveis a Oloroso, Palo Cortado, Amontillado e Pedro Ximénez</dd>
+          <dt>Declínio do Século XX</dt><dd>A área total de vinhedos caiu de mais de 20.000 ha nos anos 1970 para os actuais 10.350 ha, com muitas vinhas substituídas por girassóis e cereais</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 24 ─────────────────────────────────── -->
+      <section class="chapter" id="jerez-regiao">
+        <h1 class="chapter-title">Região: Território e Clima</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Albariza</div>
+            <div class="fact-label">Solo nobre</div>
+            <div class="fact-desc">&gt;60% calcário activo · retém humidade</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Levante / Poniente</div>
+            <div class="fact-label">Ventos dominantes</div>
+            <div class="fact-desc">Quente/seco vs. fresco/húmido</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Jerez Superior</div>
+            <div class="fact-label">Zona mais nobre</div>
+            <div class="fact-desc">Norte do rio Guadalete · melhor albariza</div>
+          </div>
+        </div>
+
+        <p>A DO Jerez localiza-se na província de Cádiz e abrange três cidades produtoras: Jerez de la Frontera (vinificação), Sanlúcar de Barrameda e El Puerto de Santa María (onde estão as bodegas de envelhecimento). Os solos desempenham papel central na identidade dos vinhos:</p>
+
+        <dl class="region-facts">
+          <dt>Albariza</dt><dd>Calcário activo superior a 60%, com grande capacidade de retenção hídrica — ideal para vinhos finos e elegantes. A grande capacidade de retenção de humidade no inverno fornece água às videiras durante os verões secos</dd>
+          <dt>Barro</dt><dd>Mais argiloso, resulta em vinhos mais encorpados e rústicos</dd>
+          <dt>Arenas</dt><dd>Arenoso, maior produtividade e resistência à filoxera. Usado principalmente para Moscatel, especialmente na região de Chipiona</dd>
+          <dt>Jerez Superior</dt><dd>A zona mais nobre, com os melhores solos de albariza entre Jerez e Sanlúcar, ao norte do rio Guadalete. Distritos como Balbaina, Macharnudo, Carrascal e Añina são reconhecidos pela finesse dos seus vinhos</dd>
+          <dt>Clima</dt><dd>Mediterrânico com influência atlântica. Os ventos Levante (quente e seco) e Poniente (fresco e húmido) afectam directamente o crescimento da flor. Temperaturas entre 18–40 °C entre Jerez e Sanlúcar</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 25 ─────────────────────────────────── -->
+      <section class="chapter" id="jerez-viticultura">
+        <h1 class="chapter-title">Viticultura e Castas</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Palomino Fino</div>
+            <div class="fact-label">90% dos vinhedos</div>
+            <div class="fact-desc">Baixa acidez · pouco açúcar · neutra</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Pedro Ximénez</div>
+            <div class="fact-label">&lt;100 ha em Jerez</div>
+            <div class="fact-desc">Passificada ao sol · 200–400 g/L açúcar</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">4.100 plantas/ha</div>
+            <div class="fact-label">Densidade média</div>
+            <div class="fact-desc">Máx. 80 hl/ha de produção</div>
+          </div>
+        </div>
+
+        <dl class="region-facts">
+          <dt>Palomino Fino</dt><dd>Cobre 90% dos vinhedos. Adaptada a solos secos e arenosos, substituiu a Palomino Basto. Tem baixa acidez e pouco açúcar (colhida a 13 °Brix), sendo mais adequada à produção seca. Os seus cachos soltos também servem como uva de mesa</dd>
+          <dt>Moscatel Gordo Blanco (de Alexandria)</dt><dd>Cerca de 3% da área, cultivada em solos arenosos como em Chipiona. Usada para vinhos doces e varietais</dd>
+          <dt>Pedro Ximénez (PX)</dt><dd>Menos de 100 ha em Jerez, devido à fragilidade da casca. Com frequência, o mosto vem da DO Montilla-Moriles. PX e Moscatel são passificados ao sol antes da prensagem — o mosto atinge apenas cerca de 5% álcool, com açúcares residuais entre 200–400 g/L</dd>
+          <dt>Tresbolillo</dt><dd>Padrão histórico de plantação hexagonal. Hoje predominam fileiras ordenadas que permitem mecanização. A poda tradicional <em>Vara y Pulgar</em> — similar ao Guyot — consiste em manter uma vara (7–8 gemas) e um pulgar (braço curto para o próximo ano)</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 26 ─────────────────────────────────── -->
+      <section class="chapter" id="jerez-vinificacao">
+        <h1 class="chapter-title">Vinificação e Envelhecimento</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">8 Set.</div>
+            <div class="fact-label">Início da colheita</div>
+            <div class="fact-desc">Dura cerca de um mês</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">72,5 L/100 kg</div>
+            <div class="fact-label">Rendimento máximo</div>
+            <div class="fact-desc">Superior ao permitido em Champagne</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Solera</div>
+            <div class="fact-label">Sistema de envelhecimento</div>
+            <div class="fact-desc">Criaderas + solera · blending dinâmico</div>
+          </div>
+        </div>
+
+        <p>A colheita começa tradicionalmente em 8 de setembro e dura cerca de um mês. As uvas são desengaçadas e prensadas em prensas pneumáticas horizontais. O mosto de lágrima é vinificado separadamente — ideal para Finos. A fermentação ocorre a temperaturas de até 28 °C, evitando ésteres e aromas frutados. Os vinhos atingem 12–13% de álcool, e a flor começa a desenvolver-se naturalmente.</p>
+
+        <dl class="region-facts">
+          <dt>Dupla Classificação</dt><dd>Os vinhos são classificados duas vezes — em janeiro e na primavera. Vinhos de solos leves tendem a virar Fino; os de solos pesados, Oloroso</dd>
+          <dt>Fortificação</dt><dd>Finos são fortificados a 15,5% com <em>mitad y mitad</em> (mistura de álcool a 95,5% e vinho jovem). Olorosos a 17,5%. A diferença de graduação determina se a flor sobrevive ou não</dd>
+          <dt>Sistema de Solera</dt><dd>Cascos de carvalho americano usados, dispostos em andares (criaderas). O vinho é retirado da solera (andar inferior) e reabastecido com vinho mais jovem das criaderas superiores. Nunca se retira mais de um terço de qualquer casco de uma vez</dd>
+          <dt>Botas</dt><dd>Barris de carvalho americano de 600–650 litros, intencionalmente preenchidos até apenas cinco sextos da capacidade — o espaço vazio permite o contacto controlado com o oxigénio necessário para o desenvolvimento da flor</dd>
+        </dl>
+
+        <h2>Organização das Bodegas</h2>
+        <p>A indústria de Jerez organiza-se em quatro tipos de bodegas, cada um com requisitos específicos de produção, armazenamento e licenciamento:</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Tipo de Bodega</th><th>Função Principal</th><th>Requisitos</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Bodegas de Producción</strong></td>
+              <td>Apenas vinificação — não armazenam nem envelhecem</td>
+              <td>Instalações de vindima e fermentação</td>
+            </tr>
+            <tr>
+              <td><strong>Bodegas de Elaboración</strong></td>
+              <td>Armazenam por períodos curtos antes de vender a granel</td>
+              <td>Capacidade mínima de armazenamento temporário</td>
+            </tr>
+            <tr>
+              <td><strong>Bodegas de Crianza y Almacenado</strong></td>
+              <td>Almacenistas — envelhecimento para venda a expedidores</td>
+              <td>Mín. 1.000 hl; 60% do stock em Jerez Superior</td>
+            </tr>
+            <tr>
+              <td><strong>Bodegas de Crianza y Expedición</strong></td>
+              <td>Envelhecimento + exportação directa ao mercado</td>
+              <td>Licença governamental; maior escala de solera</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 27 ─────────────────────────────────── -->
+      <section class="chapter" id="jerez-flor">
+        <h1 class="chapter-title">A Flor e seu Papel</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">S. cerevisiae var. beticus</div>
+            <div class="fact-label">Levedura da flor</div>
+            <div class="fact-desc">Biofilme sobre a superfície do vinho</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">15–16% ABV</div>
+            <div class="fact-label">Janela de sobrevivência</div>
+            <div class="fact-desc">Abaixo: bactérias · Acima: álcool tóxico</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">6–8 anos</div>
+            <div class="fact-label">Vida média da flor</div>
+            <div class="fact-desc">Com refrescamento contínuo da solera</div>
+          </div>
+        </div>
+
+        <p>A <strong>flor</strong> é um véu de leveduras do tipo <em>Saccharomyces cerevisiae var. beticus</em> (também chamada <em>Saccharomyces ellipsoideous</em>) que se desenvolve naturalmente sobre a superfície de certos vinhos, especialmente nos estilos Fino e Manzanilla. Este biofilme é uma das características mais distintivas do envelhecimento biológico, protegendo o vinho da oxidação e modificando profundamente as suas características sensoriais.</p>
+
+        <p>A flor consome oxigénio, etanol, glicerol e outros nutrientes do vinho, libertando compostos como o acetaldeído — responsável pelos aromas característicos de maçã verde, massa de pão e nozes. Por outro lado, este metabolismo impede a oxidação directa, mantendo o vinho fresco, seco e leve.</p>
+
+        <dl class="region-facts">
+          <dt>Condições para a Flor</dt><dd>Surge espontaneamente em vinhos que atingem cerca de 15% ABV — concentração que inibe microrganismos indesejáveis mas ainda permite a sobrevivência destas leveduras especializadas. Acima de 16%, o álcool torna-se tóxico para a flor</dd>
+          <dt>Influência do Clima</dt><dd>Em Montilla-Moriles, o calor extremo de verão mata a flor sazonalmente. Em Sanlúcar de Barrameda, o clima mais fresco e húmido permite que a flor cresça espessa e uniforme ao longo do ano, resultando em Manzanilla — o mais delicado dos Sherries</dd>
+          <dt>Solera e Flor</dt><dd>O sistema de criaderas e solera é essencial: ao ser constantemente alimentada com vinhos jovens ricos em nutrientes, a flor mantém-se viva durante 6 a 8 anos ou mais, permitindo um envelhecimento contínuo e equilibrado</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">Manzanilla — A Flor de Sanlúcar</div>
+          <p>A Manzanilla é produzida exclusivamente em Sanlúcar de Barrameda, onde o clima costeiro mais fresco e húmido favorece uma flor mais espessa e estável ao longo do ano. O resultado é um Sherry de carácter único — salino, delicado, com notas de camomila e toque floral — que muitos consideram a expressão mais refinada do envelhecimento biológico em Jerez.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 28 ─────────────────────────────────── -->
+      <section class="chapter" id="jerez-estilos">
+        <h1 class="chapter-title">Estilos de Jerez</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Fino</div>
+            <div class="fact-label">Biológico · seco</div>
+            <div class="fact-desc">15,5% · protegido pela flor</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Oloroso</div>
+            <div class="fact-label">Oxidativo</div>
+            <div class="fact-desc">17,5% · sem flor · até 24% álcool</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Palo Cortado</div>
+            <div class="fact-label">Estilo raro</div>
+            <div class="fact-desc">Começa como Fino · envelhece como Oloroso</div>
+          </div>
+        </div>
+
+        <dl class="region-facts">
+          <dt>Fino</dt><dd>Seco, leve, protegido da oxidação pela flor. Filtrado e fortificado a 15,5%. Em Sanlúcar, é chamado <strong>Manzanilla</strong>; quando envelhecido por mais de 8 anos, torna-se <strong>Manzanilla Pasada</strong></dd>
+          <dt>Amontillado</dt><dd>Começa como Fino por no mínimo 3 anos. Depois é transferido, refortificado, e passa a envelhecer oxidativamente. Pode ser adoçado ou conter vinhos mais jovens. <em>Fino Amontillado</em> e <em>Manzanilla Pasada</em> indicam estágio intermediário</dd>
+          <dt>Oloroso</dt><dd>Não passa por flor, pois é fortificado a 17,5–18% desde o início. Envelhece oxidativamente, podendo atingir até 24% de álcool. Versões doces (Cream) são feitas com PX ou mistela de Palomino</dd>
+          <dt>Palo Cortado</dt><dd>Estilo raro que começa sob flor como Fino, mas esta é inibida antes de consumir todo o glicerol. Envelhece depois oxidativamente, combinando a estrutura de Oloroso com os aromas florais do Fino</dd>
+          <dt>Pedro Ximénez e Moscatel</dt><dd>Vinhos doces, densos e concentrados. Produção semelhante à do Fino até o envelhecimento — mas a partir de uvas passificadas ao sol com 200–400 g/L de açúcar</dd>
+          <dt>RCGM</dt><dd>Mosto de Palomino concentrado e descolorado por carvão, usado para adoçar alguns estilos (Cream, Pale Cream)</dd>
+          <dt>VOS / VORS</dt><dd>VOS: <em>Very Old Sherry</em>, média de 20 anos. VORS: <em>Very Rare Old Sherry</em>, mais de 30 anos. Aplicáveis a Oloroso, Palo Cortado, Amontillado e PX</dd>
+        </dl>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 29 ─────────────────────────────────── -->
+      <section class="chapter" id="jerez-montilla">
+        <h1 class="chapter-title">Montilla-Moriles</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Pedro Ximénez</div>
+            <div class="fact-label">70% da produção local</div>
+            <div class="fact-desc">Atinge 15% naturalmente sem fortif.</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">45 °C</div>
+            <div class="fact-label">Temperatura de verão</div>
+            <div class="fact-desc">Clima continental semiárido extremo</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Mín. 2 anos</div>
+            <div class="fact-label">Envelhecimento em solera</div>
+            <div class="fact-desc">Um ano menos que em Jerez</div>
+          </div>
+        </div>
+
+        <p>Situada a 40 km ao sul de Córdoba, Montilla-Moriles tornou-se DO em 1945. Os seus vinhos podem ser fortificados ou não, e usam maioritariamente Pedro Ximénez (70%). Apesar de exportar parte do mosto para Jerez, enfrenta a reputação de ser inferior ao Sherry.</p>
+
+        <p>Com clima semiárido e continental, verões escaldantes (até 45 °C) e solos predominantemente arenosos, Montilla produz Finos sem fortificação — a Pedro Ximénez atinge naturalmente 15% ABV por fermentação completa — e estilos oxidativos fortificados ou não.</p>
+
+        <dl class="region-facts">
+          <dt>Sem Fortif. nos Finos</dt><dd>Ao contrário de Jerez, os Finos de Montilla-Moriles não precisam de ser fortificados. A Pedro Ximénez, devido ao clima quente, atinge naturalmente 15% de álcool — nível suficiente para sustentar o desenvolvimento da flor</dd>
+          <dt>Flor em Montilla</dt><dd>A camada de flor que se forma é significativamente mais fina do que a encontrada em Jerez, o que resulta em vinhos mais delicados, secos e oxidados mais rapidamente. No verão, a flor tende a morrer com o calor extremo</dd>
+          <dt>Nomenclatura</dt><dd>Dentro da Espanha, é permitido o uso dos termos "Fino", "Oloroso" e afins, mas essa nomenclatura não pode ser usada para exportação — os vinhos são rotulados pelo perfil sensorial: Pale Dry, Medium Dry, Medium Sweet, Pale Cream, Cream</dd>
+          <dt>Tinajas</dt><dd>Recipientes tradicionais de cimento ou barro (ânforas gigantes) usados antes de passar ao sistema de solera — uma singularidade de Montilla</dd>
+        </dl>
+
+        <h2>Comparativo da Flor: Jerez, Montilla-Moriles e Sanlúcar</h2>
+        <p>A flor comporta-se de forma diferente nas três principais zonas produtoras, condicionada pelo clima, altitude e humidade:</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Característica</th><th>Jerez de la Frontera</th><th>Montilla-Moriles</th><th>Sanlúcar de Barrameda</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Clima</td>
+              <td>Mediterrânico semi-árido</td>
+              <td>Continental semiárido extremo (até 45 °C)</td>
+              <td>Atlântico costeiro, fresco e húmido</td>
+            </tr>
+            <tr>
+              <td>Espessura da Flor</td>
+              <td>Moderada</td>
+              <td>Fina a muito fina</td>
+              <td>Espessa e uniforme</td>
+            </tr>
+            <tr>
+              <td>Estabilidade ao longo do ano</td>
+              <td>Sazonal — morre nos verões quentes</td>
+              <td>Muito instável — morre nos verões extremos</td>
+              <td>Estável — cresce todo o ano</td>
+            </tr>
+            <tr>
+              <td>Intervenção humana</td>
+              <td>Necessária para manter a flor activa</td>
+              <td>Alta — gestão de temperatura e eventuais fortif.</td>
+              <td>Mínima — clima favorece crescimento natural</td>
+            </tr>
+            <tr>
+              <td>Estilos produzidos com flor</td>
+              <td>Fino, Amontillado, Palo Cortado</td>
+              <td>Fino (sem fortif.), Amontillado</td>
+              <td>Manzanilla, Manzanilla Pasada</td>
+            </tr>
+            <tr>
+              <td>Aromas típicos</td>
+              <td>Maçã verde, nozes, levedura</td>
+              <td>Mais oxidativo, menos floral</td>
+              <td>Salino, camomila, delicado, floral</td>
+            </tr>
+            <tr>
+              <td>Tempo médio de vida da flor</td>
+              <td>6–8 anos (com solera)</td>
+              <td>Curto — poucas escalas de solera</td>
+              <td>Mais de 8 anos (com solera contínua)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="chapter-end"></div>
+      </section>
+
+      <!-- 30 ─────────────────────────────────── -->
+      <section class="chapter" id="jerez-outros">
+        <h1 class="chapter-title">Outros Vinhos ao Estilo de Jerez</h1>
+        <div class="chapter-rule"></div>
+
+        <div class="fact-grid">
+          <div class="fact-card">
+            <div class="fact-value">Mavrodaphne</div>
+            <div class="fact-label">Grécia · Peloponeso</div>
+            <div class="fact-desc">Semelhante ao Tawny</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Commandaria</div>
+            <div class="fact-label">Chipre · Montes Troodos</div>
+            <div class="fact-desc">Mín. 2 anos em barrica</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-value">Cyprus Sherry</div>
+            <div class="fact-label">Chipre · estilo Porto</div>
+            <div class="fact-desc">Versões secas envelhecidas sob flor</div>
+          </div>
+        </div>
+
+        <dl class="region-facts">
+          <dt>Mavrodaphne de Patras (Grécia)</dt><dd>Produzido no Peloponeso a partir da uva tinta Mavrodaphne, este vinho fortificado grego passa por longo envelhecimento em tonéis, resultando em um estilo similar ao Tawny. Aromático e potente, apresenta notas de frutas secas, caramelo e especiarias doces</dd>
+          <dt>Commandaria (Chipre)</dt><dd>Vinho fortificado tradicional de Chipre, produzido na região demarcada ao redor das encostas dos Montes Troodos. Uvas: tinta Mavro e branca Xynisteri, colhidas maduras e deixadas ao sol para concentração de açúcares. Fermentação interrompida naturalmente; vinho fortificado até 20% ABV. Maturação mínima de dois anos em barricas</dd>
+          <dt>Vinho Fortificado de Chipre (antigo "Cyprus Sherry")</dt><dd>Durante anos comercializado como "Sherry de Chipre", era produzido com métodos semelhantes ao Vinho do Porto: fermentação interrompida com álcool, seguida de envelhecimento por cerca de um ano em barricas, adoçado com mosto concentrado (RCGM). Alguns produtores criavam versões secas envelhecidas sob flor em solera por no mínimo dois anos</dd>
+        </dl>
+
+        <div class="callout">
+          <div class="callout-label">O Fim do "Sherry de Chipre"</div>
+          <p>Com a adesão de Chipre à União Europeia em 2004, a denominação "Sherry" passou a ser protegida exclusivamente para os vinhos da região de Jerez em Espanha. Os produtores cipriotes foram obrigados a renomear os seus produtos — uma das várias disputas de denominação de origem resolvidas com a integração europeia e a protecção das indicações geográficas.</p>
+        </div>
+
+        <div class="chapter-end"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Mobile bottom nav -->
+  <div class="mobile-nav">
+    <button class="mob-arrow" id="mob-prev">←</button>
+    <span class="mob-counter"><span id="mob-counter">1 / 30</span></span>
+    <button class="mob-arrow" id="mob-next">→</button>
+  </div>
+
+  <!-- Scroll arrows -->
+  <div class="scroll-arrows">
+    <button class="scroll-arrow" id="scroll-up" title="Rolar para cima">↑</button>
+    <button class="scroll-arrow" id="scroll-dn" title="Rolar para baixo">↓</button>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

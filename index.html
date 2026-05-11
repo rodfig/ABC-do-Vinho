@@ -14,7 +14,7 @@
       <h1>ABC do Vinho</h1>
       <p class="hero-tagline">Curso de Iniciação em Vinhos</p>
       <div class="hero-rule"></div>
-      <p class="hero-desc">Seis módulos sobre a origem, cultura e arte do vinho</p>
+      <p class="hero-desc">Sete módulos sobre a origem, cultura e arte do vinho</p>
     </header>
 
     <div class="modules-grid">
@@ -35,33 +35,41 @@
         <span class="mod-arrow">→</span>
       </a>
 
-      <a class="mod-card disabled" href="#" data-num="III"
+      <a class="mod-card" href="modulo3/" data-num="III"
          style="--accent:#7A4F1D">
         <div class="mod-num">Módulo III</div>
         <h2>Castas de Portugal</h2>
         <p>As principais castas autóctones tintas e brancas</p>
-        <span class="mod-arrow">em breve</span>
+        <span class="mod-arrow">→</span>
       </a>
 
-      <a class="mod-card disabled" href="#" data-num="IV"
-         style="--accent:#1E3A5F">
+      <a class="mod-card" href="modulo4/" data-num="IV"
+         style="--accent:#2E6B6B">
         <div class="mod-num">Módulo IV</div>
+        <h2>Fermentação e Vinificação</h2>
+        <p>Leveduras, maceração e o processo de fazer vinho</p>
+        <span class="mod-arrow">→</span>
+      </a>
+
+      <a class="mod-card" href="modulo5/" data-num="V"
+         style="--accent:#1E3A5F">
+        <div class="mod-num">Módulo V</div>
         <h2>Vinhos Especiais</h2>
         <p>Espumantes, Vinho do Porto, Madeira e Jerez</p>
-        <span class="mod-arrow">em breve</span>
+        <span class="mod-arrow">→</span>
       </a>
 
-      <a class="mod-card disabled" href="#" data-num="V"
+      <a class="mod-card disabled" href="#" data-num="VI"
          style="--accent:#7A3B2E">
-        <div class="mod-num">Módulo V</div>
+        <div class="mod-num">Módulo VI</div>
         <h2>Serviço e Sommelier</h2>
         <p>Serviço de bar, sommelier e maridagem</p>
         <span class="mod-arrow">em breve</span>
       </a>
 
-      <a class="mod-card disabled" href="#" data-num="VI"
+      <a class="mod-card disabled" href="#" data-num="VII"
          style="--accent:#5B2E8A">
-        <div class="mod-num">Módulo VI</div>
+        <div class="mod-num">Módulo VII</div>
         <h2>Degustação</h2>
         <p>Análise sensorial e normas de prova</p>
         <span class="mod-arrow">em breve</span>
@@ -70,10 +78,11 @@
     </div>
 
     <footer class="landing-footer">
-      &copy; 2025 AEP · ABC do Vinho
+      &copy; <span id="copy-year"></span> Rodrigo Figueiredo &middot; ABC do Vinho
     </footer>
 
   </div>
 
+<script>document.getElementById('copy-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

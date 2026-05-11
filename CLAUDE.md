@@ -17,11 +17,11 @@ PDFs live in `C:\Users\rodfi\Desktop\Documents\Wine\AEP\Profissional I\`.
 | 3 | Módulo 2/Módulo 2 - Texto para estudo.pdf | pages 123–142 (casta fichas) |
 | 4 | Módulo 3/Modulo 3 - Texto para Estudo.pdf | 78 pages (fermentação e vinificação) |
 | 5 | Módulo 3/sub-PDFs | espumantes, porto, madeira, jerez (detailed) |
-| 6 | Módulo 4/Módulo 4 - Texto para estudo.pdf | 26 pages (serviço e sommelier) |
-| 7 (or 7+8) | Módulo 5/Módulo 5 - Texto para estudo 1.pdf + 2.pdf | degustação — may split into two modules |
+| 6 | Módulo 4/Módulo 4 - Texto para estudo.pdf | serviço de bar — cocktails, IBA, ABP, utensílios, copos |
+| 7 | Módulo 5/Módulo 5 - Texto para estudo 1.pdf | degustação de vinhos — terroir, análise sensorial, normas de prova |
+| 8 | Módulo 5/Módulo 5 - Texto para estudo 2.pdf | serviço de vinhos — garrafas, rolhas, protocolo do sommelier |
 
-> Site modules do not map 1:1 to course PDFs. Modules 3–7 each draw from one or more PDFs.  
-> **Open:** Módulo 5 source has two separate PDFs (Texto para Estudo 1 + 2). Scope them before deciding whether Degustação is one module or two (7 and 8). If two, the landing must expand to 8 cards and the CSS/nav must add `[data-module="8"]`.
+> Site modules do not map 1:1 to course PDFs. Modules 6–8 each draw from one PDF.
 
 ---
 
@@ -36,15 +36,15 @@ Quizzes/tests — deferred to later phase.
 ## Site Map
 
 ```
-index.html                        ← Landing (7 module cards)
+index.html                        ← Landing (8 module cards)
 modulo1/index.html                ← 18 chapters, grouped sidebar (COMPLETE)
 modulo2/index.html                ← 24 chapters — Viticultura, Regiões e Vinhos (COMPLETE)
 modulo3/index.html                ← 36 chapters — Castas de Portugal (COMPLETE)
 modulo4/index.html                ← 22 chapters — Fermentação e Vinificação (COMPLETE)
 modulo5/index.html                ← 30 chapters — Vinhos Especiais (Espumantes / Porto / Madeira / Jerez) (COMPLETE)
-modulo6/index.html                ← Serviço e Sommelier (pending)
-modulo7/index.html                ← Degustação pt.1 (pending — scope PDFs first; may split)
-modulo8/index.html                ← Degustação pt.2 (pending — only if split)
+modulo6/index.html                ← Serviço de Bar (pending)
+modulo7/index.html                ← Degustação de Vinhos (pending)
+modulo8/index.html                ← Serviço de Vinhos — protocolo e sommelier (pending)
 css/styles.css                    ← Global reset, layout, typography, components
 js/main.js                        ← Chapter navigation engine
 ```
@@ -72,8 +72,9 @@ Mirrors Vinhos do Mundo. Cream page background, dark sidebar, gold accent, per-m
 | 3 | Castas de Portugal | amber `#7A4F1D` | `[data-module="3"]` |
 | 4 | Fermentação e Vinificação | teal `#2E6B6B` | `[data-module="4"]` |
 | 5 | Vinhos Especiais | navy `#1E3A5F` | `[data-module="5"]` |
-| 6 | Serviço e Sommelier | terracotta `#7A3B2E` | `[data-module="6"]` |
-| 7 | Degustação | violet `#5B2E8A` | `[data-module="7"]` (add to CSS) |
+| 6 | Serviço de Bar | terracotta `#7A3B2E` | `[data-module="6"]` (add to CSS) |
+| 7 | Degustação de Vinhos | violet `#5B2E8A` | `[data-module="7"]` (add to CSS) |
+| 8 | Serviço de Vinhos | olive `#4A5E3A` | `[data-module="8"]` (add to CSS) |
 
 **Chapter format:** full-length scrollable page per topic (not fixed-height slides).  
 **Chapter granularity:** one chapter per named section in the source PDFs.
@@ -150,8 +151,9 @@ Source: `Módulo 3/Modulo 3 - Texto para Estudo.pdf` (78 pages)
 | 3 | Castas de Portugal | 36 (done) |
 | 4 | Fermentação e Vinificação | 22 (done) |
 | 5 | Vinhos Especiais (4 sub-modules) | 30 (done) |
-| 6 | Serviço e Sommelier | ~25–35 est. |
-| 7 | Degustação | ~40–50 est. |
+| 6 | Serviço de Bar | ~20–30 est. |
+| 7 | Degustação de Vinhos | ~25–35 est. |
+| 8 | Serviço de Vinhos | ~20–30 est. |
 
 ---
 
@@ -164,9 +166,10 @@ Source: `Módulo 3/Modulo 3 - Texto para Estudo.pdf` (78 pages)
 5. ✅ Module 3 — 36 chapters (castas tintas + brancas)
 6. ✅ Module 4 — Fermentação e Vinificação (22 chapters)
 7. ✅ Module 5 — Vinhos Especiais (30 chapters, flat file)
-8. Module 6 — Serviço e Sommelier
-9. Module 7 — Degustação
-10. `print.css` + Puppeteer PDF export (later)
+8. Module 6 — Serviço de Bar (Módulo 4 PDF)
+9. Module 7 — Degustação de Vinhos (Módulo 5 PDF 1)
+10. Module 8 — Serviço de Vinhos (Módulo 5 PDF 2)
+11. `print.css` + Puppeteer PDF export (later)
 
 ## Deploy
 
@@ -177,5 +180,4 @@ GitHub → Vercel auto-deploy on push to `master`.
 ## Open Questions
 
 1. Modules 1 and 2 overlap on soil science — cross-reference in Module 2 or note in Module 1?
-2. Modules 2 and 7 both cover tasting methodology — same treatment or different depth?
-3. Module 7 (Degustação): scope Módulo 5 PDFs (Texto para Estudo 1 + 2) before building — may split into modules 7 and 8. If split, landing expands to 8 cards and CSS/nav gains `[data-module="8"]`.
+2. Modules 2 and 7 both cover terroir/tasting methodology — same treatment or different depth?

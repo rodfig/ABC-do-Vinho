@@ -44,7 +44,7 @@ modulo4/index.html                ← 22 chapters — Fermentação e Vinificaç
 modulo5/index.html                ← 30 chapters — Vinhos Especiais (Espumantes / Porto / Madeira / Jerez) (COMPLETE)
 modulo6/index.html                ← Serviço de Bar (pending)
 modulo7/index.html                ← Degustação de Vinhos (pending)
-modulo8/index.html                ← Serviço de Vinhos — protocolo e sommelier (pending)
+modulo8/index.html                ← 20 chapters — Serviço de Vinhos — protocolo e sommelier (COMPLETE)
 css/styles.css                    ← Global reset, layout, typography, components
 js/main.js                        ← Chapter navigation engine
 ```
@@ -74,7 +74,7 @@ Mirrors Vinhos do Mundo. Cream page background, dark sidebar, gold accent, per-m
 | 5 | Vinhos Especiais | navy `#1E3A5F` | `[data-module="5"]` |
 | 6 | Serviço de Bar | terracotta `#7A3B2E` | `[data-module="6"]` (add to CSS) |
 | 7 | Degustação de Vinhos | violet `#5B2E8A` | `[data-module="7"]` (add to CSS) |
-| 8 | Serviço de Vinhos | olive `#4A5E3A` | `[data-module="8"]` (add to CSS) |
+| 8 | Serviço de Vinhos | olive `#4A5E3A` | `[data-module="8"]` |
 
 **Chapter format:** full-length scrollable page per topic (not fixed-height slides).  
 **Chapter granularity:** one chapter per named section in the source PDFs.
@@ -90,6 +90,7 @@ Mirrors Vinhos do Mundo. Cream page background, dark sidebar, gold accent, per-m
 **Module 3 sidebar groups:** Introdução / Tintas / Brancas  
 **Module 4 sidebar groups:** Leveduras e FA / Condução / Maceração / Vinificação / Estilos Especiais  
 **Module 5 sidebar groups:** Espumantes / Vinho do Porto / Vinho da Madeira / Jerez / Sherry  
+**Module 8 sidebar groups:** Garrafas e Fechos / Serviço Profissional / Copos e Ferramentas / Garrafeira e Carta  
 **Module 1 sidebar groups:** História / Classificação e Entidades / Portugal Hoje / Cultura e Futuro
 
 ---
@@ -153,7 +154,7 @@ Source: `Módulo 3/Modulo 3 - Texto para Estudo.pdf` (78 pages)
 | 5 | Vinhos Especiais (4 sub-modules) | 30 (done) |
 | 6 | Serviço de Bar | ~20–30 est. |
 | 7 | Degustação de Vinhos | ~25–35 est. |
-| 8 | Serviço de Vinhos | ~20–30 est. |
+| 8 | Serviço de Vinhos | 20 (done) |
 
 ---
 
@@ -168,7 +169,7 @@ Source: `Módulo 3/Modulo 3 - Texto para Estudo.pdf` (78 pages)
 7. ✅ Module 5 — Vinhos Especiais (30 chapters, flat file)
 8. Module 6 — Serviço de Bar (Módulo 4 PDF)
 9. Module 7 — Degustação de Vinhos (Módulo 5 PDF 1)
-10. Module 8 — Serviço de Vinhos (Módulo 5 PDF 2)
+10. ✅ Module 8 — Serviço de Vinhos (20 chapters)
 11. `print.css` + Puppeteer PDF export (later)
 
 ## Deploy

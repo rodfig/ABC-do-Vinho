@@ -27,6 +27,7 @@
 [data-module="5"] { --accent: #1E3A5F; --accent-dark: #0F1E32; --sidebar-bg: #080F1A; }
 [data-module="6"] { --accent: #7A3B2E; --accent-dark: #4A221A; --sidebar-bg: #180A08; }
 [data-module="7"] { --accent: #5B2E8A; --accent-dark: #3A1A5C; --sidebar-bg: #120820; }
+[data-module="8"] { --accent: #4A5E3A; --accent-dark: #2A3A1F; --sidebar-bg: #0D1408; }
 
 /* ============================================================
    RESET

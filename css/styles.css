@@ -456,6 +456,14 @@ body.module-page {
   margin: 2.2rem 0 0.8rem;
 }
 
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: var(--accent);
+  margin: 2.2rem 0 0.8rem;
+}
+
 .content h4 {
   font-size: 0.85rem;
   font-weight: 600;
@@ -951,6 +959,7 @@ figcaption {
   line-height: 1.5;
 }
 .data-table tr:nth-child(even) td { background: rgba(122,104,88,0.04); }
+.data-table.no-zebra tr:nth-child(even) td { background: transparent; }
 .data-table tr:last-child td { border-bottom: none; }
 .data-table td:first-child { font-weight: 600; color: var(--accent-dark); }
 .data-table td strong { color: var(--accent-dark); }

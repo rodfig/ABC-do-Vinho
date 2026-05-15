@@ -42,8 +42,8 @@ modulo2/index.html                ← 24 chapters — Viticultura, Regiões e Vi
 modulo3/index.html                ← 36 chapters — Castas de Portugal (COMPLETE)
 modulo4/index.html                ← 22 chapters — Fermentação e Vinificação (COMPLETE)
 modulo5/index.html                ← 30 chapters — Vinhos Especiais (Espumantes / Porto / Madeira / Jerez) (COMPLETE)
-modulo6/index.html                ← Serviço de Bar (pending)
-modulo7/index.html                ← Degustação de Vinhos (pending)
+modulo6/index.html                ← 33 chapters — Serviço de Bar — cocktails, IBA, utensílios (COMPLETE)
+modulo7/index.html                ← Degustação de Vinhos (pending — not started)
 modulo8/index.html                ← 20 chapters — Serviço de Vinhos — protocolo e sommelier (COMPLETE)
 css/styles.css                    ← Global reset, layout, typography, components
 js/main.js                        ← Chapter navigation engine
@@ -72,8 +72,8 @@ Mirrors Vinhos do Mundo. Cream page background, dark sidebar, gold accent, per-m
 | 3 | Castas de Portugal | amber `#7A4F1D` | `[data-module="3"]` |
 | 4 | Fermentação e Vinificação | teal `#2E6B6B` | `[data-module="4"]` |
 | 5 | Vinhos Especiais | navy `#1E3A5F` | `[data-module="5"]` |
-| 6 | Serviço de Bar | terracotta `#7A3B2E` | `[data-module="6"]` (add to CSS) |
-| 7 | Degustação de Vinhos | violet `#5B2E8A` | `[data-module="7"]` (add to CSS) |
+| 6 | Serviço de Bar | terracotta `#7A3B2E` | `[data-module="6"]` |
+| 7 | Degustação de Vinhos | violet `#5B2E8A` | `[data-module="7"]` |
 | 8 | Serviço de Vinhos | olive `#4A5E3A` | `[data-module="8"]` |
 
 **Chapter format:** full-length scrollable page per topic (not fixed-height slides).  
@@ -90,6 +90,7 @@ Mirrors Vinhos do Mundo. Cream page background, dark sidebar, gold accent, per-m
 **Module 3 sidebar groups:** Introdução / Tintas / Brancas  
 **Module 4 sidebar groups:** Leveduras e FA / Condução / Maceração / Vinificação / Estilos Especiais  
 **Module 5 sidebar groups:** Espumantes / Vinho do Porto / Vinho da Madeira / Jerez / Sherry  
+**Module 6 sidebar groups:** Introdução ao Bar / Utensílios e Copos / Serviço e Atendimento / The Unforgettables / Contemporary Classics / Competição e Excelência  
 **Module 8 sidebar groups:** Garrafas e Fechos / Serviço Profissional / Copos e Ferramentas / Garrafeira e Carta  
 **Module 1 sidebar groups:** História / Classificação e Entidades / Portugal Hoje / Cultura e Futuro
 
@@ -152,7 +153,7 @@ Source: `Módulo 3/Modulo 3 - Texto para Estudo.pdf` (78 pages)
 | 3 | Castas de Portugal | 36 (done) |
 | 4 | Fermentação e Vinificação | 22 (done) |
 | 5 | Vinhos Especiais (4 sub-modules) | 30 (done) |
-| 6 | Serviço de Bar | ~20–30 est. |
+| 6 | Serviço de Bar | 33 (done) |
 | 7 | Degustação de Vinhos | ~25–35 est. |
 | 8 | Serviço de Vinhos | 20 (done) |
 
@@ -167,7 +168,7 @@ Source: `Módulo 3/Modulo 3 - Texto para Estudo.pdf` (78 pages)
 5. ✅ Module 3 — 36 chapters (castas tintas + brancas)
 6. ✅ Module 4 — Fermentação e Vinificação (22 chapters)
 7. ✅ Module 5 — Vinhos Especiais (30 chapters, flat file)
-8. Module 6 — Serviço de Bar (Módulo 4 PDF)
+8. ✅ Module 6 — Serviço de Bar (33 chapters)
 9. Module 7 — Degustação de Vinhos (Módulo 5 PDF 1)
 10. ✅ Module 8 — Serviço de Vinhos (20 chapters)
 11. `print.css` + Puppeteer PDF export (later)

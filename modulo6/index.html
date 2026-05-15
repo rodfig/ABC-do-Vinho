@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo VI — Serviço de Bar · ABC do Vinho</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="module-page" data-module="6">
+
+  <div class="progress-bar"></div>
+
+  <header class="topbar">
+    <a class="topbar-back" href="../">← ABC do Vinho</a>
+    <div class="topbar-sep"></div>
+    <span class="topbar-title">VI &mdash; Serviço de Bar</span>
+    <button class="topbar-menu" id="topbar-menu" aria-label="Capítulos">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="module-layout">
+
+    <!-- ── SIDEBAR ────────────────────────────── -->
+    <nav class="sidebar">
+      <div class="sidebar-module">Módulo VI</div>
+      <div class="sidebar-label">Capítulos</div>
+      <ol class="chapter-nav">
+
+        <li class="nav-group">Introdução ao Bar</li>
+        <li><a href="#historia-bar">
+          <span class="nav-num">01</span>História do Bar
+        </a></li>
+        <li><a href="#historia-cocktail">
+          <span class="nav-num">02</span>História do Cocktail
+        </a></li>
+        <li><a href="#iba-abp">
+          <span class="nav-num">03</span>IBA e Associação Barmen de Portugal
+        </a></li>
+
+        <li class="nav-group">Utensílios e Copos</li>
+        <li><a href="#utensilios">
+          <span class="nav-num">04</span>Utensílios de Bar
+        </a></li>
+        <li><a href="#copos">
+          <span class="nav-num">05</span>Copos — tipos e utilizações
+        </a></li>
+        <li><a href="#mise-en-place">
+          <span class="nav-num">06</span>Mise-en-place de Bar
+        </a></li>
+
+        <li class="nav-group">Serviço e Atendimento</li>
+        <li><a href="#atendimento">
+          <span class="nav-num">07</span>Atendimento ao Cliente
+        </a></li>
+        <li><a href="#regras-ouro">
+          <span class="nav-num">08</span>Regras de Ouro do Bar
+        </a></li>
+        <li><a href="#tipos-bebidas">
+          <span class="nav-num">09</span>Tipos de Bebidas
+        </a></li>
+
+        <li class="nav-group">The Unforgettables</li>
+        <li><a href="#alexander">
+          <span class="nav-num">10</span>Alexander
+        </a></li>
+        <li><a href="#americano">
+          <span class="nav-num">11</span>Americano
+        </a></li>
+        <li><a href="#daiquiri">
+          <span class="nav-num">12</span>Daiquiri
+        </a></li>
+        <li><a href="#dry-martini">
+          <span class="nav-num">13</span>Dry Martini
+        </a></li>
+        <li><a href="#gin-fizz">
+          <span class="nav-num">14</span>Gin Fizz
+        </a></li>
+        <li><a href="#collins">
+          <span class="nav-num">15</span>John / Tom Collins
+        </a></li>
+        <li><a href="#manhattan">
+          <span class="nav-num">16</span>Manhattan
+        </a></li>
+        <li><a href="#negroni">
+          <span class="nav-num">17</span>Negroni
+        </a></li>
+        <li><a href="#old-fashioned">
+          <span class="nav-num">18</span>Old Fashioned
+        </a></li>
+        <li><a href="#side-car">
+          <span class="nav-num">19</span>Side Car
+        </a></li>
+        <li><a href="#whiskey-sour">
+          <span class="nav-num">20</span>Whiskey / Pisco Sour
+        </a></li>
+
+        <li class="nav-group">Contemporary Classics</li>
+        <li><a href="#bellini">
+          <span class="nav-num">21</span>Bellini
+        </a></li>
+        <li><a href="#black-russian">
+          <span class="nav-num">22</span>Black Russian
+        </a></li>
+        <li><a href="#bloody-mary">
+          <span class="nav-num">23</span>Bloody Mary
+        </a></li>
+        <li><a href="#caipirinha">
+          <span class="nav-num">24</span>Caipirinha
+        </a></li>
+        <li><a href="#champagne-cocktail">
+          <span class="nav-num">25</span>Champagne Cocktail
+        </a></li>
+        <li><a href="#cosmopolitan">
+          <span class="nav-num">26</span>Cosmopolitan
+        </a></li>
+        <li><a href="#cuba-libre">
+          <span class="nav-num">27</span>Cuba Libre
+        </a></li>
+        <li><a href="#margarita">
+          <span class="nav-num">28</span>Margarita
+        </a></li>
+        <li><a href="#mint-julep">
+          <span class="nav-num">29</span>Mint Julep
+        </a></li>
+        <li><a href="#mojito">
+          <span class="nav-num">30</span>Mojito
+        </a></li>
+        <li><a href="#moscow-mule">
+          <span class="nav-num">31</span>Moscow Mule
+        </a></li>
+        <li><a href="#grasshopper">
+          <span class="nav-num">32</span>Grasshopper
+        </a></li>
+
+        <li class="nav-group">Competição e Excelência</li>
+        <li><a href="#avaliacao-asi">
+          <span class="nav-num">33</span>Critérios de Avaliação ASI
+        </a></li>
+
+      </ol>
+
+      <div class="sidebar-arrows">
+        <button class="sb-arrow" id="ch-prev" title="Capítulo anterior">↑</button>
+        <button class="sb-arrow" id="ch-next" title="Próximo capítulo">↓</button>
+      </div>
+    </nav>
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <!-- ── CONTENT ────────────────────────────── -->
+    <main class="content">
+
+      <!-- 01 -->
+      <section class="chapter" id="historia-bar">
+        <h1 class="chapter-title">História do Bar</h1>
+        <div class="chapter-rule"></div>
+
+        <p>A palavra "bar" tem origem controversa. Uma das versões mais aceitas defende que vem do inglês <em>bar</em>, que significa barra — referindo-se à estrutura física que separa o cliente do atendente, especialmente nos <em>pubs</em> britânicos. Outra explicação, também de origem inglesa, diz que o nome se refere à barra inferior dos balcões, onde os clientes apoiavam os pés. Há ainda quem associe o termo à barra de madeira onde os <em>cowboys</em> amarravam os cavalos nos <em>saloons</em> do Velho Oeste norte-americano.</p>
+      </section>
+
+      <!-- 02 -->
+      <section class="chapter" id="historia-cocktail">
+        <h1 class="chapter-title">História do Cocktail</h1>
+        <div class="chapter-rule"></div>
+
+        <p>A origem do <em>cocktail</em> (ou coquetel) remonta ao final do século XVIII. Acredita-se que surgiu nos Estados Unidos durante o período da independência, embora as circunstâncias exatas permaneçam misteriosas. Uma das histórias mais conhecidas relata que, em 1779, um irlandês chamado Flanagan abriu uma taberna em Georgetown, na Virgínia. Ele e sua filha Betsy serviam bebidas mistas chamadas de "Bracers", ou seja, bebidas estimulantes e revigorantes.</p>
+
+        <p>Em um jantar especial, Flanagan e Betsy sacrificaram galos do vizinho para servir como refeição principal. Após o jantar, os famosos Bracers foram servidos em copos decorados com penas multicoloridas dos galos abatidos. O visual impressionou os convidados, que passaram a chamar as bebidas de "Cocktails" (caudas de galo). Desde então, o nome pegou.</p>
+      </section>
+
+      <!-- 03 -->
+      <section class="chapter" id="iba-abp">
+        <h1 class="chapter-title">IBA e Associação Barmen de Portugal</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Fundada em 24 de fevereiro de 1951, em Torquay, no Reino Unido, por representantes de sete países fundadores (Dinamarca, França, Itália, Países Baixos, Suécia, Suíça e Reino Unido), a IBA é hoje a principal entidade mundial no setor de coquetelaria. O seu primeiro presidente foi Bill Tarling, do Reino Unido, seguido por George Baker, George Siever (Suíça), Pietro Grandi (Itália) e Kurt Sorensen (Dinamarca). Entre 1963 e 1976, Angelo Zola, da Itália, presidiu a associação durante 14 anos e participou da criação da IBA.</p>
+
+        <p><strong>Missão da IBA:</strong> Ligar, educar e inspirar bartenders em todo o mundo.</p>
+        <p><strong>Visão:</strong> Elevar os padrões e conhecimentos dos profissionais da área a nível internacional.</p>
+        <p><strong>Valores fundamentais:</strong> Paixão — Unidade — Legado</p>
+
+        <p>Atualmente, a IBA conta com 67 países membros e 8 países observadores. Mais informações estão disponíveis no site oficial: iba-world.com</p>
+
+        <p><strong>Competições:</strong> O Campeonato Mundial de Cocktails da IBA 2024 será realizado entre 31 de outubro e 3 de novembro na ilha da Madeira, em Portugal, organizado pela Associação Barmen de Portugal. O evento reunirá bartenders dos 67 países membros da IBA, com provas de cocktails clássicos e <em>flair bartending</em>.</p>
+
+        <p><strong>Associação Barmen de Portugal (ABP)</strong> — Fundada em 1970, ainda como <em>Club Barmen de Portugal</em>, a ABP é membro da IBA e tem desempenhado um papel importante na valorização da profissão de barman no país. A associação participa ativamente em competições internacionais, com conquistas como campeonatos mundiais, vice-campeonatos e terceiros lugares, tanto em modalidades clássicas quanto em <em>flair</em>.</p>
+      </section>
+
+      <!-- 04 -->
+      <section class="chapter" id="utensilios">
+        <h1 class="chapter-title">Utensílios de Bar</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Para o correto serviço de bar, é fundamental conhecer e utilizar os utensílios adequados:</p>
+
+        <figure>
+          <img src="img/img001_29_736x281.jpeg" alt="Utensílios de bar">
+          <figcaption>Utensílios de bar — shakers, colher, jigger, strainer e outros instrumentos essenciais</figcaption>
+        </figure>
+
+        <ul>
+          <li><strong>Copo Misturas:</strong> ideal para mexer cocktails delicados.</li>
+          <li><strong>Shaker Clássico:</strong> para misturar ingredientes com gelo vigorosamente.</li>
+          <li><strong>Boston Shaker:</strong> duas peças (um copo de vidro e uma de metal), utilizado por bartenders mais experientes.</li>
+          <li><strong>Colher de Bar:</strong> longa e espiralada, para misturar e criar camadas.</li>
+          <li><strong>Jigger:</strong> dosador de bebidas, essencial para medições precisas.</li>
+          <li><strong>Strainer (coador tipo Hawthorne):</strong> usado para coar a mistura ao servir.</li>
+          <li><strong>Coador (Fine Strainer):</strong> filtra partículas pequenas de gelo ou frutas.</li>
+          <li><strong>Pinça:</strong> para manusear ingredientes com higiene.</li>
+          <li><strong>Pilão:</strong> para macerar frutas, ervas e açúcar.</li>
+        </ul>
+      </section>
+
+      <!-- 05 -->
+      <section class="chapter" id="copos">
+        <h1 class="chapter-title">Copos — tipos e utilizações</h1>
+        <div class="chapter-rule"></div>
+
+        <p><strong>O TIPO CERTO DE COPO PARA CADA BEBIDA</strong></p>
+
+        <table class="data-table">
+          <tr>
+            <td style="width:20%; text-align:center; vertical-align:middle;">
+              <img src="img/img001_7_61x118.jpeg" alt="Copo Highball/Collins" style="max-width:100%; height:auto; border-radius:4px;">
+            </td>
+            <td style="width:80%; vertical-align:middle;">
+              <p style="margin-bottom:0.4rem;"><strong>1. Copo Highball/Collins</strong> — Os copos Highball e Collins são muito parecidos, e muitas vezes podem ser substituídos um pelo outro. São geralmente usados para drinks longos com bastante gelo. <em>Use para:</em> Whisky Highball, Bloody Mary, Mojito.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:20%; text-align:center; vertical-align:middle;">
+              <img src="img/img001_11_57x71.jpeg" alt="Old Fashioned / Copo de Whisky" style="max-width:100%; height:auto; border-radius:4px;">
+            </td>
+            <td style="width:80%; vertical-align:middle;">
+              <p style="margin-bottom:0.4rem;"><strong>2. Old Fashioned/On the rocks (Copo de Whisky)</strong> — São copos curtos, muitas vezes chamados de <em>lowball</em>, <em>on the rocks</em>, ou simplesmente "copos de whisky". São geralmente usados para coquetéis pequenos servidos com gelo (<em>on the rocks</em>) ou destilados puros, como whisky. <em>Use para:</em> Old Fashioned, Whisky Sour, Negroni.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:20%; text-align:center; vertical-align:middle;">
+              <img src="img/img001_13_75x120.jpeg" alt="Taça de coquetel / Martini" style="max-width:100%; height:auto; border-radius:4px;">
+            </td>
+            <td style="width:80%; vertical-align:middle;">
+              <p style="margin-bottom:0.4rem;"><strong>3. Taça de coquetel (Taça de Martini)</strong> — Muito associado a Martinis, são a melhor opção para coquetéis "puros", sem gelo. A melhor maneira de guardá-los é em pé ou em ganchos para copos, podendo ser guardados resfriados também. <em>Use para:</em> Dry Martini, Cosmopolitan, Daiquiri.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:20%; text-align:center; vertical-align:middle;">
+              <img src="img/img001_16_77x110.jpeg" alt="Taça Coupe / Coupette" style="max-width:100%; height:auto; border-radius:4px;">
+            </td>
+            <td style="width:80%; vertical-align:middle;">
+              <p style="margin-bottom:0.4rem;"><strong>4. Taça Coupe (ou Coupette)</strong> — Com um bojo largo e raso sobre uma haste, as taças <em>coupe</em> eram originalmente usadas para servir champagne, mas hoje em dia também são usadas para coquetéis das famílias Martini. <em>Use para:</em> Espresso Martini, Sidecar, Manhattan.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:20%; text-align:center; vertical-align:middle;">
+              <img src="img/img_001_35.png" alt="Dose / Shot" style="max-width:100%; height:auto; border-radius:4px;">
+            </td>
+            <td style="width:80%; vertical-align:middle;">
+              <p style="margin-bottom:0.4rem;"><strong>5. Dose (Shot)</strong> — São os menores copos atrás do balcão, usados para dose de bebidas puras ou pequenos drinks misturados. <em>Use para:</em> Tequila, Boilermaker.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:20%; text-align:center; vertical-align:middle;">
+              <img src="img/img001_22_76x106.jpeg" alt="Taça de Conhaque / Brandy" style="max-width:100%; height:auto; border-radius:4px;">
+            </td>
+            <td style="width:80%; vertical-align:middle;">
+              <p style="margin-bottom:0.4rem;"><strong>6. Taça de Conhaque (Brandy)</strong> — Também chamado de <em>snifter</em>, têm este tamanho e forma para que se aprecie a cor, as "lágrimas" (filetes de líquido que escorrem pela taça) e os aromas da bebida. É usado tipicamente para destilados escuros e coquetéis simples com conhaque. <em>Use para:</em> Conhaque, B&amp;B.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:20%; text-align:center; vertical-align:middle;">
+              <img src="img/img_001_36.png" alt="Taça de Champagne / Flauta" style="max-width:100%; height:auto; border-radius:4px;">
+            </td>
+            <td style="width:80%; vertical-align:middle;">
+              <p style="margin-bottom:0.4rem;"><strong>7. Taça de Champagne (Taça Flauta)</strong> — Uma taça com haste fina e bojo em formato de cone, criada para reter as bolhas por mais tempo. Normalmente usada para servir champagne e coquetéis à base desta bebida. <em>Use para:</em> Kir Royale, Bellini, Mimosa.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:20%; text-align:center; vertical-align:middle;">
+              <img src="img/img001_24_57x108.jpeg" alt="Taça de Vinho Branco" style="max-width:100%; height:auto; border-radius:4px;">
+            </td>
+            <td style="width:80%; vertical-align:middle;">
+              <p style="margin-bottom:0.4rem;"><strong>8. Taça de Vinho Branco</strong> — As taças de vinho branco tendem a ser mais largas e mais altas, e a melhor forma de guardá-las é resfriadas. Normalmente usadas para vinho branco ou coquetéis desta bebida. <em>Use para:</em> Vinho Branco, Sangria, Spritzer de Vinho.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:20%; text-align:center; vertical-align:middle;">
+              <img src="img/img001_25_72x121.jpeg" alt="Taça de Vinho Tinto" style="max-width:100%; height:auto; border-radius:4px;">
+            </td>
+            <td style="width:80%; vertical-align:middle;">
+              <p style="margin-bottom:0.4rem;"><strong>9. Taça de Vinho Tinto</strong> — As taças de vinho tinto são largas e arredondadas, para soltar o sabor e os aromas do vinho. O bojo largo também potencializa o aroma dos botânicos-do-gin, com espaço para misturas criativas e ingredientes de decoração. <em>Use para:</em> Vinho Tinto, Gin Tonica.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:20%; text-align:center; vertical-align:middle;">
+              <img src="img/img001_26_84x123.jpeg" alt="Copos e Canecas de Cerveja" style="max-width:100%; height:auto; border-radius:4px;">
+            </td>
+            <td style="width:80%; vertical-align:middle;">
+              <p style="margin-bottom:0.4rem;"><strong>10. Copos e Canecas de Cerveja</strong> — Tem uma grande variedade de estilos e formatos, e muitas são de vidro temperado, que mantém melhor a temperatura e a espuma. <em>Use para:</em> Cerveja, Cidras e Ales.</p>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- 06 -->
+      <section class="chapter" id="mise-en-place">
+        <h1 class="chapter-title">Mise-en-place de Bar</h1>
+        <div class="chapter-rule"></div>
+
+        <p>Antes do serviço, o bartender deve garantir:</p>
+
+        <ul>
+          <li>Bar limpo e organizado;</li>
+          <li>Copos em quantidade suficiente e verificados quanto à higiene;</li>
+          <li>Utensílios de serviço limpos e prontos;</li>
+          <li>Garrafas arrumadas, acessíveis e conferidas;</li>
+          <li>Bases e palhinhas sustentáveis para acompanhar as bebidas;</li>
+          <li>Bandeja de serviço limpa e disponível.</li>
+        </ul>
+      </section>
+
+      <!-- 07 -->
+      <section class="chapter" id="atendimento">
+        <h1 class="chapter-title">Atendimento ao Cliente</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O atendimento é uma arte e começa com:</p>
+
+        <ul>
+          <li>Recepção com sorriso na entrada;</li>
+          <li>Cumprimento pelo nome (quando possível);</li>
+          <li>Acomodar o cliente, oferecer a carta e estar disponível para esclarecimentos;</li>
+          <li>Confirmar se o cliente deseja variações no cocktail escolhido;</li>
+          <li>Repetir o pedido para evitar erros;</li>
+          <li>Realizar <em>upselling</em> e <em>cross-selling</em>, justificando as sugestões;</li>
+          <li>Servir sempre com simpatia, utilizando base para o copo;</li>
+          <li>Manter as mesas limpas, intervindo sempre que necessário;</li>
+          <li>Medir corretamente todas as doses com o <em>jigger</em>;</li>
+          <li>Provar a bebida com uma palhinha pequena sustentável, se necessário.</li>
+        </ul>
+      </section>
+
+      <!-- 08 -->
+      <section class="chapter" id="regras-ouro">
+        <h1 class="chapter-title">Regras de Ouro do Bar</h1>
+        <div class="chapter-rule"></div>
+
+        <ul>
+          <li>Evite misturar bebidas fortes como whisky com cognac, ou vodka com rum, no mesmo cocktail.</li>
+          <li>Durante aperitivos prolongados, evite alternar cocktails com bases alcoólicas diferentes.</li>
+          <li>Um bom cocktail geralmente tem de três a cinco elementos: base alcoólica, um ou dois licores, suco ou creme e, eventualmente, um xarope.</li>
+          <li>Use sumos naturais sempre que possível. Quando não, opte por marcas com controle de qualidade.</li>
+          <li>Utensílios e copos devem estar limpos. Um copo sujo ou decoração murcha desqualifica qualquer cocktail.</li>
+          <li>Ingredientes devem ser frescos e de boa qualidade — a fruta de guarnição, especialmente.</li>
+          <li>A maioria dos cocktails deve ser servida em copo gelado.</li>
+          <li>A decoração deve complementar o estilo da bebida. Nunca exagere no tamanho ou no volume.</li>
+          <li>Frutas fatiadas devem ser preparadas com antecedência e refrigeradas.</li>
+          <li>Nunca encha demais o copo — pode transbordar e comprometer a apresentação.</li>
+          <li>Em cocktails com refrigerantes ou água gaseificada, esses ingredientes devem ser acrescentados no final, nunca no <em>shaker</em> ou liquidificador.</li>
+          <li>O cocktail, uma vez pronto, deve ser imediatamente servido.</li>
+        </ul>
+      </section>
+
+      <!-- 09 -->
+      <section class="chapter" id="tipos-bebidas">
+        <h1 class="chapter-title">Tipos de Bebidas</h1>
+        <div class="chapter-rule"></div>
+
+        <p>As bebidas podem ser classificadas em:</p>
+
+        <ul>
+          <li><strong>Simples:</strong> uma só bebida (ex. uísque puro);</li>
+          <li><strong>Compostas:</strong> mistura de duas ou mais bebidas;</li>
+          <li><strong>Sem álcool:</strong> sumos, águas, refrigerantes;</li>
+          <li><strong>Com álcool:</strong> vinhos, destilados, cocktails.</li>
+        </ul>
+
+        <p><strong>Categorias Específicas:</strong></p>
+
+        <ul>
+          <li><strong>Short Drinks:</strong> de 60 a 90 ml, geralmente servidos em taças de cocktail ou copos <em>old-fashioned</em>.</li>
+          <li><strong>Long Drinks:</strong> preparados com destilados, licores, <em>bitters</em>, etc., servidos em copos de <em>longdrink</em> chamados <em>Highballs</em>. Completados com sucos de frutas, água gaseificada, refrigerantes e bastante gelo. Volume médio de 150 ml a 300 ml.</li>
+          <li><strong>Hot Drinks:</strong> feitos com café, chocolate ou água quente. Servidos no inverno em canecas.</li>
+          <li><strong>Frozen Drinks:</strong> batidos no liquidificador, com bebidas destiladas, licores, gelo, sorvete, bolachas ou leite condensado. Textura cremosa e lisa.</li>
+          <li><strong>Estimulantes do apetite:</strong> sabor ácido ou amargo, servidos antes das refeições.</li>
+          <li><strong>Digestivos:</strong> auxiliam o metabolismo dos alimentos, servidos após as refeições.</li>
+          <li><strong>Nutritivos:</strong> completam os valores calóricos do organismo.</li>
+          <li><strong>Refrescantes:</strong> servidos fora das refeições, com muito gelo em copo <em>Long Drink</em>.</li>
+          <li><strong>Estimulantes físicos:</strong> cocktails quentes para o frio.</li>
+          <li><strong>Cobblers:</strong> preparados à base de Vinho, Brandy ou Whisky, frutas, açúcar e gelo.</li>
+          <li><strong>Coolers:</strong> preparados à base de Sidra, <em>Ginger-Ale</em> ou outro refrigerante.</li>
+          <li><strong>Crustados:</strong> têm como base um destilado, suco de limão, Curaçau, açúcar e gelo, servidos em taças de cocktail com a borda crustada.</li>
+        </ul>
+      </section>
+      <!-- 10 -->
+      <section class="chapter" id="alexander">
+        <h1 class="chapter-title">Alexander</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Alexander é um cocktail cremoso e elegante que combina a robustez do conhaque com a doçura do licor de cacau e a suavidade do creme fresco.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>30 ml de Conhaque</li>
+                <li>30 ml de Crème de Cacao (escuro)</li>
+                <li>30 ml de Creme de Leite Fresco</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Despeje todos os ingredientes numa coqueteleira cheia de cubos de gelo.</li>
+                <li>Agite vigorosamente e coe para um copo de cocktail gelado.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Polvilhe noz-moscada fresca moída por cima.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_27_263x459.jpeg" alt="Alexander" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>O cocktail Alexander nasceu em Londres em 1922, criado por Henry McElhone no Ciro's Club em homenagem a uma noiva famosa. Inicialmente chamado de Panama, utilizava gin ao invés de conhaque e creme de cacau claro em vez do escuro.</p>
+
+        <h3>Variações</h3>
+        <ul>
+          <li><strong>Grasshopper:</strong> Utiliza crème de menthe verde no lugar do conhaque.</li>
+          <li><strong>Alexandra:</strong> Emprega creme de cacau claro em vez do escuro e substitui a noz-moscada por cacau em pó.</li>
+          <li><strong>Alexander's Sister:</strong> Usa crème de menthe em vez de crème de cacao.</li>
+          <li><strong>Alejandro:</strong> Substitui o conhaque por rum.</li>
+        </ul>
+      </section>
+      <!-- 11 -->
+      <section class="chapter" id="americano">
+        <h1 class="chapter-title">Americano</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Americano é um aperitivo clássico italiano que combina o amargor do Campari com a doçura do vermute e o frescor da água com gás.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>30 ml de Bitter Campari</li>
+                <li>30 ml de Vermute Tinto Doce</li>
+                <li>Um respingo de Água com Gás</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Misture os ingredientes diretamente num copo old fashioned cheio de cubos de gelo.</li>
+                <li>Adicione um respingo de água com gás e mexa suavemente.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Decore com meia fatia de laranja e casca de limão.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_28_250x324.jpeg" alt="Americano" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>A história do Americano remonta à segunda metade do século XIX no bar de Gaspare Campari em Milão. O cocktail ganhou notoriedade através de homenagens do mundo cinematográfico, incluindo James Bond (007 Casino Royale), cujo cocktail favorito era precisamente o Americano. O apelido "Americano" surgiu quando Primo Carnera, um boxeador italiano gigante, tornou-se campeão mundial dos pesos pesados no Madison Square Garden em Nova York. Quando Carnera regressou à Itália com o título, foi recebido com este cocktail muito italiano que, para a ocasião, foi chamado de "Americano". O Americano entrou na Lista de Cocktails IBA apenas em 1987, mas na realidade era um cocktail que se espalhou por toda a Itália durante a década de 1930.</p>
+      </section>
+
+      <!-- 12 -->
+      <section class="chapter" id="daiquiri">
+        <h1 class="chapter-title">Daiquiri</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Daiquiri é um cocktail refrescante e equilibrado que exemplifica a perfeita harmonia entre rum, lima e açúcar.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>60 ml de Rum Branco Cubano</li>
+                <li>20 ml de Sumo de Lima Fresco</li>
+                <li>2 colheres de bar de Açúcar Refinado</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Numa coqueteleira, adicione todos os ingredientes. Mexa bem para dissolver o açúcar.</li>
+                <li>Adicione gelo e agite. Coe para um copo de cocktail gelado.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Não aplicável.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_30_308x307.jpeg" alt="Daiquiri" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>As origens da criação do Daiquiri são um tanto controversas. Alguns acreditam que o cocktail foi criado em 1896 por um engenheiro americano, Jennings Cox, que vivia em Cuba na época e supervisionava as minas perto da cidade de Daiquiri. Pensa-se que ele criou o cocktail famoso depois de ficar sem gin durante uma festa de cocktails. Improvisando com os ingredientes que tinha à mão — rum, lima e açúcar — esta tornou-se a base da bebida que conhecemos hoje. O Daiquiri realmente ganhou vida num pequeno bar em Havana, quando o barman Constantino Ribalaigua Vert adicionou seu próprio toque e usou gelo raspado para criar o Daiquiri Frozen. Por volta desta época, Ernest Hemingway, que vivia em Cuba, experimentou o delicioso cocktail, apaixonou-se por esta concocção épica e tornou-se um cliente regular.</p>
+
+        <h3>Variações</h3>
+        <ul>
+          <li>Daiquiri Frozen (com gelo triturado)</li>
+          <li>Daiquiri on the rocks (servido com gelo)</li>
+          <li>Strawberry Daiquiri (com morangos)</li>
+        </ul>
+      </section>
+
+      <!-- 13 -->
+      <section class="chapter" id="dry-martini">
+        <h1 class="chapter-title">Dry Martini</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Dry Martini é considerado o rei dos cocktails, uma bebida elegante e sofisticada que representa a essência da coquetelaria clássica.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>60 ml de Gin</li>
+                <li>10 ml de Vermute Seco</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Despeje todos os ingredientes num copo de mistura com cubos de gelo. Mexa bem.</li>
+                <li>Coe para um copo de martini gelado.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Esprema o óleo da casca de limão sobre a bebida, ou decore com azeitonas verdes se solicitado.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_31_247x369.jpeg" alt="Dry Martini" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>Uma das teorias mais frequentemente citadas é que o "Professor" Jerry Thomas, um barman famoso e influente do século XIX, inventou a bebida no Hotel Occidental em São Francisco, algures entre o final da década de 1850 ou início de 1860. Segundo a história, um mineiro, prestes a partir numa viagem para Martinez, Califórnia, colocou uma pepita de ouro no bar e pediu a Thomas para lhe preparar algo especial. Thomas produziu uma bebida contendo gin Old Tom (adoçado), vermute, bitters e Maraschino, e apelidou-a de "Martinez" em honra do destino do cliente.</p>
+
+        <h3>Variações</h3>
+        <ul>
+          <li><strong>Dirty Martini</strong> (com salmoura de azeitonas)</li>
+          <li><strong>Vodka Martini</strong> (com vodka em vez de gin)</li>
+          <li><strong>Gibson</strong> (com cebola cocktail)</li>
+          <li>Algumas versões são preparadas na coqueteleira em vez do copo de mistura.</li>
+        </ul>
+      </section>
+
+      <!-- 14 -->
+      <section class="chapter" id="gin-fizz">
+        <h1 class="chapter-title">Gin Fizz</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Gin Fizz é um cocktail refrescante e efervescente que combina a botanicalidade do gin com a acidez do limão e a efervescência da água com gás.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>45 ml de Gin</li>
+                <li>30 ml de Sumo de Limão Fresco</li>
+                <li>10 ml de Xarope Simples</li>
+                <li>Respingo de Água com Gás</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Agite todos os ingredientes com gelo, exceto a água com gás.</li>
+                <li>Despeje num copo alto e fino, finalize com um respingo de água com gás.</li>
+              </ol>
+
+              <div class="callout" style="margin-top:1.5rem;">
+                <p><strong>Nota:</strong> Servir sem gelo.</p>
+              </div>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Decore com uma fatia de limão e, opcionalmente, casca de limão.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_32_226x233.jpeg" alt="Gin Fizz" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>Por volta de 1750, nasceu o Gin Fizz, um cocktail que se tornaria uma das bebidas mais populares do mundo. Naquela época, os marinheiros eram os mais afetados pela deficiência de vitamina C e escorbuto, uma doença potencialmente fatal. O Almirante Nelson teve a ideia de misturar gin com limão para ajudar a prevenir a doença entre os seus homens.</p>
+      </section>
+
+      <!-- 15 -->
+      <section class="chapter" id="collins">
+        <h1 class="chapter-title">John / Tom Collins</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Collins é um cocktail refrescante de verão que combina gin, sumo de limão e água com gás num copo alto.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>45 ml de Gin</li>
+                <li>30 ml de Sumo de Limão Fresco</li>
+                <li>15 ml de Xarope Simples</li>
+                <li>60 ml de Água com Gás</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Despeje todos os ingredientes diretamente num copo highball cheio de gelo.</li>
+                <li>Mexa suavemente.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Decore com uma fatia de limão e cereja maraschino.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_33_179x265.jpeg" alt="John / Tom Collins" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>Parece que o Collins evoluiu do Gin Punch, uma bebida popular da época, e a sua criação e nome são atribuídos a John (ou possivelmente Jim) Collins, chefe de mesa no Limmer's Hotel na Conduit Street em Londres durante o final do século XIX.</p>
+
+        <h3>Variações</h3>
+        <ul>
+          <li>Use gin 'Old Tom' para o Tom Collins.</li>
+        </ul>
+      </section>
+
+      <!-- 16 -->
+      <section class="chapter" id="manhattan">
+        <h1 class="chapter-title">Manhattan</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Manhattan é um cocktail sofisticado e equilibrado que representa a elegância da coquetelaria americana clássica.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>50 ml de Whiskey de Centeio</li>
+                <li>20 ml de Vermute Tinto Doce</li>
+                <li>1 dash de Angostura Bitters</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Despeje todos os ingredientes num copo de mistura com cubos de gelo. Mexa bem.</li>
+                <li>Coe para um copo de cocktail gelado.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Decore com uma cereja de cocktail.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_34_164x248.jpeg" alt="Manhattan" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>A história popular sugere que a bebida originou-se no Manhattan Club em Nova York em meados da década de 1870, onde foi inventada por Iain Marshall para um banquete organizado por Jennie Jerome (Lady Randolph Churchill, mãe de Winston) em honra do candidato presidencial Samuel J. Tilden.</p>
+
+        <h3>Variações</h3>
+        <ul>
+          <li>Existem numerosas variações do Manhattan, incluindo versões com diferentes tipos de whiskey e vermute.</li>
+        </ul>
+      </section>
+
+      <!-- 17 -->
+      <section class="chapter" id="negroni">
+        <h1 class="chapter-title">Negroni</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Negroni é um aperitivo italiano icónico que oferece um equilíbrio perfeito entre amargo, doce e herbal.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>30 ml de Gin</li>
+                <li>30 ml de Bitter Campari</li>
+                <li>30 ml de Vermute Tinto Doce</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Despeje todos os ingredientes diretamente num copo old fashioned gelado cheio de gelo.</li>
+                <li>Mexa suavemente.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Decore com meia fatia de laranja.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_1_198x224.jpeg" alt="Negroni" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>1919, O Início: A história do Negroni começa no Caffè Casoni em Florença. Não há registo histórico documentado, mas acredita-se pelos especialistas em cocktails que o Conde Camillo Negroni inventou a bebida quando pediu um Americano feito com gin no lugar da água com gás habitual.</p>
+      </section>
+
+      <!-- 18 -->
+      <section class="chapter" id="old-fashioned">
+        <h1 class="chapter-title">Old Fashioned</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Old Fashioned é considerado o ancestral de todos os cocktails, representando a fórmula original de cocktail na sua forma mais pura.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>45 ml de Bourbon ou Whiskey de Centeio</li>
+                <li>1 Torrão de Açúcar</li>
+                <li>Alguns dashes de Angostura Bitters</li>
+                <li>Algumas gotas de Água</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Coloque o torrão de açúcar no copo old fashioned e sature com bitter, adicione algumas gotas de água. Esmague até dissolver.</li>
+                <li>Encha o copo com cubos de gelo e adicione o whiskey. Mexa suavemente.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Decore com uma fatia de laranja ou casca, e uma cereja de cocktail.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_2_165x247.jpeg" alt="Old Fashioned" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>O Old Fashioned foi criado pela primeira vez na década de 1800, remontando aos primeiros dias dos cocktails. Embora, na época, fosse conhecido simplesmente como Whiskey Cocktail, uma bebida que seguia a fórmula básica para cocktails que incluía um destilado, açúcar, água e bitters.</p>
+      </section>
+
+      <!-- 19 -->
+      <section class="chapter" id="side-car">
+        <h1 class="chapter-title">Side Car</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Side Car é um cocktail elegante e equilibrado que combina a riqueza do conhaque com a acidez cítrica e a doçura do licor de laranja.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>50 ml de Conhaque</li>
+                <li>20 ml de Triple Sec</li>
+                <li>20 ml de Sumo de Limão Fresco</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Despeje todos os ingredientes numa coqueteleira, agite bem com gelo.</li>
+                <li>Coe para um copo de cocktail gelado.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Não aplicável.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_3_150x232.jpeg" alt="Side Car" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>Embora não seja 100% confirmado, especula-se que foi inventado no final da Primeira Guerra Mundial, algures em Londres ou Paris. David A. Embury escreveu no seu livro "Fine Art of Mixing Drink" em 1948 que a bebida foi criada por um amigo seu. Ele também nota que o cocktail recebeu o seu nome devido ao sidecar da motocicleta.</p>
+      </section>
+
+      <!-- 20 -->
+      <section class="chapter" id="whiskey-sour">
+        <h1 class="chapter-title">Whiskey / Pisco Sour</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Whiskey Sour é um cocktail clássico que exemplifica o equilíbrio perfeito entre doce e azedo, com a opção de adicionar clara de ovo para textura.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>45 ml de Bourbon Whiskey</li>
+                <li>25 ml de Sumo de Limão Fresco</li>
+                <li>20 ml de Xarope de Açúcar</li>
+                <li>20 ml de Clara de Ovo (Opcional)</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Despeje todos os ingredientes numa coqueteleira cheia de gelo. Agite bem.</li>
+                <li>Coe para um copo cobbler. Se servido "On the rocks", coe os ingredientes para um copo old fashioned cheio de gelo.</li>
+              </ol>
+
+              <div class="callout" style="margin-top:1.5rem;">
+                <p><strong>Nota:</strong> Se usar clara de ovo, agite um pouco mais forte para libertar e incorporar a espuma da clara.</p>
+              </div>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Decore com meia fatia de laranja e cereja maraschino, opcionalmente use casca de laranja.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_4_329x254.jpeg" alt="Whiskey / Pisco Sour" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>O Whiskey Sour oficialmente remonta à década de 1860, mas marinheiros da Marinha Britânica bebiam algo muito similar muito antes disso. Em longas viagens marítimas, a água nem sempre era confiável, então para combater isso, destilados eram frequentemente usados.</p>
+
+        <h3>Variações</h3>
+        <ul>
+          <li><strong>Pisco Sour</strong> (substituir whiskey por pisco)</li>
+        </ul>
+      </section>
+
+      <!-- 21 -->
+      <section class="chapter" id="bellini">
+        <h1 class="chapter-title">Bellini</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Bellini é um cocktail elegante e refrescante que captura a essência dos pêssegos maduros numa bebida efervescente.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>100 ml de Prosecco</li>
+                <li>50 ml de Puré de Pêssego Branco</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Despeje o puré de pêssego no copo de mistura com gelo, adicione o vinho Prosecco.</li>
+                <li>Mexa suavemente e despeje numa taça flute gelada.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Não aplicável.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_5_160x243.jpeg" alt="Bellini" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>O Bellini foi inventado algures entre 1934 e 1948 por Giuseppe Cipriani, fundador do Harry's Bar em Veneza, Itália. Ele nomeou a bebida Bellini porque a sua cor rosa única lembrava-lhe a toga de um santo numa pintura do artista veneziano do século XV Giovanni Bellini.</p>
+
+        <h3>Variações</h3>
+        <ul>
+          <li><strong>PUCCINI:</strong> Sumo de Tangerina Fresco</li>
+          <li><strong>ROSSINI:</strong> Puré de Morango Fresco</li>
+          <li><strong>TINTORETTO:</strong> Sumo de Romã Fresco</li>
+        </ul>
+      </section>
+
+      <!-- 22 -->
+      <section class="chapter" id="black-russian">
+        <h1 class="chapter-title">Black Russian</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Black Russian é um cocktail simples mas sofisticado que combina a neutralidade da vodka com a riqueza do licor de café.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>50 ml de Vodka</li>
+                <li>20 ml de Licor de Café</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Despeje os ingredientes no copo old fashioned cheio de cubos de gelo.</li>
+                <li>Mexa suavemente.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Não aplicável.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_6_178x182.jpeg" alt="Black Russian" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>O cocktail Black Russian apareceu pela primeira vez em 1949 e é atribuído a Gustave Tops, um barman belga, que o criou no Hotel Metropole em Bruxelas em honra de Perle Mesta, então Embaixadora dos Estados Unidos no Luxemburgo.</p>
+
+        <h3>Variações</h3>
+        <ul>
+          <li><strong>WHITE RUSSIAN:</strong> Adicionar creme fresco por cima e mexer lentamente.</li>
+        </ul>
+      </section>
+
+      <!-- 23 -->
+      <section class="chapter" id="bloody-mary">
+        <h1 class="chapter-title">Bloody Mary</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Bloody Mary é um cocktail complexo e saboroso, frequentemente consumido como bebida matinal devido às suas qualidades supostamente curativas.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>45 ml de Vodka</li>
+                <li>90 ml de Sumo de Tomate</li>
+                <li>15 ml de Sumo de Limão Fresco</li>
+                <li>2 dashes de Molho Worcestershire</li>
+                <li>Tabasco, Sal de Aipo, Pimenta (A gosto)</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Mexa suavemente todos os ingredientes num copo de mistura com gelo.</li>
+                <li>Despeje no copo rocks.</li>
+              </ol>
+
+              <div class="callout" style="margin-top:1.5rem;">
+                <p><strong>Nota:</strong> Se solicitado servido com gelo, despeje no copo highball.</p>
+              </div>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Aipo, Fatia de Limão (Opcional)</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_8_230x231.jpeg" alt="Bloody Mary" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>A criação do Bloody Mary é frequentemente creditada a Fernand Petiot na década de 1920 enquanto jovem barman no Harry's New York Bar em Paris. No entanto, parece que ele simplesmente temperou uma combinação já existente e bem estabelecida de vodka e sumo de tomate enquanto trabalhava no St. Regis Hotel, Nova York durante a década de 1940.</p>
+
+        <h3>Variações</h3>
+        <ul>
+          <li><strong>Virgin Mary</strong> (sem vodka)</li>
+        </ul>
+      </section>
+
+      <!-- 24 -->
+      <section class="chapter" id="caipirinha">
+        <h1 class="chapter-title">Caipirinha</h1>
+        <div class="chapter-rule"></div>
+
+        <p>A Caipirinha é o cocktail nacional do Brasil, uma bebida refrescante e vibrante que celebra a cachaça brasileira.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>60 ml de Cachaça</li>
+                <li>1 Lima cortada em pequenos pedaços</li>
+                <li>4 colheres de chá de Açúcar Branco de Cana</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Coloque a lima e o açúcar num copo double old fashioned e esmague suavemente.</li>
+                <li>Encha o copo com gelo partido e adicione a cachaça. Mexa suavemente para envolver os ingredientes.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Não aplicável.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_9_204x205.jpeg" alt="Caipirinha" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>Embora a origem da bebida seja desconhecida, há consenso na comunidade académica de que a Caipirinha foi inventada no interior de São Paulo, Brasil, em 1918.</p>
+
+        <h3>Variações</h3>
+        <ul>
+          <li><strong>CAIPIROSKA:</strong> Em vez de cachaça, usar vodka</li>
+          <li><strong>CAIPIRISSIMA:</strong> Usar rum</li>
+          <li><strong>CAIPIRÃO:</strong> Usar Licor Beirão</li>
+        </ul>
+      </section>
+
+      <!-- 25 -->
+      <section class="chapter" id="champagne-cocktail">
+        <h1 class="chapter-title">Champagne Cocktail</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Champagne Cocktail é uma bebida elegante e festiva que eleva o champagne com toques aromáticos de bitter e conhaque.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>90 ml de Champagne Gelado</li>
+                <li>10 ml de Conhaque</li>
+                <li>2 pitadas de Angostura Bitters</li>
+                <li>Algumas gotas de Grand Marnier (opcional)</li>
+                <li>1 torrão de açúcar</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Coloque o torrão de açúcar com 2 pitadas de bitters numa taça grande de champagne, adicione o conhaque.</li>
+                <li>Despeje suavemente o champagne gelado.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Decore com casca de laranja e cereja maraschino.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_10_228x227.jpeg" alt="Champagne Cocktail" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>A primeira menção conhecida por escrito do cocktail de champagne pode ser encontrada em "The Bon Vivant's Companion" de Jerry Thomas, que foi publicado em 1862. Neste livro influente de cocktails, Thomas incluiu uma receita para o cocktail de champagne, descrevendo-o como uma mistura de champagne, açúcar e bitters aromáticos.</p>
+      </section>
+
+      <!-- 26 -->
+      <section class="chapter" id="cosmopolitan">
+        <h1 class="chapter-title">Cosmopolitan</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Cosmopolitan é um cocktail moderno e elegante que se tornou icónico através da cultura popular.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>40 ml de Vodka Citron</li>
+                <li>15 ml de Cointreau</li>
+                <li>15 ml de Sumo de Lima Fresco</li>
+                <li>30 ml de Sumo de Arando</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Adicione todos os ingredientes numa coqueteleira cheia de gelo. Agite bem.</li>
+                <li>Coe para um copo de cocktail grande.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Decore com uma espiral de limão.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_12_244x249.jpeg" alt="Cosmopolitan" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>A origem do cosmopolitan é disputada, com algumas histórias rastreando-o desde a comunidade gay de Provincetown na década de 1970, movendo-se para oeste para Cleveland e Minneapolis, e chegando a São Francisco. De lá, moveu-se de volta para leste, com a receita contemporânea sendo misturada em 1989 na cidade de Nova York. Tornou-se conhecido na série "Sex and the City", bebido por Carrie Bradshaw (Sarah Jessica Parker).</p>
+      </section>
+
+      <!-- 27 -->
+      <section class="chapter" id="cuba-libre">
+        <h1 class="chapter-title">Cuba Libre</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Cuba Libre é um cocktail simples mas histórico que combina rum, cola e lima numa bebida refrescante.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>50 ml de Rum Branco</li>
+                <li>120 ml de Coca-Cola</li>
+                <li>10 ml de Sumo de Lima Fresco</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Construa todos os ingredientes num copo highball cheio de gelo.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Decore com fatia de lima.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_14_171x236.jpeg" alt="Cuba Libre" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>Como conta a história, no ano 1900, um capitão do Exército americano estacionado em Havana durante a Guerra Hispano-Americana despejou Coca-Cola e um apertar de lima no seu Bacardí e brindou aos seus camaradas cubanos gritando no bar: "Por Cuba Libre!" ("Por uma Cuba livre!"). E assim, uma lenda nasceu.</p>
+      </section>
+
+      <!-- 28 -->
+      <section class="chapter" id="margarita">
+        <h1 class="chapter-title">Margarita</h1>
+        <div class="chapter-rule"></div>
+
+        <p>A Margarita é um cocktail mexicano icónico que celebra a tequila com a acidez perfeita da lima e a doçura do licor de laranja.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>50 ml de Tequila 100% Agave</li>
+                <li>20 ml de Triple Sec</li>
+                <li>15 ml de Sumo de Lima Espremido na Hora</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Adicione todos os ingredientes numa coqueteleira com gelo. Agite.</li>
+                <li>Coe para um copo de cocktail gelado.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Meio aro de sal (opcional).</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_15_237x199.jpeg" alt="Margarita" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>Francisco "Pancho" Morales diz que criou a Margarita no verão de 1942 enquanto trabalhava num bar chamado Tommy's Place na Avenida Juarez em Ciudad Juarez, México, depois de "Uma senhora entrou e disse: 'Deixa-me ter uma Magnolia'" no dia 4 de julho de 1942.</p>
+
+        <h3>Variações</h3>
+        <ul>
+          <li><strong>Frozen Margarita</strong> (com gelo triturado)</li>
+        </ul>
+      </section>
+
+      <!-- 29 -->
+      <section class="chapter" id="mint-julep">
+        <h1 class="chapter-title">Mint Julep</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Mint Julep é um cocktail sulista americano clássico que celebra a hortelã fresca e o bourbon.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>60 ml de Bourbon Whiskey</li>
+                <li>4 ramos de hortelã fresca</li>
+                <li>1 colher de chá de Açúcar em Pó</li>
+                <li>2 colheres de chá de Água</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Num copo de Julep de aço inoxidável, esmague suavemente a hortelã com açúcar e água.</li>
+                <li>Encha o copo com gelo partido, adicione o bourbon e mexa bem até o copo gelar.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Decore com um ramo de hortelã.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_17_171x238.jpeg" alt="Mint Julep" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>O mint julep originou-se no sul dos Estados Unidos, provavelmente durante o século XVIII. As primeiras menções conhecidas datam de 1770 e incluem uma peça satírica de Robert Munford, "The Candidate". O Mint Julep é a bebida do Kentucky Derby. "A primeira menção escrita de um copo de julep sendo concedido como troféu de corrida de cavalos [foi] em 1816. Isso é prova de que os juleps eram altamente valorizados e associados às corridas de cavalos."</p>
+      </section>
+
+      <!-- 30 -->
+      <section class="chapter" id="mojito">
+        <h1 class="chapter-title">Mojito</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Mojito é um cocktail cubano refrescante que combina rum, hortelã, lima e água com gás numa harmonia perfeita.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>45 ml de Rum Branco Cubano</li>
+                <li>20 ml de Sumo de Lima Fresco</li>
+                <li>6 ramos de Hortelã</li>
+                <li>2 colheres de chá de Açúcar Branco de Cana</li>
+                <li>Água com Gás</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Misture os ramos de hortelã com açúcar e sumo de lima.</li>
+                <li>Adicione um respingo de água com gás e encha o copo com gelo.</li>
+                <li>Despeje o rum e finalize com água com gás. Mexa ligeiramente para envolver todos os ingredientes.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Decore com ramos de hortelã e fatia de lima.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_18_214x215.jpeg" alt="Mojito" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>Diz-se que o Mojito original era uma bebida medicinal para combater doenças na ilha de Cuba. Um álcool tipo aguardente de rum era misturado com hortelã, lima e xarope de cana de açúcar para afastar doenças.</p>
+      </section>
+
+      <!-- 31 -->
+      <section class="chapter" id="moscow-mule">
+        <h1 class="chapter-title">Moscow Mule</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Moscow Mule é um cocktail americano servido tradicionalmente numa caneca de cobre que realça o sabor picante do ginger beer.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>45 ml de Vodka Smirnoff</li>
+                <li>120 ml de Ginger Beer</li>
+                <li>10 ml de Sumo de lima fresco</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Numa caneca Mule ou copo rocks, combine a vodka e o ginger beer.</li>
+                <li>Adicione o sumo de lima e mexa suavemente para envolver todos os ingredientes.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Decore com uma fatia de lima.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_19_205x208.jpeg" alt="Moscow Mule" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>O Moscow Mule nasceu naquele dia em 1941. A combinação perfeita de vodka e ginger beer, alojada numa caneca de cobre sólida que mantinha a bebida fria e realçava o seu sabor e aroma, resultando num cocktail pelo qual a América se apaixonaria pelo século seguinte e além.</p>
+      </section>
+
+      <!-- 32 -->
+      <section class="chapter" id="grasshopper">
+        <h1 class="chapter-title">Grasshopper</h1>
+        <div class="chapter-rule"></div>
+
+        <p>O Grasshopper é um cocktail cremoso e refrescante com sabor a menta e chocolate, perfeito como digestivo.</p>
+
+        <h3>Ingredientes</h3>
+        <table class="data-table">
+          <tr>
+            <td style="width:45%; vertical-align:top;">
+              <ul>
+                <li>20 ml de Crème de Cacao (Branco)</li>
+                <li>20 ml de Crème de Menthe (Verde)</li>
+                <li>20 ml de Creme Fresco</li>
+              </ul>
+
+              <h3 style="margin-top:1.5rem;">Método de Preparo</h3>
+              <ol>
+                <li>Despeje todos os ingredientes numa coqueteleira cheia de gelo. Agite vigorosamente por alguns segundos.</li>
+                <li>Coe para um copo de cocktail gelado.</li>
+              </ol>
+
+              <h3 style="margin-top:1.5rem;">Guarnição</h3>
+              <p>Não aplicável, folha de hortelã opcional.</p>
+            </td>
+            <td style="width:55%; text-align:center;">
+              <img src="img/img001_20_219x220.jpeg" alt="Grasshopper" style="max-width:100%; height:auto; border-radius:6px;">
+            </td>
+          </tr>
+        </table>
+
+        <h3>História</h3>
+        <p>Philibert Guichet inventou a bebida que se tornaria conhecida como Grasshopper, para uma competição de cocktails em 1918 na cidade de Nova York. O cocktail de Guichet conseguiu o segundo lugar e tornou-se tão popular em casa em Nova Orleans, que mantém um lugar permanente no menu de cocktails do Tujague's desde então.</p>
+      </section>
+
+      <!-- 33 -->
+      <section class="chapter" id="avaliacao-asi">
+        <h1 class="chapter-title">Critérios de Avaliação ASI</h1>
+        <div class="chapter-rule"></div>
+
+        <p>A competição da Associação da Sommellerie Internacional (ASI) para serviço de bar avalia os candidatos com base nos seguintes pontos fundamentais:</p>
+
+        <h3>Aspectos Técnicos</h3>
+        <p>O sommelier deve demonstrar precisão técnica usando os ingredientes corretos e medindo-os com exatidão. É essencial preparar o cocktail utilizando o método correto, seja na coqueteleira, copo de mistura ou diretamente no copo de serviço, empregando sempre os utensílios apropriados para cada técnica.</p>
+
+        <h3>Apresentação e Acabamento</h3>
+        <p>A preparação e uso da guarnição correta são fundamentais, assim como garantir que a aparência do cocktail esteja perfeita. O profissional deve provar o cocktail para garantir o equilíbrio de sabores antes de servir ao cliente, sempre apresentando a bebida sobre uma base adequada.</p>
+
+        <h3>Organização e Profissionalismo</h3>
+        <p>A arrumação da estação de trabalho deve ser mantida durante todo o processo, demonstrando organização e eficiência. É crucial demonstrar habilidades de bar com confiança e desenvoltura profissional.</p>
+
+        <h3>Comunicação e Serviço</h3>
+        <p>Durante a preparação, o sommelier deve comunicar e descrever a receita e método, estando preparado para responder a perguntas do examinador. É importante perguntar se o cliente gostaria de uma recomendação de comida, fornecendo descrição detalhada e explicando a harmonização da escolha com o cocktail servido.</p>
+
+        <h3>Conhecimento e Harmonização</h3>
+        <p>O profissional deve demonstrar conhecimento profundo sobre cada cocktail, incluindo sua história, variações e características organolépticas. A capacidade de sugerir harmonizações adequadas com alimentos é essencial para o serviço completo.</p>
+
+        <p>Este guia representa a base fundamental para qualquer profissional de bar que deseje dominar a arte da coquetelaria clássica, combinando técnica, conhecimento histórico e excelência no serviço.</p>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- Mobile bottom nav -->
+  <nav class="mobile-nav">
+    <button class="mob-arrow" id="mob-prev">◀</button>
+    <span class="mob-counter" id="mob-counter">1 / 33</span>
+    <button class="mob-arrow" id="mob-next">▶</button>
+  </nav>
+
+  <!-- Scroll arrows -->
+  <div class="scroll-arrows">
+    <button class="scroll-arrow" id="scroll-up" title="Rolar para cima">↑</button>
+    <button class="scroll-arrow" id="scroll-dn" title="Rolar para baixo">↓</button>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

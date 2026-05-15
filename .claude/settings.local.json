@@ -20,7 +20,24 @@
       "Bash(gh --version)",
       "Bash(gh auth *)",
       "PowerShell(gh *)",
-      "PowerShell(winget *)"
+      "PowerShell(winget *)",
+      "PowerShell(& \"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" auth status)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(python \"C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\ABC do Vinho\\\\extract_images.py\")",
+      "PowerShell(python \"C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\ABC do Vinho\\\\extract_castas.py\")",
+      "Read(//mnt/c/Users/rodfi/Desktop/Documents/Wine/AEP/Profissional I/ABC do Vinho/modulo2/**)",
+      "Bash(dir \"C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\ABC do Vinho\\\\modulo2\\\\img\")",
+      "WebSearch",
+      "Bash(git restore *)",
+      "WebFetch(domain:www.vinetowinecircle.com)",
+      "Bash(Test-Path C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\ABC do Vinho\\\\modulo4 *)",
+      "Bash(Get-Content \"C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\ABC do Vinho\\\\modulo4\\\\index.html\")",
+      "Bash(Measure-Object -Line)",
+      "PowerShell(\\(Get-Content \"C:\\\\Users\\\\rodfi\\\\Desktop\\\\Documents\\\\Wine\\\\AEP\\\\Profissional I\\\\ABC do Vinho\\\\modulo4\\\\index.html\" | Measure-Object -Line\\).Lines)",
+      "Bash(powershell *)"
     ]
   }
 }

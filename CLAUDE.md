@@ -174,6 +174,16 @@ Source: `Módulo 3/Modulo 3 - Texto para Estudo.pdf` (78 pages)
 10. ✅ Module 8 — Serviço de Vinhos (20 chapters)
 11. `print.css` + Puppeteer PDF export (later)
 
+## ⛔ CRITICAL: GIT AND DEPLOYMENT POLICY ⛔
+
+**NEVER COMMIT OR PUSH WITHOUT EXPLICIT USER INSTRUCTION.**
+
+When the user says "commit", "deploy", or any variation:
+1. Run `git status --porcelain` — find ALL changed files
+2. Stage specific files by name (never `git add -A`)
+3. Commit with a descriptive message
+4. **ALWAYS push immediately after commit** — `git push origin master` triggers Vercel
+
 ## Deploy
 
 GitHub → Vercel auto-deploy on push to `master`.

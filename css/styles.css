@@ -1,3 +1,5 @@
+@import url('/css/dev-local.css');
+
 /* ============================================================
    ABC DO VINHO — Design System
    ============================================================ */
@@ -996,3 +998,26 @@ figcaption {
   font-weight: 500;
 }
 .spec-val em { color: var(--accent-dark); font-style: normal; }
+
+/* ── Language toggle ─────────────────────────────────────────────────────── */
+#lang-toggle {
+  display: none;
+  position: fixed;
+  bottom: .75rem;
+  right: .75rem;
+  z-index: 9999;
+  padding: .25rem .65rem;
+  background: rgba(0,0,0,.08);
+  color: var(--page-muted);
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 1rem;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-decoration: none;
+  transition: background .15s, color .15s;
+}
+#lang-toggle:hover {
+  background: rgba(0,0,0,.15);
+  color: var(--page-text);
+}

@@ -47,7 +47,22 @@ modulo7/index.html                ← Degustação de Vinhos (COMPLETE — 10 ca
 modulo8/index.html                ← 20 chapters — Serviço de Vinhos — protocolo e sommelier (COMPLETE)
 css/styles.css                    ← Global reset, layout, typography, components
 js/main.js                        ← Chapter navigation engine
+en/                                ← EN mirror of root + all 8 modules (dev-only, see below)
 ```
+
+---
+
+## EN Translation (dev-only, not released)
+
+Ported from Vinhos do Mundo's translation pipeline. Machine-translates PT → EN via Google Translate, with a curated glossary to protect wine terminology GT would otherwise mangle. **Not live in production** — same posture as the source project: the toggle button and the `en/` tree are both dev-only until a human QA pass signs off, since automatic translation of technical wine content can mislead students.
+
+**Pipeline:**
+- `scripts/setup-en-tree.js` — one-time scaffolder. Mirrors `index.html` + each `moduloN/index.html` into `en/`, adjusting relative asset paths and injecting the `#lang-toggle` anchor into both the PT source and the EN copy. Idempotent (`--dry-run` to preview, `--no-pt` to skip touching PT sources).
+- `scripts/generate-en.js <path>` — per-page translator. Walks text nodes **and** `alt=`/`title=`/`aria-label=` attribute values, applies `js/translations.json`'s `swap` table (known PT→EN wine terms, case-preserving) and `protect` list (proper nouns wrapped in placeholders so GT can't touch them — grape varieties, DOCs, fortified-wine classifications, cocktail names, etc.), batches the rest through Google Translate, then writes `en/{path}`. Re-run per file whenever `translations.json` changes.
+- `js/translations.json` — the glossary. Built incrementally: seed it, translate, spot-check for garbled domain terms, add entries, re-run. Ambiguous words (e.g. "Colheita" = both "harvest" the generic verb and a Port wine classification) can't be perfectly disambiguated by this regex-based approach — favor the more common sense and note the tradeoff.
+- **Visibility:** `#lang-toggle` is `display:none` in `css/styles.css`; only `css/dev-local.css` (imported via `@import`, itself excluded from Vercel via `.vercelignore` along with `en/` and `scripts/`) sets it visible. So the toggle only appears on localhost — production visitors never see it or reach `/en/`.
+
+To regenerate after a PT content edit: re-run `generate-en.js` for the affected module(s), then spot-check for GT errors (see workflow used in this repo's translation review sessions — check for leftover PT text via an accented-word scan across `en/*/index.html`, verify no `⟦N⟧` placeholder leakage, and read a couple of pages for garbled proper nouns).
 
 ---
 

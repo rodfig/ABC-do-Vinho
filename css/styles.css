@@ -1003,8 +1003,8 @@ figcaption {
 #lang-toggle {
   display: none;
   position: fixed;
-  bottom: .75rem;
-  right: .75rem;
+  top: calc(50% + 50px);
+  right: max(1rem, calc(100vw - 230px - 820px - 2.5rem));
   z-index: 9999;
   padding: .25rem .65rem;
   background: rgba(0,0,0,.08);

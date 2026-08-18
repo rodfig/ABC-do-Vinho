@@ -64,6 +64,26 @@ function collectNodes(html) {
   return nodes;
 }
 
+// Collects translatable attribute values (alt/title/aria-label) — these live
+// inside tags, so collectNodes (which only walks text between tags) never
+// sees them. Same {start, end, text} shape as text nodes so they can share
+// the swap/protect/GT pipeline and the back-to-front replace pass.
+const ATTR_NAMES = ['alt', 'title', 'aria-label'];
+
+function collectAttrNodes(html) {
+  const nodes = [];
+  const re = new RegExp(`\\b(?:${ATTR_NAMES.join('|')})="([^"]*)"`, 'g');
+  let m;
+  while ((m = re.exec(html))) {
+    const value = m[1];
+    if (!value.trim()) continue;
+    const start = m.index + m[0].indexOf('"') + 1;
+    const end   = start + value.length;
+    nodes.push({ start, end, text: value });
+  }
+  return nodes;
+}
+
 // ── Pre-swap (translations.json) ────────────────────────────────────────────
 // Replaces known PT wine terms with their EN equivalents before GT sees the
 // text, so GT treats them as already-English and leaves them alone.
@@ -150,7 +170,12 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // ── EN tree helpers ─────────────────────────────────────────────────────────
 
-function adjustPaths(html) {
+function adjustPaths(html, isRoot) {
+  if (isRoot) {
+    // Root index.html has no '../' yet — its shared-asset refs (css/js/img)
+    // need one added; same-tree links ("modulo1/", ...) stay untouched.
+    return html.replace(/\b((?:src|href)=")(css|js|img|fonts)\//g, (_, attr, dir) => `${attr}../${dir}/`);
+  }
   return html.replace(/\b((?:src|href)=")(\.\.\/)/g, (_, a, up) => `${a}../${up}`);
 }
 
@@ -170,6 +195,11 @@ function fixRootLinks(html) {
   html = html.replace(
     /(<a\b[^>]*\bhref=")([^"]*)"([^>]*class="back-link"[^>]*)>/g,
     (_, pre, _href, attrs) => `${pre}/en/"${attrs}>`
+  );
+  // topbar-back breadcrumb (ABC do Vinho markup: class before href)
+  html = html.replace(
+    /(<a\b[^>]*class="topbar-back"[^>]*\bhref=")([^"]*)"/g,
+    (_, pre, _href) => `${pre}/en/"`
   );
   return html;
 }
@@ -200,7 +230,7 @@ async function main() {
   console.log(`Output : ${path.relative(ROOT, outPath)}`);
 
   let html  = fs.readFileSync(srcPath, 'utf8');
-  const nodes = collectNodes(html);
+  const nodes = [...collectNodes(html), ...collectAttrNodes(html)];
   console.log(`Nodes  : ${nodes.length}`);
 
   // Annotate each node with its trimmed + pre-swapped text
@@ -245,7 +275,7 @@ async function main() {
   html = html.replace(/(<title>[^<]+)(<\/title>)/, '$1 — EN$2');
 
   const dir = relNorm.replace(/[^/]+$/, '');
-  html = adjustPaths(html);
+  html = adjustPaths(html, dir === '');
   html = fixRootLinks(html);
   html = injectToggle(html, '/' + dir, 'PT');
 

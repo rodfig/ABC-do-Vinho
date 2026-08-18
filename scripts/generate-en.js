@@ -262,7 +262,7 @@ async function main() {
   // for GT to work with and translate unreliably. Exact-match only — this must
   // never be a substring swap, since "o"/"a" are the most common words in
   // Portuguese and would corrupt any longer text they appear within.
-  const ISOLATED_WORDS = { O: 'The', A: 'The', Os: 'The', As: 'The', o: 'the', a: 'the', os: 'the', as: 'the', ', a': ',' };
+  const ISOLATED_WORDS = { O: 'The', A: 'The', Os: 'The', As: 'The', o: 'the', a: 'the', os: 'the', as: 'the', ', a': ',', Vinho: 'Vinho' };
 
   const cache = new Map();
   let done = 0;

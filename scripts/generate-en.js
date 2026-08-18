@@ -250,6 +250,17 @@ async function main() {
   const vulnerable  = allProtect.filter(term => applySwaps(term, swaps) !== term);
   const safe        = allProtect.filter(term => applySwaps(term, swaps) === term);
   const ptProtectsPre  = buildProtect({ protect: vulnerable }, 'P');
+  // A sentence that opens with "A/O [Proper Noun]" (e.g. "A Tinta Roriz...",
+  // "A Touriga Nacional...") reads as "The [Name]..." once translated, but
+  // proper noun grape/place names normally don't take an article in English
+  // ("Tinta Roriz has...", not "The Tinta Roriz has..."). Checked against the
+  // RAW text before any protection runs (vulnerable terms would otherwise
+  // already be placeholders by the time we could match them here) and only
+  // at the very start of the string — mid-sentence "a Touriga Nacional" (e.g.
+  // "sobre a Touriga Nacional") legitimately keeps its article.
+  const dropArticleRe = new RegExp(
+    `^[AO] (${[...allProtect].sort((a, b) => b.length - a.length).map(escapeRe).join('|')})(?![a-zA-ZÀ-ɏ])`
+  );
   // GT doesn't reliably leave already-swapped English text alone either — it
   // still tweaks capitalization or inserts words even in text that's already
   // in the target language. Route every swap *value* through the same
@@ -267,9 +278,10 @@ async function main() {
 
   // Annotate each node: protect proper nouns, THEN swap, THEN protect swap output.
   const annotated = nodes.map(node => {
-    const trimmed     = node.text.trim();
-    const leading      = node.text.slice(0, node.text.indexOf(trimmed[0]));
-    const trailing     = node.text.slice(node.text.lastIndexOf(trimmed[trimmed.length - 1]) + 1);
+    const trimmed0    = node.text.trim();
+    const trimmed     = trimmed0.replace(dropArticleRe, '$1');
+    const leading      = node.text.slice(0, node.text.indexOf(trimmed0[0]));
+    const trailing     = node.text.slice(node.text.lastIndexOf(trimmed0[trimmed0.length - 1]) + 1);
     const ptShielded   = applyProtect(trimmed, ptProtectsPre);
     const preSwapped   = applySwaps(ptShielded, swaps);
     return { ...node, trimmed, leading, trailing, preSwapped };
@@ -307,6 +319,9 @@ async function main() {
   // word, different sense, so the mapping is file-specific rather than global.
   if (relNorm === 'modulo2/index.html') ISOLATED_WORDS['Choro'] = 'Bleeding';
   if (relNorm === 'modulo8/index.html') ISOLATED_WORDS['Choro'] = 'Weeping';
+  // "Touriga Francesa" para "Touriga Franca" — the isolated "para" between
+  // the two protected names means "to" (renamed X to Y), not "for".
+  if (relNorm === 'modulo3/index.html') ISOLATED_WORDS['para'] = 'to';
 
   const cache = new Map();
   let done = 0;

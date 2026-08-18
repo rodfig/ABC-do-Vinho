@@ -102,11 +102,16 @@ function buildSwaps(table) {
 // Protected terms are replaced with ⟦N⟧ placeholders before GT sees the text,
 // then restored after — GT cannot translate Unicode bracket tokens.
 function buildProtect(table) {
-  return (table.protect || []).map((term, i) => ({
-    term,
-    placeholder: `⟦${i}⟧`,
-    re: new RegExp(`(?<![a-zA-ZÀ-ɏ])${escapeRe(term)}(?![a-zA-ZÀ-ɏ])`, 'gi'),
-  }));
+  // Longest-first: a short term (e.g. protecting "Vintage") must not fragment
+  // a longer already-swapped phrase (e.g. "...or vintage on the label") before
+  // that phrase gets protected as one contiguous unit.
+  return [...(table.protect || [])]
+    .sort((a, b) => b.length - a.length)
+    .map((term, i) => ({
+      term,
+      placeholder: `⟦${i}⟧`,
+      re: new RegExp(`(?<![a-zA-ZÀ-ɏ])${escapeRe(term)}(?![a-zA-ZÀ-ɏ])`, 'gi'),
+    }));
 }
 
 function applyProtect(text, protects) {
@@ -224,7 +229,12 @@ async function main() {
   const outPath = path.join(ROOT, 'en', relNorm);
   const table    = JSON.parse(fs.readFileSync(TABLE_PATH, 'utf8'));
   const swaps    = buildSwaps(table);
-  const protects = buildProtect(table);
+  // GT doesn't reliably leave already-swapped English text alone — it still
+  // tweaks capitalization or inserts words even in text that's already in the
+  // target language. Route every swap *value* through the same placeholder
+  // protection used for proper nouns, so GT can't touch it either.
+  const swapValues = [...new Set(Object.values(table.swap || {}))];
+  const protects = buildProtect({ protect: [...(table.protect || []), ...swapValues] });
 
   console.log(`Source : ${relNorm}`);
   console.log(`Output : ${path.relative(ROOT, outPath)}`);
@@ -245,19 +255,28 @@ async function main() {
   // Deduplicate: only translate unique strings
   // Apply protect placeholders before sending to GT, restore after.
   const uniqueKeys = [...new Set(annotated.map(n => n.preSwapped))];
-  const uniqueForGT = uniqueKeys.map(k => applyProtect(k, protects));
   console.log(`Unique : ${uniqueKeys.length}`);
+
+  // Isolated single-word nodes (whole node text is just a Portuguese article,
+  // e.g. a leading "O " before a <strong>Name</strong>) have no sentence context
+  // for GT to work with and translate unreliably. Exact-match only — this must
+  // never be a substring swap, since "o"/"a" are the most common words in
+  // Portuguese and would corrupt any longer text they appear within.
+  const ISOLATED_WORDS = { O: 'The', A: 'The', Os: 'The', As: 'The', o: 'the', a: 'the', os: 'the', as: 'the', ', a': ',' };
 
   const cache = new Map();
   let done = 0;
 
-  for (let i = 0; i < uniqueKeys.length; i += BATCH_SIZE) {
-    const batchKeys  = uniqueKeys.slice(i, i + BATCH_SIZE);
-    const batchForGT = uniqueForGT.slice(i, i + BATCH_SIZE);
+  const toTranslate = uniqueKeys.filter(k => !(k in ISOLATED_WORDS));
+  for (const k of uniqueKeys) if (k in ISOLATED_WORDS) cache.set(k, ISOLATED_WORDS[k]);
+
+  for (let i = 0; i < toTranslate.length; i += BATCH_SIZE) {
+    const batchKeys  = toTranslate.slice(i, i + BATCH_SIZE);
+    const batchForGT = batchKeys.map(k => applyProtect(k, protects));
     const results    = await gtBatch(batchForGT);
     batchKeys.forEach((key, j) => cache.set(key, restoreProtect(results[j], protects)));
     done += batchKeys.length;
-    process.stdout.write(`\r  ${done}/${uniqueKeys.length}`);
+    process.stdout.write(`\r  ${done}/${toTranslate.length}`);
     await sleep(DELAY_MS);
   }
 

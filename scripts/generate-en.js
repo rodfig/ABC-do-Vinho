@@ -101,7 +101,7 @@ function buildSwaps(table) {
 
 // Protected terms are replaced with ⟦N⟧ placeholders before GT sees the text,
 // then restored after — GT cannot translate Unicode bracket tokens.
-function buildProtect(table) {
+function buildProtect(table, prefix = '') {
   // Longest-first: a short term (e.g. protecting "Vintage") must not fragment
   // a longer already-swapped phrase (e.g. "...or vintage on the label") before
   // that phrase gets protected as one contiguous unit.
@@ -109,7 +109,7 @@ function buildProtect(table) {
     .sort((a, b) => b.length - a.length)
     .map((term, i) => ({
       term,
-      placeholder: `⟦${i}⟧`,
+      placeholder: `⟦${prefix}${i}⟧`,
       re: new RegExp(`(?<![a-zA-ZÀ-ɏ])${escapeRe(term)}(?![a-zA-ZÀ-ɏ])`, 'gi'),
     }));
 }
@@ -229,12 +229,25 @@ async function main() {
   const outPath = path.join(ROOT, 'en', relNorm);
   const table    = JSON.parse(fs.readFileSync(TABLE_PATH, 'utf8'));
   const swaps    = buildSwaps(table);
-  // GT doesn't reliably leave already-swapped English text alone — it still
-  // tweaks capitalization or inserts words even in text that's already in the
-  // target language. Route every swap *value* through the same placeholder
-  // protection used for proper nouns, so GT can't touch it either.
-  const swapValues = [...new Set(Object.values(table.swap || {}))];
-  const protects = buildProtect({ protect: [...(table.protect || []), ...swapValues] });
+  // Proper nouns that a generic swap would otherwise corrupt (e.g. "tinta":
+  // "red" mangling the grape name "Tinta Roriz") must be shielded BEFORE
+  // swaps run. But protecting a proper noun BEFORE swaps also blocks any
+  // swap key that legitimately references that same literal text (e.g. a
+  // "Vinhos tintos do Douro" swap key can't match once "Douro" has already
+  // become a placeholder). So: only pre-protect terms swaps would actually
+  // touch; everything else is protected after swapping, same timing as the
+  // swap-value protection below, so swap keys can still reference them.
+  const allProtect  = table.protect || [];
+  const vulnerable  = allProtect.filter(term => applySwaps(term, swaps) !== term);
+  const safe        = allProtect.filter(term => applySwaps(term, swaps) === term);
+  const ptProtectsPre  = buildProtect({ protect: vulnerable }, 'P');
+  // GT doesn't reliably leave already-swapped English text alone either — it
+  // still tweaks capitalization or inserts words even in text that's already
+  // in the target language. Route every swap *value* through the same
+  // placeholder protection, applied after swapping — alongside the "safe"
+  // proper nouns above.
+  const swapValues     = [...new Set(Object.values(table.swap || {}))];
+  const enProtects  = buildProtect({ protect: [...safe, ...swapValues] }, 'S');
 
   console.log(`Source : ${relNorm}`);
   console.log(`Output : ${path.relative(ROOT, outPath)}`);
@@ -243,17 +256,17 @@ async function main() {
   const nodes = [...collectNodes(html), ...collectAttrNodes(html)];
   console.log(`Nodes  : ${nodes.length}`);
 
-  // Annotate each node with its trimmed + pre-swapped text
+  // Annotate each node: protect proper nouns, THEN swap, THEN protect swap output.
   const annotated = nodes.map(node => {
-    const trimmed    = node.text.trim();
-    const leading    = node.text.slice(0, node.text.indexOf(trimmed[0]));
-    const trailing   = node.text.slice(node.text.lastIndexOf(trimmed[trimmed.length - 1]) + 1);
-    const preSwapped = applySwaps(trimmed, swaps);
+    const trimmed     = node.text.trim();
+    const leading      = node.text.slice(0, node.text.indexOf(trimmed[0]));
+    const trailing     = node.text.slice(node.text.lastIndexOf(trimmed[trimmed.length - 1]) + 1);
+    const ptShielded   = applyProtect(trimmed, ptProtectsPre);
+    const preSwapped   = applySwaps(ptShielded, swaps);
     return { ...node, trimmed, leading, trailing, preSwapped };
   });
 
   // Deduplicate: only translate unique strings
-  // Apply protect placeholders before sending to GT, restore after.
   const uniqueKeys = [...new Set(annotated.map(n => n.preSwapped))];
   console.log(`Unique : ${uniqueKeys.length}`);
 
@@ -262,7 +275,7 @@ async function main() {
   // for GT to work with and translate unreliably. Exact-match only — this must
   // never be a substring swap, since "o"/"a" are the most common words in
   // Portuguese and would corrupt any longer text they appear within.
-  const ISOLATED_WORDS = { O: 'The', A: 'The', Os: 'The', As: 'The', o: 'the', a: 'the', os: 'the', as: 'the', ', a': ',', Vinho: 'Vinho' };
+  const ISOLATED_WORDS = { O: 'The', A: 'The', Os: 'The', As: 'The', o: 'the', a: 'the', os: 'the', as: 'the', ', a': ',', Vinho: 'Vinho', moderado: '', 'O consumo': 'Moderate consumption' };
 
   const cache = new Map();
   let done = 0;
@@ -272,9 +285,12 @@ async function main() {
 
   for (let i = 0; i < toTranslate.length; i += BATCH_SIZE) {
     const batchKeys  = toTranslate.slice(i, i + BATCH_SIZE);
-    const batchForGT = batchKeys.map(k => applyProtect(k, protects));
+    const batchForGT = batchKeys.map(k => applyProtect(k, enProtects));
     const results    = await gtBatch(batchForGT);
-    batchKeys.forEach((key, j) => cache.set(key, restoreProtect(results[j], protects)));
+    batchKeys.forEach((key, j) => {
+      const restored = restoreProtect(restoreProtect(results[j], enProtects), ptProtectsPre);
+      cache.set(key, restored);
+    });
     done += batchKeys.length;
     process.stdout.write(`\r  ${done}/${toTranslate.length}`);
     await sleep(DELAY_MS);

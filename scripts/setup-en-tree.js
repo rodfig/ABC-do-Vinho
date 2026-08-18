@@ -84,8 +84,8 @@ let ptEdited  = 0;
 for (const rel of files) {
   const isRoot = rel === 'index.html';
   const dirFwd = rel.replace(/[^/]+$/, '');   // '' for root, 'modulo1/' for modules
-  const enUrl  = '/en/' + dirFwd;
-  const ptUrl  = '/' + dirFwd;
+  const enUrl  = '/en/' + dirFwd + '?setlang=en';
+  const ptUrl  = '/' + dirFwd + '?setlang=pt';
 
   const srcPath = path.join(ROOT, rel);
   const enPath  = path.join(EN_DIR, rel);

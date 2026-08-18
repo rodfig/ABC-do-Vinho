@@ -266,7 +266,14 @@ async function main() {
   // in the target language. Route every swap *value* through the same
   // placeholder protection, applied after swapping — alongside the "safe"
   // proper nouns above.
-  const swapValues     = [...new Set(Object.values(table.swap || {}))];
+  // Single-word swap values (e.g. "white", "glass") don't need placeholder
+  // protection — GT reliably leaves a lone common word alone — and giving
+  // them one is actively harmful: the case-insensitive protect/restore cycle
+  // always restores the flat literal JSON value, silently undoing whatever
+  // capital preserveCase() applied (e.g. "Branco" -> "White" via preserveCase,
+  // then flattened back to "white" by a same-named protect entry). Multi-word
+  // phrases still need protection since GT does reword those.
+  const swapValues     = [...new Set(Object.values(table.swap || {}))].filter(v => v.includes(' '));
   const enProtects  = buildProtect({ protect: [...safe, ...swapValues] }, 'S');
 
   console.log(`Source : ${relNorm}`);
@@ -322,6 +329,12 @@ async function main() {
   // "Touriga Francesa" para "Touriga Franca" — the isolated "para" between
   // the two protected names means "to" (renamed X to Y), not "for".
   if (relNorm === 'modulo3/index.html') ISOLATED_WORDS['para'] = 'to';
+  // Isolated "Americano" (nav link, chapter title) is the cocktail's proper
+  // name and must stay "Americano" — but lowercase "americano" elsewhere in
+  // this file means the nationality adjective ("cocktail americano" = "American
+  // cocktail") and must keep translating normally, so this can't be a blanket
+  // case-insensitive protect entry.
+  if (relNorm === 'modulo6/index.html') ISOLATED_WORDS['Americano'] = 'Americano';
 
   const cache = new Map();
   let done = 0;

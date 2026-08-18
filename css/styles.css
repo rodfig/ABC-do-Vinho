@@ -1000,10 +1000,12 @@ figcaption {
 .spec-val em { color: var(--accent-dark); font-style: normal; }
 
 /* ── Language toggle ─────────────────────────────────────────────────────── */
+/* Fixed at the bottom, in the same right-offset column as .scroll-arrows so it
+   lines up with them instead of sitting in the far corner of the viewport. */
 #lang-toggle {
   display: none;
   position: fixed;
-  top: calc(50% + 50px);
+  bottom: .75rem;
   right: max(1rem, calc(100vw - 230px - 820px - 2.5rem));
   z-index: 9999;
   padding: .25rem .65rem;

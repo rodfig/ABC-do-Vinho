@@ -206,7 +206,7 @@ function fixRootLinks(html) {
 
 function injectToggle(html, href, label) {
   // Strip any existing toggle (PT source already has one pointing to /en/), then inject correct one.
-  html = html.replace(/<a id="lang-toggle"[^>]*>[^<]*<\/a>\n?/g, '');
+  html = html.replace(/[ \t]*<a id="lang-toggle"[^>]*>[^<]*<\/a>\n?/g, '');
   return html.replace('</body>', `<a id="lang-toggle" href="${href}">${label}</a>\n</body>`);
 }
 

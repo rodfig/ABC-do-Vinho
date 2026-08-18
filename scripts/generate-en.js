@@ -175,13 +175,22 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // ── EN tree helpers ─────────────────────────────────────────────────────────
 
-function adjustPaths(html, isRoot) {
+function adjustPaths(html, isRoot, moduleDir) {
   if (isRoot) {
     // Root index.html has no '../' yet — its shared-asset refs (css/js/img)
     // need one added; same-tree links ("modulo1/", ...) stay untouched.
     return html.replace(/\b((?:src|href)=")(css|js|img|fonts)\//g, (_, attr, dir) => `${attr}../${dir}/`);
   }
-  return html.replace(/\b((?:src|href)=")(\.\.\/)/g, (_, a, up) => `${a}../${up}`);
+  // Module pages: bump existing '../' (css/js refs, which point at the
+  // project-root-level shared folders) up one level for the extra /en/
+  // depth. But each module also has its OWN sibling img/ folder — unlike
+  // css/js, images are per-module, not shared at the root — referenced
+  // without a leading '../' (e.g. src="img/p005-....jpeg"). From
+  // en/moduloN/, reaching that folder needs '../../moduloN/img/...': up
+  // two levels to the project root, then back into the PT module's img/.
+  html = html.replace(/\b((?:src|href)=")(\.\.\/)/g, (_, a, up) => `${a}../${up}`);
+  html = html.replace(/\b(src=")(img)\//g, (_, attr, dir) => `${attr}../../${moduleDir}${dir}/`);
+  return html;
 }
 
 // Root-pointing links (breadcrumb Home, back-link) end up pointing at the PT root
@@ -266,6 +275,23 @@ async function main() {
     return { ...node, trimmed, leading, trailing, preSwapped };
   });
 
+  // A lone leading article ("A "/"O ") before a term where English idiom drops
+  // the article entirely (e.g. "Ampelography is..." not "The ampelography
+  // is...") — checked by position, not by the article's own isolated text,
+  // since "A "/"O " legitimately becomes "The" everywhere else.
+  const DROP_ARTICLE_BEFORE = new Set(['ampelografia', 'altitude elevada', 'clima mediterrânico quente e seco']);
+  for (let i = 0; i < annotated.length - 1; i++) {
+    if (annotated[i].trimmed in { O: 1, A: 1, o: 1, a: 1 } && DROP_ARTICLE_BEFORE.has(annotated[i + 1].trimmed)) {
+      annotated[i].preSwapped = '⟦DROP-ARTICLE⟧';
+      annotated[i].trailing = '';
+      // The dropped article was carrying the sentence-initial capital — the
+      // next node is now sentence-first and needs it, but only for THIS
+      // occurrence (the cached translation is shared with other identical
+      // nodes elsewhere, e.g. a lowercase mid-sentence "ampelografia").
+      annotated[i + 1].forceCapitalize = true;
+    }
+  }
+
   // Deduplicate: only translate unique strings
   const uniqueKeys = [...new Set(annotated.map(n => n.preSwapped))];
   console.log(`Unique : ${uniqueKeys.length}`);
@@ -275,7 +301,12 @@ async function main() {
   // for GT to work with and translate unreliably. Exact-match only — this must
   // never be a substring swap, since "o"/"a" are the most common words in
   // Portuguese and would corrupt any longer text they appear within.
-  const ISOLATED_WORDS = { O: 'The', A: 'The', Os: 'The', As: 'The', o: 'the', a: 'the', os: 'the', as: 'the', ', a': ',', Vinho: 'Vinho', moderado: '', 'O consumo': 'Moderate consumption' };
+  const ISOLATED_WORDS = { O: 'The', A: 'The', Os: 'The', As: 'The', o: 'the', a: 'the', os: 'the', as: 'the', ', a': ',', Vinho: 'Vinho', moderado: '', 'O consumo': 'Moderate consumption', '⟦DROP-ARTICLE⟧': '' };
+  // "Choro" means something different per module: vine-cycle "bleeding" in
+  // modulo2, a bottle-storage fault ("weeping") in modulo8 — same isolated
+  // word, different sense, so the mapping is file-specific rather than global.
+  if (relNorm === 'modulo2/index.html') ISOLATED_WORDS['Choro'] = 'Bleeding';
+  if (relNorm === 'modulo8/index.html') ISOLATED_WORDS['Choro'] = 'Weeping';
 
   const cache = new Map();
   let done = 0;
@@ -301,7 +332,10 @@ async function main() {
   // Replace back-to-front to keep earlier offsets valid
   const reversed = [...annotated].sort((a, b) => b.start - a.start);
   for (const node of reversed) {
-    const translated = cache.get(node.preSwapped) ?? node.trimmed;
+    let translated = cache.get(node.preSwapped) ?? node.trimmed;
+    if (node.forceCapitalize && translated) {
+      translated = translated[0].toUpperCase() + translated.slice(1);
+    }
     const result     = node.leading + translated + node.trailing;
     html = html.slice(0, node.start) + result + html.slice(node.end);
   }
@@ -310,7 +344,7 @@ async function main() {
   html = html.replace(/(<title>[^<]+)(<\/title>)/, '$1 — EN$2');
 
   const dir = relNorm.replace(/[^/]+$/, '');
-  html = adjustPaths(html, dir === '');
+  html = adjustPaths(html, dir === '', dir);
   html = fixRootLinks(html);
   html = injectToggle(html, '/' + dir, 'PT');
 

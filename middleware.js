@@ -1,15 +1,13 @@
 export const config = {
-  matcher: '/((?!en/|css/|js/|img/|fonts/|favicon\\.ico|.*\\..*).*)',
+  matcher: '/((?!css/|js/|img/|fonts/|favicon\\.ico|.*\\..*).*)',
 };
 
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 365; // 1 year
 
-function setCookie(response, lang) {
-  response.headers.append(
-    'Set-Cookie',
-    `lang=${lang}; Path=/; Max-Age=${COOKIE_MAX_AGE}; SameSite=Lax`
-  );
-  return response;
+function redirect(location, lang) {
+  const headers = { Location: location };
+  if (lang) headers['Set-Cookie'] = `lang=${lang}; Path=/; Max-Age=${COOKIE_MAX_AGE}; SameSite=Lax`;
+  return new Response(null, { status: 307, headers });
 }
 
 export default function middleware(request) {
@@ -17,7 +15,7 @@ export default function middleware(request) {
   const { pathname, searchParams } = url;
 
   // Static assets slip through even if the matcher lets them in (belt and suspenders).
-  if (/^\/(en|css|js|img|fonts)\//.test(pathname) || /\.[a-z0-9]+$/i.test(pathname)) {
+  if (/^\/(css|js|img|fonts)\//.test(pathname) || /\.[a-z0-9]+$/i.test(pathname)) {
     return;
   }
 
@@ -29,17 +27,17 @@ export default function middleware(request) {
     if (setlang === 'en' && !pathname.startsWith('/en')) target = `/en${pathname}`;
     if (setlang === 'pt' && pathname.startsWith('/en')) target = pathname.replace(/^\/en/, '') || '/';
     const redirectUrl = new URL(target + (searchParams.toString() ? `?${searchParams}` : ''), url);
-    return setCookie(Response.redirect(redirectUrl, 307), setlang);
+    return redirect(redirectUrl.toString(), setlang);
   }
 
   const cookieLang = request.headers.get('cookie')?.match(/(?:^|;\s*)lang=(en|pt)/)?.[1];
 
   if (cookieLang) {
     if (cookieLang === 'en' && !pathname.startsWith('/en')) {
-      return Response.redirect(new URL(`/en${pathname}`, url), 307);
+      return redirect(new URL(`/en${pathname}`, url).toString());
     }
     if (cookieLang === 'pt' && pathname.startsWith('/en')) {
-      return Response.redirect(new URL(pathname.replace(/^\/en/, '') || '/', url), 307);
+      return redirect(new URL(pathname.replace(/^\/en/, '') || '/', url).toString());
     }
     return;
   }
@@ -48,7 +46,7 @@ export default function middleware(request) {
   if (!pathname.startsWith('/en')) {
     const country = request.headers.get('x-vercel-ip-country');
     if (country && country !== 'PT') {
-      return setCookie(Response.redirect(new URL(`/en${pathname}`, url), 307), 'en');
+      return redirect(new URL(`/en${pathname}`, url).toString(), 'en');
     }
   }
 }
